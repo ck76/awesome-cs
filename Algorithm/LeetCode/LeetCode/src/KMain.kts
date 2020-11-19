@@ -1,0 +1,7 @@
+
+
+print("kmain")
+
+class Solution{
+
+}
