@@ -1,3 +1,21 @@
-**/.idea
-./idea
+# Go
+pkg/
+bin/
+
+# IDEA
 *.iml
+.idea/
+out/
+
+# Gradle
+.gradle/
+build/
+
+# Cargo
+target/
+
+# Others
+# *.luac
+luac.out
+*.DS_Store
+

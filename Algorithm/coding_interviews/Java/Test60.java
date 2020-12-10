@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-16
  * Time: 17:12
  * Declaration: All Rights Reserved !!!
@@ -27,7 +27,7 @@ public class Test60 {
     }
 
     /**
-     * ÌâÄ¿£º´ÓÉÏµ½ÏÂ°´²ã´òÓ¡¶ş²æÊ÷£¬Í¬Ò»²ãµÄ½áµã°´´Ó×óµ½ÓÒµÄË³Ğò´òÓ¡£¬Ã¿Ò»²ã´òÓ¡Ò»ĞĞ¡£
+     * é¢˜ç›®ï¼šä»ä¸Šåˆ°ä¸‹æŒ‰å±‚æ‰“å°äºŒå‰æ ‘ï¼ŒåŒä¸€å±‚çš„ç»“ç‚¹æŒ‰ä»å·¦åˆ°å³çš„é¡ºåºæ‰“å°ï¼Œæ¯ä¸€å±‚æ‰“å°ä¸€è¡Œã€‚
      * @param root
      */
     public static void print(BinaryTreeNode root) {
@@ -37,9 +37,9 @@ public class Test60 {
 
         List<BinaryTreeNode> list = new LinkedList<>();
         BinaryTreeNode node;
-        // µ±Ç°²ãµÄ½áµã¸öÊı
+        // å½“å‰å±‚çš„ç»“ç‚¹ä¸ªæ•°
         int current = 1;
-        // ¼ÇÂ¼ÏÂÒ»²ãµÄ½áµã¸öÊı
+        // è®°å½•ä¸‹ä¸€å±‚çš„ç»“ç‚¹ä¸ªæ•°
         int next = 0;
         list.add(root);
 

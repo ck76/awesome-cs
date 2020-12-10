@@ -1,15 +1,15 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-15
  * Time: 14:54
  * Declaration: All Rights Reserved !!!
  */
 public class Test55 {
     /**
-     * ÌâÄ¿£ºÇëÊµÏÖÒ»¸öº¯ÊıÓÃÀ´ÕÒ³ö×Ö·ûÁ÷ÖĞµÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·û¡£
+     * é¢˜ç›®ï¼šè¯·å®ç°ä¸€ä¸ªå‡½æ•°ç”¨æ¥æ‰¾å‡ºå­—ç¬¦æµä¸­ç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ã€‚
      */
     private static class CharStatistics {
-        // ³öÏÖÒ»´ÎµÄ±êÊ¶
+        // å‡ºç°ä¸€æ¬¡çš„æ ‡è¯†
         private int index = 0;
         private int[] occurrence = new int[256];
 
@@ -24,11 +24,11 @@ public class Test55 {
                 throw new IllegalArgumentException( ch + "must be a ASCII char");
             }
 
-            // Ö»³öÏÖÒ»´Î
+            // åªå‡ºç°ä¸€æ¬¡
             if (occurrence[ch] == -1) {
                 occurrence[ch] = index;
             } else {
-                // ³öÏÖÁËÁ½´Î
+                // å‡ºç°äº†ä¸¤æ¬¡
                 occurrence[ch] = -2;
             }
 
@@ -44,7 +44,7 @@ public class Test55 {
                 insert(data.charAt(i));
             }
             char ch = '\0';
-            // ÓÃÓÚ¼ÇÂ¼×îĞ¡µÄË÷Òı£¬¶ÔÓ¦µÄ¾ÍÊÇµÚÒ»¸ö²»ÖØ¸´µÄÊı×Ö
+            // ç”¨äºè®°å½•æœ€å°çš„ç´¢å¼•ï¼Œå¯¹åº”çš„å°±æ˜¯ç¬¬ä¸€ä¸ªä¸é‡å¤çš„æ•°å­—
             int minIndex = Integer.MAX_VALUE;
             for (int i = 0; i < occurrence.length; i++) {
                 if (occurrence[i] >= 0 && occurrence[i] < minIndex) {

@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-11
  * Time: 17:20
  * Declaration: All Rights Reserved !!!
@@ -28,13 +28,13 @@ public class Test36 {
         int left = inversePairsCore(copy, data, start, start + length);
         int right = inversePairsCore(copy, data, start + length + 1, end);
 
-        // Ç°°ë¶ÎµÄ×îºóÒ»¸öÊı×ÖµÄÏÂ±ê
+        // å‰åŠæ®µçš„æœ€åä¸€ä¸ªæ•°å­—çš„ä¸‹æ ‡
         int i = start + length;
-        // ºó°ë¶Î×îºóÒ»¸öÊı×ÖµÄÏÂ±ê
+        // ååŠæ®µæœ€åä¸€ä¸ªæ•°å­—çš„ä¸‹æ ‡
         int j = end;
-        // ¿ªÊ¼¿½±´µÄÎ»ÖÃ
+        // å¼€å§‹æ‹·è´çš„ä½ç½®
         int indexCopy = end;
-        // ÄæĞòÊı
+        // é€†åºæ•°
         int count = 0;
 
         while (i >= start && j >= start + length + 1) {
@@ -42,7 +42,7 @@ public class Test36 {
                 copy[indexCopy] = data[i];
                 indexCopy--;
                 i--;
-                count += j - (start + length); // ¶ÔÓ¦µÄÄæĞòÊı
+                count += j - (start + length); // å¯¹åº”çš„é€†åºæ•°
             } else {
                 copy[indexCopy] = data[j];
                 indexCopy--;

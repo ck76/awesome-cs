@@ -1,15 +1,15 @@
 import java.util.Arrays;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-14
  * Time: 14:33
  * Declaration: All Rights Reserved !!!
  */
 public class Test44 {
     /**
-     * ÌâÄ¿£º´ÓÆË¿ËÅÆÖĞËæ»ú³é5ÕÅÅÆ£¬ÅĞ¶ÏÊÇ²»ÊÇÒ»¸öË³×Ó£¬ ¼´Õâ5ÕÅÅÆÊÇ²»ÊÇÁ¬ĞøµÄ¡£
-     * 2¡«10ÎªÊı×Ö±¾Éí£¬ AÎª1¡£ JÎª11¡¢QÎª12¡¢ Îª13¡£Ğ¡Íõ¿ÉÒÔ¿´³ÉÈÎÒâÊı×Ö¡£
+     * é¢˜ç›®ï¼šä»æ‰‘å…‹ç‰Œä¸­éšæœºæŠ½5å¼ ç‰Œï¼Œåˆ¤æ–­æ˜¯ä¸æ˜¯ä¸€ä¸ªé¡ºå­ï¼Œ å³è¿™5å¼ ç‰Œæ˜¯ä¸æ˜¯è¿ç»­çš„ã€‚
+     * 2ï½10ä¸ºæ•°å­—æœ¬èº«ï¼Œ Aä¸º1ã€‚ Jä¸º11ã€Qä¸º12ã€ ä¸º13ã€‚å°ç‹å¯ä»¥çœ‹æˆä»»æ„æ•°å­—ã€‚
      * @param numbers
      * @return
      */
@@ -18,7 +18,7 @@ public class Test44 {
             return false;
         }
 
-        // ¶ÔÔªËØ½øĞĞÅÅĞò
+        // å¯¹å…ƒç´ è¿›è¡Œæ’åº
         Arrays.sort(numbers);
         int numberOfZero = 0;
         int numberOfGap = 0;
@@ -26,7 +26,7 @@ public class Test44 {
             numberOfZero++;
         }
 
-        // µÚÒ»¸ö·Ç0ÔªËØµÄÎ»ÖÃ
+        // ç¬¬ä¸€ä¸ªé0å…ƒç´ çš„ä½ç½®
         int small = numberOfZero;
         int big = small + 1;
 

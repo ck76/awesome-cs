@@ -1,5 +1,5 @@
 /**
- * Author: ������
+ * Author: 王俊超
  * Date: 2015-04-23
  * Time: 16:50
  * Declaration: All Rights Reserved !!!
@@ -11,80 +11,80 @@ public class Test16 {
     }
 
     /**
-     * ����һ������������һ��������ͷ��㣬��ת�������������ת��������ͷ��㡣
+     * 定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。
      *
-     * @param head ������ͷ���
-     * @return ��ת���������ͷ���
+     * @param head 链表的头结点
+     * @return 反转后的链表的头结点
      */
     public static ListNode reverseList(ListNode head) {
-        // ����һ����ʱ��㣬����β�巨���߼�ͷ���
+        // 创建一个临时结点，当作尾插法的逻辑头结点
         ListNode root = new ListNode();
-        // �߼�ͷ�������һ�����Ϊ��
+        // 逻辑头结点点的下一个结点为空
         root.next = null;
 
-        // ���ڼ�¼Ҫ��������һ�����
+        // 用于记录要处理的下一个结点
         ListNode next;
-        // ��ǰ�����Ľ�㲻Ϊ��
+        // 当前处理的结点不为空
         while (head != null) {
-            // ��¼Ҫ��������һ�����
+            // 记录要处理的下一个结点
             next = head.next;
-            // ��ǰ������һ�����ָ���߼�ͷ������һ�����
+            // 当前结点的下一个结点指向逻辑头结点的下一个结点
             head.next = root.next;
-            // �߼�ͷ������һ�����ָ��ǰ�����Ľ��
+            // 逻辑头结点的下一个结点指向当前处理的结点
             root.next = head;
-            // ������������һ������ͷ��
+            // 上面操作完成了一个结点的头插
 
-            // ��ǰ���ָ����һ��Ҫ�����Ľ��
+            // 当前结点指向下一个要处理的结点
             head = next;
         }
 
-        // �߼�ͷ������һ�������Ƿ��غ��ͷ���
+        // 逻辑头结点的下一个结点就是返回后的头结点
         return root.next;
     }
 
     /**
-     * ����һ������������һ��������ͷ��㣬��ת�������������ת��������ͷ��㡣
-     * ���鱾�ϵķ�������ʹ���߼�ͷ��㡿
+     * 定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。
+     * 【书本上的方法，不使用逻辑头结点】
      *
-     * @param head ������ͷ���
-     * @return ��ת���������ͷ���
+     * @param head 链表的头结点
+     * @return 反转后的链表的头结点
      */
     public static ListNode reverseList2(ListNode head) {
-        // ���ڼ�¼��ת���������ͷ���
+        // 用于记录反转后的链表的头结点
         ListNode reverseHead = null;
-        // ���ڼ�¼��ǰ�����Ľ���
+        // 用于记录当前处理的结点的
         ListNode curr = head;
-        // ���ڼ�¼��ǰ����ǰ�����
-        // ǰ����㿪ʼΪnull����Ϊ���Ƿ�ת������һ��������һ����㣬��null
+        // 用于记录当前结点的前驱结点
+        // 前驱结点开始为null，因为了是反转后的最后一个结点的下一个结点，即null
         ListNode prev = null;
-        // ��ǰ������һ�����
+        // 当前结点的下一个结点
         ListNode next;
 
-        // ����������β�巨����
+        // 对链表进行尾插法操作
         while (curr != null) {
-            // ��¼��ǰ�����Ľ�㣬���һ����¼�Ľ����Ƿ�ת���ͷ���
-            // ��ע�⣺�����ϵĲ�ͬ����Ϊcurr.next=nullʱ��curr��ʱ�����һ�������Ľ�㣬
-            // ��Ӧ����ת����������ǵ�һ����㣬��������������ȷ��ֻ�Ƕ���һЩ�жϣ����Բ�Ҫif��
+            // 记录当前处理的结点，最后一个记录的结点就是反转后的头结点
+            // 【注意：与书上的不同，因为curr.next=null时，curr此时就最后一个处理的结点，
+            // 对应到反转后的链表就是第一个结点，书上那样做更精确，只是多了一些判断，可以不要if】
             reverseHead = curr;
-            // ��¼��Ȼǰ��һ�����
+            // 记录当然前下一个结点
             next = curr.next;
-            // ��ǰ������һ�����ָ��ǰ����㣬������ǰ���Ͳ��뵽�˷�ת������ͷ��
+            // 当前结点的下一个结点指向前驱结点，这样当前结点就插入到了反转链表的头部
             curr.next = prev;
-            // ��¼��ǰ���Ϊǰ�����
+            // 记录当前结点为前驱结点
             prev = curr;
-            // ��ǰ�����ƶ�����һ�����
+            // 当前结点点移动到下一个结点
             curr = next;
         }
 
-        // ����ת���ͷ���
+        // 返回转后的头结点
         return reverseHead;
     }
 
 
     /**
-     * ���������Ԫ��ֵ
+     * 输出链表的元素值
      *
-     * @param head ������ͷ���
+     * @param head 链表的头结点
      */
     public static void printList(ListNode head) {
         while (head != null) {

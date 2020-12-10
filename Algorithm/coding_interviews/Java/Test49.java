@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-06-14
  * Time: 16:26
  * Declaration: All Rights Reserved !!!
@@ -7,8 +7,8 @@
 public class Test49 {
 
     /**
-     * ÌâÄ¿£ºÊµÏÖÒ»¸öº¯ÊýstringToInt,ÊµÏÖ°Ñ×Ö·û´®×ª»»³ÉÕûÊýÕâ¸ö¹¦ÄÜ£¬
-     * ²»ÄÜÊ¹ÓÃatoi»òÕßÆäËûÀàËÆµÄ¿âº¯Êý¡£
+     * é¢˜ç›®ï¼šå®žçŽ°ä¸€ä¸ªå‡½æ•°stringToInt,å®žçŽ°æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ•´æ•°è¿™ä¸ªåŠŸèƒ½ï¼Œ
+     * ä¸èƒ½ä½¿ç”¨atoiæˆ–è€…å…¶ä»–ç±»ä¼¼çš„åº“å‡½æ•°ã€‚
      *
      * @param num
      * @return
@@ -32,22 +32,22 @@ public class Test49 {
     }
 
     /**
-     * ÅÐ¶Ï×Ö·ûÊÇ·ñÊÇÊý×Ö
+     * åˆ¤æ–­å­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—
      *
-     * @param c ×Ö·û
-     * @return trueÊÇ£¬false·ñ
+     * @param c å­—ç¬¦
+     * @return trueæ˜¯ï¼Œfalseå¦
      */
     private static boolean isDigit(char c) {
         return c >= '0' && c <= '9';
     }
 
     /**
-     * ¶Ô×Ö·û´®½øÐÐ½âÎö
+     * å¯¹å­—ç¬¦ä¸²è¿›è¡Œè§£æž
      *
-     * @param num      Êý×Ö´®
-     * @param index    ¿ªÊ¼½âÎöµÄË÷Òý
-     * @param positive ÊÇÕýÊý»¹ÊÇ¸ºÊý
-     * @return ·µ»Ø½á¹û
+     * @param num      æ•°å­—ä¸²
+     * @param index    å¼€å§‹è§£æžçš„ç´¢å¼•
+     * @param positive æ˜¯æ­£æ•°è¿˜æ˜¯è´Ÿæ•°
+     * @return è¿”å›žç»“æžœ
      */
     private static int parseString(String num, int index, boolean positive) {
 
@@ -59,7 +59,7 @@ public class Test49 {
         long tmp = 0;
         while (index < num.length() && isDigit(num.charAt(index))) {
             tmp = tmp * 10 + num.charAt(index) - '0';
-            // ±£Ö¤ÇóµÄµÃµÄÖµ²»³¬³öÕûÊýµÄ×î´ó¾ø¶ÔÖµ
+            // ä¿è¯æ±‚çš„å¾—çš„å€¼ä¸è¶…å‡ºæ•´æ•°çš„æœ€å¤§ç»å¯¹å€¼
             if (tmp > 0x8000_0000L) {
                 throw new NumberFormatException(num);
             }

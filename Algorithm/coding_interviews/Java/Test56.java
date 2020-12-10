@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-16
  * Time: 08:49
  * Declaration: All Rights Reserved !!!
@@ -35,12 +35,12 @@ public class Test56 {
             }
         }
 
-        // Á´±íÖĞÃ»ÓĞ»·
+        // é“¾è¡¨ä¸­æ²¡æœ‰ç¯
         if (fast == null || fast.next == null) {
             return null;
         }
 
-        // fastÖØĞÂÖ¸ÏòµÚÒ»¸ö½áµã
+        // fasté‡æ–°æŒ‡å‘ç¬¬ä¸€ä¸ªç»“ç‚¹
         fast = head;
 
         while (fast != slow) {

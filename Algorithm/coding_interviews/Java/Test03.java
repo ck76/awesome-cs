@@ -1,44 +1,44 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-04-21
  * Time: 18:43
  * Declaration: All Rights Reserved !!!
  */
 public class Test03 {
     /**
-     * ÔÚÒ»¸ö¶þÎ¬Êý×éÖÐ£¬Ã¿Ò»ÐÐ¶¼°´ÕÕ´Ó×óµ½ÓÒµÝÔöµÄË³ÐòÅÅÐò£¬Ã¿Ò»ÁÐ¶¼°´ÕÕ´ÓÉÏµ½ÏÂµÝÔöµÄË³ÐòÅÅÐò¡£
-     * ÇëÍê³ÉÒ»¸öº¯Êý£¬ÊäÈëÕâÑùµÄÒ»¸ö¶þÎ¬Êý×éºÍÒ»¸öÕûÊý£¬ÅÐ¶ÏÊý×éÖÐÊÇ·ñº¬ÓÐ¸ÃÕûÊý¡£
+     * åœ¨ä¸€ä¸ªäºŒç»´æ•°ç»„ä¸­ï¼Œæ¯ä¸€è¡Œéƒ½æŒ‰ç…§ä»Žå·¦åˆ°å³é€’å¢žçš„é¡ºåºæŽ’åºï¼Œæ¯ä¸€åˆ—éƒ½æŒ‰ç…§ä»Žä¸Šåˆ°ä¸‹é€’å¢žçš„é¡ºåºæŽ’åºã€‚
+     * è¯·å®Œæˆä¸€ä¸ªå‡½æ•°ï¼Œè¾“å…¥è¿™æ ·çš„ä¸€ä¸ªäºŒç»´æ•°ç»„å’Œä¸€ä¸ªæ•´æ•°ï¼Œåˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å«æœ‰è¯¥æ•´æ•°ã€‚
      * <p/>
-     * ¹æÂÉ£ºÊ×ÏÈÑ¡È¡Êý×éÖÐÓÒÉÏ½ÇµÄÊý×Ö¡£Èç¹û¸ÃÊý×ÖµÈÓÚÒª²éÕÒµÄÊý×Ö£¬²éÕÒ¹ý³Ì½áÊø£º
-     * Èç¹û¸ÃÊý×Ö´óÓÚÒª²éÕÒµÄÊý×Ö£¬ÌÞ³ýÕâ¸öÊý×ÖËùÔÚµÄÁÐ£ºÈç¹û¸ÃÊý×ÖÐ¡ÓÚÒª²éÕÒµÄÊý×Ö£¬ÌÞ³ýÕâ¸öÊý×ÖËùÔÚµÄÐÐ¡£
-     * Ò²¾ÍÊÇËµÈç¹ûÒª²éÕÒµÄÊý×Ö²»ÔÚÊý×éµÄÓÒÉÏ½Ç£¬ÔòÃ¿£­´Î¶¼ÔÚÊý×éµÄ²éÕÒ·¶Î§ÖÐÌÞ³ý£©ÐÐ»òÕßÒ»ÁÐ£¬ÕâÑùÃ¿Ò»²½¶¼¿ÉÒÔËõÐ¡
-     * ²éÕÒµÄ·¶Î§£¬Ö±µ½ÕÒµ½Òª²éÕÒµÄÊý×Ö£¬»òÕß²éÕÒ·¶Î§Îª¿Õ¡£
+     * è§„å¾‹ï¼šé¦–å…ˆé€‰å–æ•°ç»„ä¸­å³ä¸Šè§’çš„æ•°å­—ã€‚å¦‚æžœè¯¥æ•°å­—ç­‰äºŽè¦æŸ¥æ‰¾çš„æ•°å­—ï¼ŒæŸ¥æ‰¾è¿‡ç¨‹ç»“æŸï¼š
+     * å¦‚æžœè¯¥æ•°å­—å¤§äºŽè¦æŸ¥æ‰¾çš„æ•°å­—ï¼Œå‰”é™¤è¿™ä¸ªæ•°å­—æ‰€åœ¨çš„åˆ—ï¼šå¦‚æžœè¯¥æ•°å­—å°äºŽè¦æŸ¥æ‰¾çš„æ•°å­—ï¼Œå‰”é™¤è¿™ä¸ªæ•°å­—æ‰€åœ¨çš„è¡Œã€‚
+     * ä¹Ÿå°±æ˜¯è¯´å¦‚æžœè¦æŸ¥æ‰¾çš„æ•°å­—ä¸åœ¨æ•°ç»„çš„å³ä¸Šè§’ï¼Œåˆ™æ¯ï¼æ¬¡éƒ½åœ¨æ•°ç»„çš„æŸ¥æ‰¾èŒƒå›´ä¸­å‰”é™¤ï¼‰è¡Œæˆ–è€…ä¸€åˆ—ï¼Œè¿™æ ·æ¯ä¸€æ­¥éƒ½å¯ä»¥ç¼©å°
+     * æŸ¥æ‰¾çš„èŒƒå›´ï¼Œç›´åˆ°æ‰¾åˆ°è¦æŸ¥æ‰¾çš„æ•°å­—ï¼Œæˆ–è€…æŸ¥æ‰¾èŒƒå›´ä¸ºç©ºã€‚
      *
-     * @param matrix ´ý²éÕÒµÄÊý×é
-     * @param number Òª²éÕÒµÄÊý
-     * @return ²éÕÒ½á¹û£¬trueÕÒµ½£¬falseÃ»ÓÐÕÒµ½
+     * @param matrix å¾…æŸ¥æ‰¾çš„æ•°ç»„
+     * @param number è¦æŸ¥æ‰¾çš„æ•°
+     * @return æŸ¥æ‰¾ç»“æžœï¼Œtrueæ‰¾åˆ°ï¼Œfalseæ²¡æœ‰æ‰¾åˆ°
      */
     public static boolean find(int[][] matrix, int number) {
 
-        // ÊäÈëÌõ¼þÅÐ¶Ï
+        // è¾“å…¥æ¡ä»¶åˆ¤æ–­
         if (matrix == null || matrix.length < 1 || matrix[0].length < 1) {
             return false;
         }
 
-        int rows = matrix.length; // Êý×éµÄÐÐÊý
-        int cols = matrix[1].length; // Êý×éÐÐµÄÁÐÊý
+        int rows = matrix.length; // æ•°ç»„çš„è¡Œæ•°
+        int cols = matrix[1].length; // æ•°ç»„è¡Œçš„åˆ—æ•°
 
-        int row = 0; // ÆðÊ¼¿ªÊ¼µÄÐÐºÅ
-        int col = cols - 1; // ÆðÊ¼¿ªÊ¼µÄÁÐºÅ
+        int row = 0; // èµ·å§‹å¼€å§‹çš„è¡Œå·
+        int col = cols - 1; // èµ·å§‹å¼€å§‹çš„åˆ—å·
 
-        // Òª²éÕÒµÄÎ»ÖÃÈ·±£ÔÚÊý×éÖ®ÄÚ
+        // è¦æŸ¥æ‰¾çš„ä½ç½®ç¡®ä¿åœ¨æ•°ç»„ä¹‹å†…
         while (row >= 0 && row < rows && col >= 0 && col < cols) {
-            if (matrix[row][col] == number) { // Èç¹ûÕÒµ½ÁË¾ÍÖ±½ÓÍË³ö
+            if (matrix[row][col] == number) { // å¦‚æžœæ‰¾åˆ°äº†å°±ç›´æŽ¥é€€å‡º
                 return true;
-            } else if (matrix[row][col] > number) { // Èç¹ûÕÒµ½µÄÊý±ÈÒªÕÒµÄÊý´ó£¬ËµÃ÷ÒªÕÒµÄÊýÔÚµ±Ç°ÊýµÄ×ó±ß
-                col--; // ÁÐÊý¼õÒ»£¬´ú±íÏò×óÒÆ¶¯
-            } else { // Èç¹ûÕÒµ½µÄÊý±ÈÒªÕÒµÄÊýÐ¡£¬ËµÃ÷ÒªÕÒµÄÊýÔÚµ±Ç°ÊýµÄÏÂ±ß
-                row++; // ÐÐÊý¼ÓÒ»£¬´ú±íÏòÏÂÒÆ¶¯
+            } else if (matrix[row][col] > number) { // å¦‚æžœæ‰¾åˆ°çš„æ•°æ¯”è¦æ‰¾çš„æ•°å¤§ï¼Œè¯´æ˜Žè¦æ‰¾çš„æ•°åœ¨å½“å‰æ•°çš„å·¦è¾¹
+                col--; // åˆ—æ•°å‡ä¸€ï¼Œä»£è¡¨å‘å·¦ç§»åŠ¨
+            } else { // å¦‚æžœæ‰¾åˆ°çš„æ•°æ¯”è¦æ‰¾çš„æ•°å°ï¼Œè¯´æ˜Žè¦æ‰¾çš„æ•°åœ¨å½“å‰æ•°çš„ä¸‹è¾¹
+                row++; // è¡Œæ•°åŠ ä¸€ï¼Œä»£è¡¨å‘ä¸‹ç§»åŠ¨
             }
         }
 
@@ -52,12 +52,12 @@ public class Test03 {
                 {4, 7, 10, 13},
                 {6, 8, 11, 15}
         };
-        System.out.println(find(matrix, 7));    // Òª²éÕÒµÄÊýÔÚÊý×éÖÐ
-        System.out.println(find(matrix, 5));    // Òª²éÕÒµÄÊý²»ÔÚÊý×éÖÐ
-        System.out.println(find(matrix, 1));    // Òª²éÕÒµÄÊýÊÇÊý×éÖÐ×îÐ¡µÄÊý×Ö
-        System.out.println(find(matrix, 15));   // Òª²éÕÒµÄÊýÊÇÊý×éÖÐ×î´óµÄÊý×Ö
-        System.out.println(find(matrix, 0));    // Òª²éÕÒµÄÊý±ÈÊý×éÖÐ×îÐ¡µÄÊý×Ö»¹Ð¡
-        System.out.println(find(matrix, 16));   // Òª²éÕÒµÄÊý±ÈÊý×éÖÐ×î´óµÄÊý×Ö»¹´ó
-        System.out.println(find(null, 16));     // ½¡×³ÐÔ²âÊÔ£¬ÊäÈë¿ÕÖ¸Õë
+        System.out.println(find(matrix, 7));    // è¦æŸ¥æ‰¾çš„æ•°åœ¨æ•°ç»„ä¸­
+        System.out.println(find(matrix, 5));    // è¦æŸ¥æ‰¾çš„æ•°ä¸åœ¨æ•°ç»„ä¸­
+        System.out.println(find(matrix, 1));    // è¦æŸ¥æ‰¾çš„æ•°æ˜¯æ•°ç»„ä¸­æœ€å°çš„æ•°å­—
+        System.out.println(find(matrix, 15));   // è¦æŸ¥æ‰¾çš„æ•°æ˜¯æ•°ç»„ä¸­æœ€å¤§çš„æ•°å­—
+        System.out.println(find(matrix, 0));    // è¦æŸ¥æ‰¾çš„æ•°æ¯”æ•°ç»„ä¸­æœ€å°çš„æ•°å­—è¿˜å°
+        System.out.println(find(matrix, 16));   // è¦æŸ¥æ‰¾çš„æ•°æ¯”æ•°ç»„ä¸­æœ€å¤§çš„æ•°å­—è¿˜å¤§
+        System.out.println(find(null, 16));     // å¥å£®æ€§æµ‹è¯•ï¼Œè¾“å…¥ç©ºæŒ‡é’ˆ
     }
 }

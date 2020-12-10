@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-16
  * Time: 18:41
  * Declaration: All Rights Reserved !!!
@@ -41,12 +41,12 @@ public class Test61 {
 
         while (current.size() > 0) {
 
-            // ´Ó×îºóÒ»¸ö¿ªÊ¼È¡
+            // ä»æœ€åä¸€ä¸ªå¼€å§‹å–
             node = current.remove(current.size() - 1);
 
             System.out.printf("%-3d", node.val);
 
-            // µ±Ç°ÊÇ´Ó×óÍùÓÒ´òÓ¡µÄ£¬ÄÇ¾Í°´´Ó×óÍùÓÒÈëÕ»
+            // å½“å‰æ˜¯ä»å·¦å¾€å³æ‰“å°çš„ï¼Œé‚£å°±æŒ‰ä»å·¦å¾€å³å…¥æ ˆ
             if (flag == 0) {
                 if (node.left != null) {
                     reverse.add(node.left);
@@ -58,7 +58,7 @@ public class Test61 {
 
 
             }
-            // µ±Ç°ÊÇ´ÓÓÒÍù×ó´òÓ¡µÄ£¬ÄÇ¾Í°´´ÓÓÒÍù×óÈëÕ»
+            // å½“å‰æ˜¯ä»å³å¾€å·¦æ‰“å°çš„ï¼Œé‚£å°±æŒ‰ä»å³å¾€å·¦å…¥æ ˆ
             else {
                 if (node.right != null) {
                     reverse.add(node.right);

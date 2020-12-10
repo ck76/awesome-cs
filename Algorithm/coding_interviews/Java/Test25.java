@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-04-24
  * Time: 13:45
  * Declaration: All Rights Reserved !!!
  */
 public class Test25 {
     /**
-     * ¶ş²æÊ÷µÄÊ÷½áµã
+     * äºŒå‰æ ‘çš„æ ‘ç»“ç‚¹
      */
     public static class BinaryTreeNode {
         int value;
@@ -18,51 +18,51 @@ public class Test25 {
     }
 
     /**
-     * ÊäÈëÒ»¿Ã¶ş²æÊ÷ºÍÒ»¸öÕûÊı£¬ ´òÓ¡³ö¶ş²æÊ÷ÖĞ½áµãÖµµÄºÍÎªÊäÈëÕûÊıµÄËùÓĞÂ·¾¶¡£
-     * ´ÓÊ÷µÄ¸ù½áµã¿ªÊ¼ÍùÏÂÒ»Ö±µ½Ò¶ÏúµãËù¾­¹ıµÄ½áµãĞÎ³ÉÒ»ÌõÂ·¾¶¡£
+     * è¾“å…¥ä¸€æ£µäºŒå‰æ ‘å’Œä¸€ä¸ªæ•´æ•°ï¼Œ æ‰“å°å‡ºäºŒå‰æ ‘ä¸­ç»“ç‚¹å€¼çš„å’Œä¸ºè¾“å…¥æ•´æ•°çš„æ‰€æœ‰è·¯å¾„ã€‚
+     * ä»æ ‘çš„æ ¹ç»“ç‚¹å¼€å§‹å¾€ä¸‹ä¸€ç›´åˆ°å¶é”€ç‚¹æ‰€ç»è¿‡çš„ç»“ç‚¹å½¢æˆä¸€æ¡è·¯å¾„ã€‚
      *
-     * @param root        Ê÷µÄ¸ù½áµã
-     * @param expectedSum ÒªÇóµÄÂ·¾¶ºÍ
+     * @param root        æ ‘çš„æ ¹ç»“ç‚¹
+     * @param expectedSum è¦æ±‚çš„è·¯å¾„å’Œ
      */
     public static void findPath(BinaryTreeNode root, int expectedSum) {
-        // ´´½¨Ò»¸öÁ´±í£¬ÓÃÓÚ´æ·Å¸ù½áµãµ½µ±Ç°´¦Àí½áµãµÄËù¾­¹ıµÄ½áµã
+        // åˆ›å»ºä¸€ä¸ªé“¾è¡¨ï¼Œç”¨äºå­˜æ”¾æ ¹ç»“ç‚¹åˆ°å½“å‰å¤„ç†ç»“ç‚¹çš„æ‰€ç»è¿‡çš„ç»“ç‚¹
         List<Integer> list = new ArrayList<>();
 
-        // Èç¹û¸ù½áµã²»Îª¿Õ£¬¾Íµ÷ÓÃ¸¨Öú´¦Àí·½·¨
+        // å¦‚æœæ ¹ç»“ç‚¹ä¸ä¸ºç©ºï¼Œå°±è°ƒç”¨è¾…åŠ©å¤„ç†æ–¹æ³•
         if (root != null) {
             findPath(root, 0, expectedSum, list);
         }
     }
 
     /**
-     * @param root        µ±Ç°Òª´¦ÀíµÄ½áµã
-     * @param curSum      µ±Ç°¼ÇÂ¼µÄºÍ£¨»¹Î´¼ÓÉÏµ±Ç°½áµãµÄÖµ£©
-     * @param expectedSum ÒªÇóµÄÂ·¾¶ºÍ
-     * @param result      ¸ù½áµãµ½µ±Ç°´¦Àí½áµãµÄËù¾­¹ıµÄ½áµã£¬£¨»¹Î´°üÀ¨µ±Ç°½áµã£©
+     * @param root        å½“å‰è¦å¤„ç†çš„ç»“ç‚¹
+     * @param curSum      å½“å‰è®°å½•çš„å’Œï¼ˆè¿˜æœªåŠ ä¸Šå½“å‰ç»“ç‚¹çš„å€¼ï¼‰
+     * @param expectedSum è¦æ±‚çš„è·¯å¾„å’Œ
+     * @param result      æ ¹ç»“ç‚¹åˆ°å½“å‰å¤„ç†ç»“ç‚¹çš„æ‰€ç»è¿‡çš„ç»“ç‚¹ï¼Œï¼ˆè¿˜æœªåŒ…æ‹¬å½“å‰ç»“ç‚¹ï¼‰
      */
     public static void findPath(BinaryTreeNode root, int curSum, int expectedSum, List<Integer> result) {
 
-        // Èç¹û½áµã²»Îª¿Õ¾Í½øĞĞ´¦Àí
+        // å¦‚æœç»“ç‚¹ä¸ä¸ºç©ºå°±è¿›è¡Œå¤„ç†
         if (root != null) {
-            // ¼ÓÉÏµ±Ç°½áµãµÄÖµ
+            // åŠ ä¸Šå½“å‰ç»“ç‚¹çš„å€¼
             curSum += root.value;
-            // ½«µ±Ç°½áµãÈë¶Ó
+            // å°†å½“å‰ç»“ç‚¹å…¥é˜Ÿ
             result.add(root.value);
-            // Èç¹ûµ±Ç°½áµãµÄÖµĞ¡ÓÚÆÚÍûµÄºÍ
+            // å¦‚æœå½“å‰ç»“ç‚¹çš„å€¼å°äºæœŸæœ›çš„å’Œ
             if (curSum < expectedSum) {
-                // µİ¹é´¦Àí×ó×ÓÊ÷
+                // é€’å½’å¤„ç†å·¦å­æ ‘
                 findPath(root.left, curSum, expectedSum, result);
-                // µİ¹é´¦ÀíÓÒ×ÓÊ÷
+                // é€’å½’å¤„ç†å³å­æ ‘
                 findPath(root.right, curSum, expectedSum, result);
             }
-            // Èç¹ûµ±Ç°ºÍÓëÆÚÍûµÄºÍÏàµÈ
+            // å¦‚æœå½“å‰å’Œä¸æœŸæœ›çš„å’Œç›¸ç­‰
             else if (curSum == expectedSum) {
-                // µ±Ç°½áµãÊÇÒ¶½áµã£¬ÔòÊä³ö½á¹û
+                // å½“å‰ç»“ç‚¹æ˜¯å¶ç»“ç‚¹ï¼Œåˆ™è¾“å‡ºç»“æœ
                 if (root.left == null && root.right == null) {
                     System.out.println(result);
                 }
             }
-            // ÒÆ³ıµ±Ç°½áµã
+            // ç§»é™¤å½“å‰ç»“ç‚¹
             result.remove(result.size() - 1);
         }
     }
@@ -84,15 +84,15 @@ public class Test25 {
         root.right = new BinaryTreeNode();
         root.right.value = 12;
 
-        // ÓĞÁ½ÌõÂ·¾¶ÉÏµÄ½áµãºÍÎª22
+        // æœ‰ä¸¤æ¡è·¯å¾„ä¸Šçš„ç»“ç‚¹å’Œä¸º22
         System.out.println("findPath(root, 22);");
         findPath(root, 22);
 
-        // Ã»ÓĞÂ·¾¶ÉÏµÄ½áµãºÍÎª15
+        // æ²¡æœ‰è·¯å¾„ä¸Šçš„ç»“ç‚¹å’Œä¸º15
         System.out.println("findPath(root, 15);");
         findPath(root, 15);
 
-        // ÓĞÒ»ÌõÂ·¾¶ÉÏµÄ½áµãºÍÎª19
+        // æœ‰ä¸€æ¡è·¯å¾„ä¸Šçš„ç»“ç‚¹å’Œä¸º19
         System.out.println("findPath(root, 19);");
         findPath(root, 19);
 
@@ -117,11 +117,11 @@ public class Test25 {
         root2.left.left.left.left = new BinaryTreeNode();
         root2.left.left.left.left.value = 1;
 
-        // ÓĞÒ»ÌõÂ·¾¶ÉÏÃæµÄ½áµãºÍÎª15
+        // æœ‰ä¸€æ¡è·¯å¾„ä¸Šé¢çš„ç»“ç‚¹å’Œä¸º15
         System.out.println("findPath(root2, 15);");
         findPath(root2, 15);
 
-        // Ã»ÓĞÂ·¾¶ÉÏÃæµÄ½áµãºÍÎª16
+        // æ²¡æœ‰è·¯å¾„ä¸Šé¢çš„ç»“ç‚¹å’Œä¸º16
         System.out.println("findPath(root2, 16);");
         findPath(root2, 16);
 
@@ -145,27 +145,27 @@ public class Test25 {
         root3.right.right.right.right = new BinaryTreeNode();
         root3.right.right.right.right.value = 5;
 
-        // ÓĞÒ»ÌõÂ·¾¶ÉÏÃæµÄ½áµãºÍÎª15
+        // æœ‰ä¸€æ¡è·¯å¾„ä¸Šé¢çš„ç»“ç‚¹å’Œä¸º15
         System.out.println("findPath(root3, 15);");
         findPath(root3, 15);
 
-        // Ã»ÓĞÂ·¾¶ÉÏÃæµÄ½áµãºÍÎª16
+        // æ²¡æœ‰è·¯å¾„ä¸Šé¢çš„ç»“ç‚¹å’Œä¸º16
         System.out.println("findPath(root3, 16);");
         findPath(root3, 16);
 
-        // Ê÷ÖĞÖ»ÓĞ1¸ö½áµã
+        // æ ‘ä¸­åªæœ‰1ä¸ªç»“ç‚¹
         BinaryTreeNode root4 = new BinaryTreeNode();
 
         root4.value = 1;
-        // ÓĞÒ»ÌõÂ·¾¶ÉÏÃæµÄ½áµãºÍÎª1
+        // æœ‰ä¸€æ¡è·¯å¾„ä¸Šé¢çš„ç»“ç‚¹å’Œä¸º1
         System.out.println("findPath(root4, 1);");
         findPath(root4, 1);
 
-        // Ã»ÓĞÂ·¾¶ÉÏÃæµÄ½áµãºÍÎª2
+        // æ²¡æœ‰è·¯å¾„ä¸Šé¢çš„ç»“ç‚¹å’Œä¸º2
         System.out.println("findPath(root4, 2);");
         findPath(root4, 2);
 
-        // Ê÷ÖĞÃ»ÓĞ½áµã
+        // æ ‘ä¸­æ²¡æœ‰ç»“ç‚¹
         System.out.println("findPath(null, 0);");
         findPath(null, 0);
     }

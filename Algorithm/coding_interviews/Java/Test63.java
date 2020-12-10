@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-16
  * Time: 21:39
  * Declaration: All Rights Reserved !!!
@@ -35,23 +35,23 @@ public class Test63 {
     private static BinaryTreeNode kthNodeCore(BinaryTreeNode root, int[] k) {
         BinaryTreeNode result = null;
 
-        // ÏÈ³É×ó×ÓÊ÷ÖĞÕÒ
+        // å…ˆæˆå·¦å­æ ‘ä¸­æ‰¾
         if (root.left != null) {
           result =  kthNodeCore(root.left, k);
         }
 
-        // Èç¹ûÔÚ×ó×ÓÊ÷ÖĞÃ»ÓĞÕÒµ½
+        // å¦‚æœåœ¨å·¦å­æ ‘ä¸­æ²¡æœ‰æ‰¾åˆ°
         if (result == null) {
-            // ËµÃ÷µ±Ç°µÄ¸ù½áµãÊÇËùÒªÕÒµÄ½áµã
+            // è¯´æ˜å½“å‰çš„æ ¹ç»“ç‚¹æ˜¯æ‰€è¦æ‰¾çš„ç»“ç‚¹
             if(k[0] == 1) {
                 result = root;
             } else {
-                // µ±Ç°µÄ¸ù½áµã²»ÊÇÒªÕÒµÄ½áµã£¬µ«ÊÇÒÑ¾­ÕÒ¹ıÁË£¬ËùÒÔ¼ÆÊıÆ÷¼õÒ»
+                // å½“å‰çš„æ ¹ç»“ç‚¹ä¸æ˜¯è¦æ‰¾çš„ç»“ç‚¹ï¼Œä½†æ˜¯å·²ç»æ‰¾è¿‡äº†ï¼Œæ‰€ä»¥è®¡æ•°å™¨å‡ä¸€
                 k[0]--;
             }
         }
 
-        // ¸ù½áµãÒÔ¼°¸ù½áµãµÄÓÒ×Ó½áµã¶¼Ã»ÓĞÕÒµ½£¬ÔòÕÒÆäÓÒ×ÓÊ÷
+        // æ ¹ç»“ç‚¹ä»¥åŠæ ¹ç»“ç‚¹çš„å³å­ç»“ç‚¹éƒ½æ²¡æœ‰æ‰¾åˆ°ï¼Œåˆ™æ‰¾å…¶å³å­æ ‘
         if (result == null && root.right != null) {
             result = kthNodeCore(root.right, k);
         }
@@ -89,7 +89,7 @@ public class Test63 {
     }
 
     /**
-     * ÖĞĞò±éÀúÒ»¿ÃÊ÷
+     * ä¸­åºéå†ä¸€æ£µæ ‘
      * @param root
      */
     private static void print(BinaryTreeNode root) {

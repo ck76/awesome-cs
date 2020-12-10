@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-11
  * Time: 16:46
  * Declaration: All Rights Reserved !!!
@@ -25,12 +25,12 @@ public class Test35 {
         }
 
         Set<Map.Entry<Character, Integer>> entrySet = map.entrySet();
-        // ¼ÇÂ¼Ö»³öÏÖÒ»´ÎµÄ×Ö·ûµÄË÷Òı
+        // è®°å½•åªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦çš„ç´¢å¼•
         int idx = Integer.MAX_VALUE;
-        // ¼ÇÂ¼Ö»³öÏÖÒ»´ÎµÄ×Ö·û
+        // è®°å½•åªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦
         char result = '\0';
 
-        // ÕÒ×îĞ¡Ë÷Òı¶ÔÓ¦µÄ×Ö·û
+        // æ‰¾æœ€å°ç´¢å¼•å¯¹åº”çš„å­—ç¬¦
         for (Map.Entry<Character, Integer> entry : entrySet) {
             if (entry.getValue() >= 0 && entry.getValue() < idx) {
                 idx = entry.getValue();

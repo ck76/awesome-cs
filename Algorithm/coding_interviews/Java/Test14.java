@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-04-23
  * Time: 15:53
  * Declaration: All Rights Reserved !!!
@@ -7,35 +7,35 @@
 public class Test14 {
 
     /**
-     * ÊäÈëÒ»¸öÕûÊýÊý×é£¬ÊµÏÖÒ»¸öº¯ÊýÀ´µ÷Õû¸ÃÊý×éÖÐÊý×ÖµÄË³Ðò£¬
-     * Ê¹µÃËùÓÐÆæÊýÎ»ÓÚÊý×éµÄÇ°°ë²¿·Ö£¬ËùÓÐÅ¼ÊýÎ»ÓèÊý×éµÄºó°ë²¿·Ö¡£
+     * è¾“å…¥ä¸€ä¸ªæ•´æ•°æ•°ç»„ï¼Œå®žçŽ°ä¸€ä¸ªå‡½æ•°æ¥è°ƒæ•´è¯¥æ•°ç»„ä¸­æ•°å­—çš„é¡ºåºï¼Œ
+     * ä½¿å¾—æ‰€æœ‰å¥‡æ•°ä½äºŽæ•°ç»„çš„å‰åŠéƒ¨åˆ†ï¼Œæ‰€æœ‰å¶æ•°ä½äºˆæ•°ç»„çš„åŽåŠéƒ¨åˆ†ã€‚
      *
-     * @param arr ÊäÈëµÄÊý×é
+     * @param arr è¾“å…¥çš„æ•°ç»„
      */
     public static void reorderOddEven(int[] arr) {
-        // ¶ÔÓÚÊäÈëµÄÊý×éÎª¿Õ£¬»òÕß³¤¶ÈÐ¡ÓÚ2µÄÖ»½Ó·µ»Ø
+        // å¯¹äºŽè¾“å…¥çš„æ•°ç»„ä¸ºç©ºï¼Œæˆ–è€…é•¿åº¦å°äºŽ2çš„åªæŽ¥è¿”å›ž
         if (arr == null || arr.length < 2) {
             return;
         }
 
-        // ´Ó×óÏòÓÒ¼ÇÂ¼Å¼ÊýµÄÎ»ÖÃ
+        // ä»Žå·¦å‘å³è®°å½•å¶æ•°çš„ä½ç½®
         int start = 0;
-        // ´ÓÓÒÏò×ó¼ÇÂ¼ÆæÊýµÄÎ»ÖÃ
+        // ä»Žå³å‘å·¦è®°å½•å¥‡æ•°çš„ä½ç½®
         int end = arr.length - 1;
-        // ¿ªÊ¼µ÷ÕûÆæÊýºÍÅ¼ÊýµÄÎ»ÖÃ
+        // å¼€å§‹è°ƒæ•´å¥‡æ•°å’Œå¶æ•°çš„ä½ç½®
         while (start < end) {
-            // ÕÒÅ¼Êý
+            // æ‰¾å¶æ•°
             while (start < end && arr[start] % 2 != 0) {
                 start++;
             }
-            // ÕÒÆæÊý
+            // æ‰¾å¥‡æ•°
             while (start < end && arr[end] % 2 == 0) {
                 end--;
             }
 
-            // ÕÒµ½ºó¾Í½«ÆæÊýºÍÅ¼Êý½»»»Î»ÖÃ
-            // ¶ÔÓÚstart=endµÄÇé¿ö£¬½»»»²»»á²úÉúÊ²Ã´Ó°Ïì
-            // ËùÒÔ½«ifÅÐ¶ÏÊ¡È¥ÁË
+            // æ‰¾åˆ°åŽå°±å°†å¥‡æ•°å’Œå¶æ•°äº¤æ¢ä½ç½®
+            // å¯¹äºŽstart=endçš„æƒ…å†µï¼Œäº¤æ¢ä¸ä¼šäº§ç”Ÿä»€ä¹ˆå½±å“
+            // æ‰€ä»¥å°†ifåˆ¤æ–­çœåŽ»äº†
             int tmp = arr[start];
             arr[start] = arr[end];
             arr[end] = tmp;
@@ -43,9 +43,9 @@ public class Test14 {
     }
 
     /**
-     * Êä³öÊý×éµÄÐÅÏ¢
+     * è¾“å‡ºæ•°ç»„çš„ä¿¡æ¯
      *
-     * @param arr ´ýÊä³öÊý×é
+     * @param arr å¾…è¾“å‡ºæ•°ç»„
      */
     public static void printArray(int[] arr) {
         if (arr != null && arr.length > 0) {

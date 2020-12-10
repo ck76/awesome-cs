@@ -3,14 +3,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-14
  * Time: 17:06
  * Declaration: All Rights Reserved !!!
  */
 public class Test50 {
     /**
-     * Ê÷µÄ½áµã¶¨Òå
+     * æ ‘çš„ç»“ç‚¹å®šä¹‰
      */
     private static class TreeNode {
         int val;
@@ -32,22 +32,22 @@ public class Test50 {
     }
 
     /**
-     * ÕÒ½áµãµÄÂ·¾¶
+     * æ‰¾ç»“ç‚¹çš„è·¯å¾„
      *
-     * @param root   ¸ù½áµã
-     * @param target Ä¿±ê½áµã
-     * @param path   ´Ó¸ù½áµãµ½Ä¿±ê½áµãµÄÂ·¾¶
+     * @param root   æ ¹ç»“ç‚¹
+     * @param target ç›®æ ‡ç»“ç‚¹
+     * @param path   ä»æ ¹ç»“ç‚¹åˆ°ç›®æ ‡ç»“ç‚¹çš„è·¯å¾„
      */
     public static void getNodePath(TreeNode root, TreeNode target, List<TreeNode> path) {
         if (root == null) {
             return;
         }
 
-        // Ìí¼Óµ±Ç°½áµã
+        // æ·»åŠ å½“å‰ç»“ç‚¹
         path.add(root);
 
         List<TreeNode> children = root.children;
-        // ´¦Àí×Ó½áµã
+        // å¤„ç†å­ç»“ç‚¹
         for (TreeNode node : children) {
 
             if (node == target) {
@@ -58,16 +58,16 @@ public class Test50 {
             }
         }
 
-        // ÏÖ³¡»¹Ô­
+        // ç°åœºè¿˜åŸ
         path.remove(path.size() - 1);
     }
 
     /**
-     * ÕÒÁ½¸öÂ·¾¶ÖĞµÄ×îºóÒ»¸ö¹²Í¬µÄ½áµã
+     * æ‰¾ä¸¤ä¸ªè·¯å¾„ä¸­çš„æœ€åä¸€ä¸ªå…±åŒçš„ç»“ç‚¹
      *
-     * @param p1 Â·¾¶1
-     * @param p2 Â·¾¶2
-     * @return ¹²Í¬µÄ½áµã£¬Ã»ÓĞ·µ»Ønull
+     * @param p1 è·¯å¾„1
+     * @param p2 è·¯å¾„2
+     * @return å…±åŒçš„ç»“ç‚¹ï¼Œæ²¡æœ‰è¿”å›null
      */
     public static TreeNode getLastCommonNode(List<TreeNode> p1, List<TreeNode> p2) {
         Iterator<TreeNode> ite1 = p1.iterator();
@@ -86,11 +86,11 @@ public class Test50 {
     }
 
     /**
-     * ÕÒÊ÷ÖĞÁ½¸ö½áµãµÄ×îµÍ¹«¹²×æÏÈ
-     * @param root Ê÷µÄ¸ù½áµã
-     * @param p1 ½áµã1
-     * @param p2 ½áµã2
-     * @return ¹«¹²½áµã£¬Ã»ÓĞ·µ»Ønull
+     * æ‰¾æ ‘ä¸­ä¸¤ä¸ªç»“ç‚¹çš„æœ€ä½å…¬å…±ç¥–å…ˆ
+     * @param root æ ‘çš„æ ¹ç»“ç‚¹
+     * @param p1 ç»“ç‚¹1
+     * @param p2 ç»“ç‚¹2
+     * @return å…¬å…±ç»“ç‚¹ï¼Œæ²¡æœ‰è¿”å›null
      */
     public static TreeNode getLastCommonParent(TreeNode root, TreeNode p1, TreeNode p2) {
         if (root == null || p1 == null || p2 == null) {
@@ -113,7 +113,7 @@ public class Test50 {
     }
 
 
-    // ĞÎ×´ÆÕÍ¨µÄÊ÷
+    // å½¢çŠ¶æ™®é€šçš„æ ‘
     //             1
     //           /   \
     //         2      3
@@ -150,7 +150,7 @@ public class Test50 {
         System.out.println(getLastCommonParent(n1, n6, n8));
     }
 
-    // Ê÷ÍË»¯³ÉÒ»¸öÁ´±í
+    // æ ‘é€€åŒ–æˆä¸€ä¸ªé“¾è¡¨
     //               1
     //              /
     //             2
@@ -175,7 +175,7 @@ public class Test50 {
         System.out.println(getLastCommonParent(n1, n4, n5));
     }
 
-    // Ê÷ÍË»¯³ÉÒ»¸öÁ´±í£¬Ò»¸ö½áµã²»ÔÚÊ÷ÖĞ
+    // æ ‘é€€åŒ–æˆä¸€ä¸ªé“¾è¡¨ï¼Œä¸€ä¸ªç»“ç‚¹ä¸åœ¨æ ‘ä¸­
     //               1
     //              /
     //             2

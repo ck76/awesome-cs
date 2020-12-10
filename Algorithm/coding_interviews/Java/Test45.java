@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-06-14
  * Time: 14:57
  * Declaration: All Rights Reserved !!!
@@ -18,22 +18,22 @@ public class Test45 {
             list.add(i);
         }
 
-        // ÒªÉ¾³ýÔªËØµÄÎ»ÖÃ
+        // è¦åˆ é™¤å…ƒç´ çš„ä½ç½®
         int idx = 0;
-        // ¿ªÊ¼¼ÆÊýµÄÎ»ÖÃ
+        // å¼€å§‹è®¡æ•°çš„ä½ç½®
         int start = 0;
 
         while (list.size() > 1) {
 
-            // Ö»ÒªÒÆ¶¯m-1´Î¾Í¿ÉÒÔÒÆ¶¯µ½ÏÂÒ»¸öÒªÉ¾³ýµÄÔªËØÉÏ
+            // åªè¦ç§»åŠ¨m-1æ¬¡å°±å¯ä»¥ç§»åŠ¨åˆ°ä¸‹ä¸€ä¸ªè¦åˆ é™¤çš„å…ƒç´ ä¸Š
             for (int i = 1; i < m; i++) {
-                idx = (idx + 1) % list.size(); // ¡¾A¡¿
+                idx = (idx + 1) % list.size(); // ã€Aã€‘
             }
 
             list.remove(idx);
 
-            // È·±£idxÖ¸ÏòÃ¿Ò»ÂÖµÄµÚÒ»¸öÎ»ÖÃ
-            // ÏÂÃæµÄ¿ÉÒÔ²»ÓÃ£¬¡¾A¡¿ÒÑ¾­¿ÉÒÔ±£Ö¤ÆäÕýÈ·ÐÔÁË£¬¿ÉÒÔ·ÖÎön=6£¬m=6µÄµÚÒ»´ÎÉ¾³ýÇé¿ö
+            // ç¡®ä¿idxæŒ‡å‘æ¯ä¸€è½®çš„ç¬¬ä¸€ä¸ªä½ç½®
+            // ä¸‹é¢çš„å¯ä»¥ä¸ç”¨ï¼Œã€Aã€‘å·²ç»å¯ä»¥ä¿è¯å…¶æ­£ç¡®æ€§äº†ï¼Œå¯ä»¥åˆ†æžn=6ï¼Œm=6çš„ç¬¬ä¸€æ¬¡åˆ é™¤æƒ…å†µ
         //  if (idx == list.size()) {
         //      idx = 0;
         //  }
@@ -62,18 +62,18 @@ public class Test45 {
     }
 
     private static void test01() {
-        System.out.println(lastRemaining(5, 3)); // ×îºóÓàÏÂ3
-        System.out.println(lastRemaining(5, 2)); // ×îºóÓàÏÂ2
-        System.out.println(lastRemaining(6, 7)); // ×îºóÓàÏÂ4
-        System.out.println(lastRemaining(6, 6)); // ×îºóÓàÏÂ3
-        System.out.println(lastRemaining(0, 0)); // ×îºóÓàÏÂ-1
+        System.out.println(lastRemaining(5, 3)); // æœ€åŽä½™ä¸‹3
+        System.out.println(lastRemaining(5, 2)); // æœ€åŽä½™ä¸‹2
+        System.out.println(lastRemaining(6, 7)); // æœ€åŽä½™ä¸‹4
+        System.out.println(lastRemaining(6, 6)); // æœ€åŽä½™ä¸‹3
+        System.out.println(lastRemaining(0, 0)); // æœ€åŽä½™ä¸‹-1
     }
 
     private static void test02() {
-        System.out.println(lastRemaining2(5, 3)); // ×îºóÓàÏÂ3
-        System.out.println(lastRemaining2(5, 2)); // ×îºóÓàÏÂ2
-        System.out.println(lastRemaining2(6, 7)); // ×îºóÓàÏÂ4
-        System.out.println(lastRemaining2(6, 6)); // ×îºóÓàÏÂ3
-        System.out.println(lastRemaining2(0, 0)); // ×îºóÓàÏÂ-1
+        System.out.println(lastRemaining2(5, 3)); // æœ€åŽä½™ä¸‹3
+        System.out.println(lastRemaining2(5, 2)); // æœ€åŽä½™ä¸‹2
+        System.out.println(lastRemaining2(6, 7)); // æœ€åŽä½™ä¸‹4
+        System.out.println(lastRemaining2(6, 6)); // æœ€åŽä½™ä¸‹3
+        System.out.println(lastRemaining2(0, 0)); // æœ€åŽä½™ä¸‹-1
     }
 }

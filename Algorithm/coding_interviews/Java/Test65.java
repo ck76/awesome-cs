@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-17
  * Time: 09:44
  * Declaration: All Rights Reserved !!!
@@ -10,44 +10,44 @@ public class Test65 {
     private static List<Integer> maxInWindows(List<Integer> data, int size) {
         List<Integer> windowMax = new LinkedList<>();
 
-        // Ìõ¼ş¼ì²é
+        // æ¡ä»¶æ£€æŸ¥
         if (data == null || size < 1 || data.size() < 1) {
             return windowMax;
         }
 
         Deque<Integer> idx = new LinkedList<>();
 
-        // ´°¿Ú»¹Ã»ÓĞ±»ÌîÂúÊ±£¬ÕÒ×î´óÖµµÄË÷Òı
+        // çª—å£è¿˜æ²¡æœ‰è¢«å¡«æ»¡æ—¶ï¼Œæ‰¾æœ€å¤§å€¼çš„ç´¢å¼•
         for (int i = 0; i < size && i < data.size(); i++) {
-            // Èç¹ûË÷Òı¶ÔÓ¦µÄÖµ±ÈÖ®Ç°´æ´¢µÄË÷ÒıÖµ¶ÔÓ¦µÄÖµ´ó»òÕßÏàµÈ£¬¾ÍÉ¾³ıÖ®Ç°´æ´¢µÄÖµ
+            // å¦‚æœç´¢å¼•å¯¹åº”çš„å€¼æ¯”ä¹‹å‰å­˜å‚¨çš„ç´¢å¼•å€¼å¯¹åº”çš„å€¼å¤§æˆ–è€…ç›¸ç­‰ï¼Œå°±åˆ é™¤ä¹‹å‰å­˜å‚¨çš„å€¼
             while (!idx.isEmpty() && data.get(i) >= data.get(idx.getLast())) {
                 idx.removeLast();
             }
 
-            //  Ìí¼ÓË÷Òı
+            //  æ·»åŠ ç´¢å¼•
             idx.addLast(i);
         }
 
-        // ´°¿ÚÒÑ¾­±»ÌîÂúÁË
+        // çª—å£å·²ç»è¢«å¡«æ»¡äº†
         for (int i = size; i < data.size(); i++) {
-            // µÚÒ»¸ö´°¿ÚµÄ×î´óÖµ±£´æ
+            // ç¬¬ä¸€ä¸ªçª—å£çš„æœ€å¤§å€¼ä¿å­˜
             windowMax.add(data.get(idx.getFirst()));
 
-            // Èç¹ûË÷Òı¶ÔÓ¦µÄÖµ±ÈÖ®Ç°´æ´¢µÄË÷ÒıÖµ¶ÔÓ¦µÄÖµ´ó»òÕßÏàµÈ£¬¾ÍÉ¾³ıÖ®Ç°´æ´¢µÄÖµ
+            // å¦‚æœç´¢å¼•å¯¹åº”çš„å€¼æ¯”ä¹‹å‰å­˜å‚¨çš„ç´¢å¼•å€¼å¯¹åº”çš„å€¼å¤§æˆ–è€…ç›¸ç­‰ï¼Œå°±åˆ é™¤ä¹‹å‰å­˜å‚¨çš„å€¼
             while (!idx.isEmpty() && data.get(i) >= data.get(idx.getLast())) {
                 idx.removeLast();
             }
 
-            // É¾³ıÒÑ¾­»¬³ö´°¿ÚµÄÊı¾İ¶ÔÓ¦µÄÏÂ±ê
+            // åˆ é™¤å·²ç»æ»‘å‡ºçª—å£çš„æ•°æ®å¯¹åº”çš„ä¸‹æ ‡
             if (!idx.isEmpty() && idx.getFirst() <= (i - size)) {
                 idx.removeFirst();
             }
 
-            // ¿ÉÄÜµÄ×î´óµÄÏÂ±êË÷ÒıÈë¶Ó
+            // å¯èƒ½çš„æœ€å¤§çš„ä¸‹æ ‡ç´¢å¼•å…¥é˜Ÿ
             idx.addLast(i);
         }
 
-        // ×îºóÒ»¸ö´°¿Ú×î´óÖµÈë¶Ó
+        // æœ€åä¸€ä¸ªçª—å£æœ€å¤§å€¼å…¥é˜Ÿ
         windowMax.add(data.get(idx.getFirst()));
 
         return windowMax;

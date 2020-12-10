@@ -8,14 +8,14 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 *******************************************************************/
 
 //==================================================================
-// ¡¶½£Ö¸Offer¡ª¡ªÃûÆóÃæÊÔ¹Ù¾«½²µäÐÍ±à³ÌÌâ¡·´úÂë
-// ×÷Õß£ººÎº£ÌÎ
+// ã€Šå‰‘æŒ‡Offerâ€”â€”åä¼é¢è¯•å®˜ç²¾è®²å…¸åž‹ç¼–ç¨‹é¢˜ã€‹ä»£ç 
+// ä½œè€…ï¼šä½•æµ·æ¶›
 //==================================================================
 
-// ÃæÊÔÌâ11£ºÐý×ªÊý×éµÄ×îÐ¡Êý×Ö
-// ÌâÄ¿£º°ÑÒ»¸öÊý×é×î¿ªÊ¼µÄÈô¸É¸öÔªËØ°áµ½Êý×éµÄÄ©Î²£¬ÎÒÃÇ³ÆÖ®ÎªÊý×éµÄÐý×ª¡£
-// ÊäÈëÒ»¸öµÝÔöÅÅÐòµÄÊý×éµÄÒ»¸öÐý×ª£¬Êä³öÐý×ªÊý×éµÄ×îÐ¡ÔªËØ¡£ÀýÈçÊý×é
-// {3, 4, 5, 1, 2}Îª{1, 2, 3, 4, 5}µÄÒ»¸öÐý×ª£¬¸ÃÊý×éµÄ×îÐ¡ÖµÎª1¡£
+// é¢è¯•é¢˜11ï¼šæ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—
+// é¢˜ç›®ï¼šæŠŠä¸€ä¸ªæ•°ç»„æœ€å¼€å§‹çš„è‹¥å¹²ä¸ªå…ƒç´ æ¬åˆ°æ•°ç»„çš„æœ«å°¾ï¼Œæˆ‘ä»¬ç§°ä¹‹ä¸ºæ•°ç»„çš„æ—‹è½¬ã€‚
+// è¾“å…¥ä¸€ä¸ªé€’å¢žæŽ’åºçš„æ•°ç»„çš„ä¸€ä¸ªæ—‹è½¬ï¼Œè¾“å‡ºæ—‹è½¬æ•°ç»„çš„æœ€å°å…ƒç´ ã€‚ä¾‹å¦‚æ•°ç»„
+// {3, 4, 5, 1, 2}ä¸º{1, 2, 3, 4, 5}çš„ä¸€ä¸ªæ—‹è½¬ï¼Œè¯¥æ•°ç»„çš„æœ€å°å€¼ä¸º1ã€‚
 
 #include <cstdio>
 #include <exception>
@@ -32,22 +32,22 @@ int Min(int* numbers, int length)
     int indexMid = index1;
     while(numbers[index1] >= numbers[index2])
     {
-        // Èç¹ûindex1ºÍindex2Ö¸ÏòÏàÁÚµÄÁ½¸öÊý£¬
-        // Ôòindex1Ö¸ÏòµÚÒ»¸öµÝÔö×ÓÊý×éµÄ×îºóÒ»¸öÊý×Ö£¬
-        // index2Ö¸ÏòµÚ¶þ¸ö×ÓÊý×éµÄµÚÒ»¸öÊý×Ö£¬Ò²¾ÍÊÇÊý×éÖÐµÄ×îÐ¡Êý×Ö
+        // å¦‚æžœindex1å’Œindex2æŒ‡å‘ç›¸é‚»çš„ä¸¤ä¸ªæ•°ï¼Œ
+        // åˆ™index1æŒ‡å‘ç¬¬ä¸€ä¸ªé€’å¢žå­æ•°ç»„çš„æœ€åŽä¸€ä¸ªæ•°å­—ï¼Œ
+        // index2æŒ‡å‘ç¬¬äºŒä¸ªå­æ•°ç»„çš„ç¬¬ä¸€ä¸ªæ•°å­—ï¼Œä¹Ÿå°±æ˜¯æ•°ç»„ä¸­çš„æœ€å°æ•°å­—
         if(index2 - index1 == 1)
         {
             indexMid = index2;
             break;
         }
  
-        // Èç¹ûÏÂ±êÎªindex1¡¢index2ºÍindexMidÖ¸ÏòµÄÈý¸öÊý×ÖÏàµÈ£¬
-        // ÔòÖ»ÄÜË³Ðò²éÕÒ
+        // å¦‚æžœä¸‹æ ‡ä¸ºindex1ã€index2å’ŒindexMidæŒ‡å‘çš„ä¸‰ä¸ªæ•°å­—ç›¸ç­‰ï¼Œ
+        // åˆ™åªèƒ½é¡ºåºæŸ¥æ‰¾
         indexMid = (index1 + index2) / 2;
         if(numbers[index1] == numbers[index2] && numbers[indexMid] == numbers[index1])
             return MinInOrder(numbers, index1, index2);
 
-        // ËõÐ¡²éÕÒ·¶Î§
+        // ç¼©å°æŸ¥æ‰¾èŒƒå›´
         if(numbers[indexMid] >= numbers[index1])
             index1 = indexMid;
         else if(numbers[indexMid] <= numbers[index2])
@@ -69,7 +69,7 @@ int MinInOrder(int* numbers, int index1, int index2)
     return result;
 }
 
-// ====================²âÊÔ´úÂë====================
+// ====================æµ‹è¯•ä»£ç ====================
 void Test(int* numbers, int length, int expected)
 {
     int result = 0;
@@ -96,31 +96,31 @@ void Test(int* numbers, int length, int expected)
 
 int main(int argc, char* argv[])
 {
-    // µäÐÍÊäÈë£¬µ¥µ÷ÉýÐòµÄÊý×éµÄÒ»¸öÐý×ª
+    // å…¸åž‹è¾“å…¥ï¼Œå•è°ƒå‡åºçš„æ•°ç»„çš„ä¸€ä¸ªæ—‹è½¬
     int array1[] = { 3, 4, 5, 1, 2 };
     Test(array1, sizeof(array1) / sizeof(int), 1);
 
-    // ÓÐÖØ¸´Êý×Ö£¬²¢ÇÒÖØ¸´µÄÊý×Ö¸ÕºÃµÄ×îÐ¡µÄÊý×Ö
+    // æœ‰é‡å¤æ•°å­—ï¼Œå¹¶ä¸”é‡å¤çš„æ•°å­—åˆšå¥½çš„æœ€å°çš„æ•°å­—
     int array2[] = { 3, 4, 5, 1, 1, 2 };
     Test(array2, sizeof(array2) / sizeof(int), 1);
 
-    // ÓÐÖØ¸´Êý×Ö£¬µ«ÖØ¸´µÄÊý×Ö²»ÊÇµÚÒ»¸öÊý×ÖºÍ×îºóÒ»¸öÊý×Ö
+    // æœ‰é‡å¤æ•°å­—ï¼Œä½†é‡å¤çš„æ•°å­—ä¸æ˜¯ç¬¬ä¸€ä¸ªæ•°å­—å’Œæœ€åŽä¸€ä¸ªæ•°å­—
     int array3[] = { 3, 4, 5, 1, 2, 2 };
     Test(array3, sizeof(array3) / sizeof(int), 1);
 
-    // ÓÐÖØ¸´µÄÊý×Ö£¬²¢ÇÒÖØ¸´µÄÊý×Ö¸ÕºÃÊÇµÚÒ»¸öÊý×ÖºÍ×îºóÒ»¸öÊý×Ö
+    // æœ‰é‡å¤çš„æ•°å­—ï¼Œå¹¶ä¸”é‡å¤çš„æ•°å­—åˆšå¥½æ˜¯ç¬¬ä¸€ä¸ªæ•°å­—å’Œæœ€åŽä¸€ä¸ªæ•°å­—
     int array4[] = { 1, 0, 1, 1, 1 };
     Test(array4, sizeof(array4) / sizeof(int), 0);
 
-    // µ¥µ÷ÉýÐòÊý×é£¬Ðý×ª0¸öÔªËØ£¬Ò²¾ÍÊÇµ¥µ÷ÉýÐòÊý×é±¾Éí
+    // å•è°ƒå‡åºæ•°ç»„ï¼Œæ—‹è½¬0ä¸ªå…ƒç´ ï¼Œä¹Ÿå°±æ˜¯å•è°ƒå‡åºæ•°ç»„æœ¬èº«
     int array5[] = { 1, 2, 3, 4, 5 };
     Test(array5, sizeof(array5) / sizeof(int), 1);
 
-    // Êý×éÖÐÖ»ÓÐÒ»¸öÊý×Ö
+    // æ•°ç»„ä¸­åªæœ‰ä¸€ä¸ªæ•°å­—
     int array6[] = { 2 };
     Test(array6, sizeof(array6) / sizeof(int), 2);
 
-    // ÊäÈënullptr
+    // è¾“å…¥nullptr
     Test(nullptr, 0, 0);
 
     return 0;

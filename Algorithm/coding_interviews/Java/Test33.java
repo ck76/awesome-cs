@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-11
  * Time: 10:38
  * Declaration: All Rights Reserved !!!
@@ -9,7 +9,7 @@ import java.util.Comparator;
 public class Test33 {
 
     /**
-     * ×Ô¶¨ÒåµÄÅÅĞò±È½ÏÆ÷£¬ÊµÏÖËã·¨ËµÃ÷µÄÅÅĞòÔ­Àí
+     * è‡ªå®šä¹‰çš„æ’åºæ¯”è¾ƒå™¨ï¼Œå®ç°ç®—æ³•è¯´æ˜çš„æ’åºåŸç†
      */
     private static class MComparator implements Comparator<String> {
 
@@ -27,12 +27,12 @@ public class Test33 {
     }
 
     /**
-     * ¿ìËÙÅÅĞòËã·¨
+     * å¿«é€Ÿæ’åºç®—æ³•
      *
-     * @param array      ´ıÅÅĞòÊı×é
-     * @param start      ÒªÅÅĞòµÄÆğÊ¼Î»ÖÃ
-     * @param end        ÒªÅÅĞòµÄ½áÊøÎ»ÖÃ
-     * @param comparator ×Ô¶¨ÒåµÄ±È½ÏÆ÷
+     * @param array      å¾…æ’åºæ•°ç»„
+     * @param start      è¦æ’åºçš„èµ·å§‹ä½ç½®
+     * @param end        è¦æ’åºçš„ç»“æŸä½ç½®
+     * @param comparator è‡ªå®šä¹‰çš„æ¯”è¾ƒå™¨
      */
     private static void quickSort(String[] array, int start, int end, Comparator<String> comparator) {
 
@@ -62,10 +62,10 @@ public class Test33 {
     }
 
     /**
-     * ÌâÄ¿£ºÊäÈëÒ»¸öÕıÕûÊıÊı×é£¬°ÑÊı×éÀïËùÓĞÊı×ÖÆ´½ÓÆğÀ´ÅÅ³ÉÒ»¸öÊı£¬
-     * ´òÓ¡ÄÜÆ´½Ó³öµÄËùÓĞÊı×ÖÖĞ×îĞ¡µÄÒ»¸ö¡£
-     * @param array ÊäÈëµÄÊı×é
-     * @return Êä³ö½á¹û
+     * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°æ•°ç»„ï¼ŒæŠŠæ•°ç»„é‡Œæ‰€æœ‰æ•°å­—æ‹¼æ¥èµ·æ¥æ’æˆä¸€ä¸ªæ•°ï¼Œ
+     * æ‰“å°èƒ½æ‹¼æ¥å‡ºçš„æ‰€æœ‰æ•°å­—ä¸­æœ€å°çš„ä¸€ä¸ªã€‚
+     * @param array è¾“å…¥çš„æ•°ç»„
+     * @return è¾“å‡ºç»“æœ
      */
     public static String printMinNumber(String[] array) {
 

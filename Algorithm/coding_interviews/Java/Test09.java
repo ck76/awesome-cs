@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-04-23
  * Time: 09:09
  * Declaration: All Rights Reserved !!!
@@ -7,42 +7,42 @@
 public class Test09 {
 
     /**
-     * Ğ´Ò»¸öº¯Êı£¬ÊäÈën£¬Çóì³²¨ÄÇÆõ£¨Fibonacci) ÊıÁĞµÄµÚnÏî
-     * @param n FibonacciÊıµÄÏîÊı
-     * @return µÚnÏîµÄ½á¹û
+     * å†™ä¸€ä¸ªå‡½æ•°ï¼Œè¾“å…¥nï¼Œæ±‚æ–æ³¢é‚£å¥‘ï¼ˆFibonacci) æ•°åˆ—çš„ç¬¬né¡¹
+     * @param n Fibonacciæ•°çš„é¡¹æ•°
+     * @return ç¬¬né¡¹çš„ç»“æœ
      */
     public static long fibonacci(int n) {
 
-        // µ±ÊäÈë·ÇÕıÕûÊıµÄÊ±ºò·µ»Ø0
+        // å½“è¾“å…¥éæ­£æ•´æ•°çš„æ—¶å€™è¿”å›0
         if (n <= 0) {
             return 0;
         }
 
-        // ÊäÈë1»òÕß2µÄÊ±ºò·µ»Ø1
+        // è¾“å…¥1æˆ–è€…2çš„æ—¶å€™è¿”å›1
         if (n == 1 || n == 2) {
             return 1;
         }
 
-        // ¼ÇÂ¼Ç°Á½¸ö£¨µÚn-2¸ö£©µÄFibonacciÊıµÄÖµ
+        // è®°å½•å‰ä¸¤ä¸ªï¼ˆç¬¬n-2ä¸ªï¼‰çš„Fibonacciæ•°çš„å€¼
         long prePre = 1;
-        // ¼ÇÂ¼Ç°Á½¸ö£¨µÚn-1¸ö£©µÄFibonacciÊıµÄÖµ
+        // è®°å½•å‰ä¸¤ä¸ªï¼ˆç¬¬n-1ä¸ªï¼‰çš„Fibonacciæ•°çš„å€¼
         long pre = 1;
-        // ¼ÇÂ¼Ç°Á½¸ö£¨µÚn¸ö£©µÄFibonacciÊıµÄÖµ
+        // è®°å½•å‰ä¸¤ä¸ªï¼ˆç¬¬nä¸ªï¼‰çš„Fibonacciæ•°çš„å€¼
         long current = 2;
 
-        // Çó½âµÚn¸öµÄFibonacciÊıµÄÖµ
+        // æ±‚è§£ç¬¬nä¸ªçš„Fibonacciæ•°çš„å€¼
         for (int i = 3; i <= n ; i++) {
-            // ÇóµÚi¸öµÄFibonacciÊıµÄÖµ
+            // æ±‚ç¬¬iä¸ªçš„Fibonacciæ•°çš„å€¼
             current = prePre + pre;
-            // ¸üĞÂ¼ÇÂ¼µÄ½á¹û£¬prePreÔ­ÏÈ¼ÇÂ¼µÚi-2¸öFibonacciÊıµÄÖµ
-            // ÏÖÔÚ¼ÇÂ¼µÚi-1¸öFibonacciÊıµÄÖµ
+            // æ›´æ–°è®°å½•çš„ç»“æœï¼ŒprePreåŸå…ˆè®°å½•ç¬¬i-2ä¸ªFibonacciæ•°çš„å€¼
+            // ç°åœ¨è®°å½•ç¬¬i-1ä¸ªFibonacciæ•°çš„å€¼
             prePre = pre;
-            // ¸üĞÂ¼ÇÂ¼µÄ½á¹û£¬preÔ­ÏÈ¼ÇÂ¼µÚi-1¸öFibonacciÊıµÄÖµ
-            // ÏÖÔÚ¼ÇÂ¼µÚi¸öFibonacciÊıµÄÖµ
+            // æ›´æ–°è®°å½•çš„ç»“æœï¼ŒpreåŸå…ˆè®°å½•ç¬¬i-1ä¸ªFibonacciæ•°çš„å€¼
+            // ç°åœ¨è®°å½•ç¬¬iä¸ªFibonacciæ•°çš„å€¼
             pre = current;
         }
 
-        // ·µ»ØËùÇóµÄ½á¹û
+        // è¿”å›æ‰€æ±‚çš„ç»“æœ
         return current;
     }
 

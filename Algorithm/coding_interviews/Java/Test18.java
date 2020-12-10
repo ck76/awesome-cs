@@ -1,12 +1,12 @@
 /**
- * Author: ������
+ * Author: 王俊超
  * Date: 2015-04-23
  * Time: 19:06
  * Declaration: All Rights Reserved !!!
  */
 public class Test18 {
     /**
-     * �������������
+     * 二叉树的树结点
      */
     public static class BinaryTreeNode {
         int value;
@@ -15,77 +15,77 @@ public class Test18 {
     }
 
     /**
-     * �������ö�����A��B���ж�B�ǲ���A���ӽṹ��
-     * �÷�������A�����ҵ�һ����B���ĸ��ڵ���ȵ�Ԫ�صĽ�㣬
-     * �������ȵĽ�㿪ʼ�ж���B�ǲ�����A���ӽṹ������ҵ����һ���ͷ��أ�
-     * ����ֱ�����еĽ�㶼����Ϊֹ��
+     * 输入两棵二叉树A和B，判断B是不是A的子结构。
+     * 该方法是在A树中找到一个与B树的根节点相等的元素的结点，
+     * 从这个相等的结点开始判断树B是不是树A的子结构，如果找到其的一个就返回，
+     * 否则直到所有的结点都找完为止。
      *
-     * @param root1 ��A�ĸ����
-     * @param root2 ��B�ĸ����
-     * @return true����B����A���ӽṹ��false����B�ǲ���A���ӽṹ
+     * @param root1 树A的根结点
+     * @param root2 树B的根结点
+     * @return true：树B是树A的子结构，false：树B是不树A的子结构
      */
     public static boolean hasSubtree(BinaryTreeNode root1, BinaryTreeNode root2) {
-        // ֻҪ����������ͬһ���ͷ���true
-        // ��ע��˴����鱾�ϵĲ�ͬ���鱾�ϵ�û����һ����
+        // 只要两个对象是同一个就返回true
+        // 【注意此处与书本上的不同，书本上的没有这一步】
         if (root1 == root2) {
             return true;
         }
 
-        // ֻҪ��B�ĸ�����Ϊ�վͷ���true
+        // 只要树B的根结点点为空就返回true
         if (root2 == null) {
             return true;
         }
 
-        // ��B�ĸ���㲻Ϊ�գ������A�ĸ����Ϊ�վͷ���false
+        // 树B的根结点不为空，如果树A的根结点为空就返回false
         if (root1 == null) {
             return false;
         }
 
-        // ��¼ƥ����
+        // 记录匹配结果
         boolean result = false;
 
-        // �������ֵ��Ⱦͣ�����ƥ�䷽��
+        // 如果结点的值相等就，调用匹配方法
         if (root1.value == root2.value) {
             result = match(root1, root2);
         }
 
-        // ���ƥ���ֱ�ӷ��ؽ��
+        // 如果匹配就直接返回结果
         if (result) {
             return true;
         }
 
-        // �����ƥ�������A�����ӽ������ӽ������ж�
+        // 如果不匹配就找树A的左子结点和右子结点进行判断
         return hasSubtree(root1.left, root2) || hasSubtree(root1.right, root2);
     }
 
     /**
-     * ����A�����root1����B�����root2��ʼ��һ��һ��Ԫ�ؽ����жϣ��ж�B�ǲ���A���ӽṹ
+     * 从树A根结点root1和树B根结点root2开始，一个一个元素进行判断，判断B是不是A的子结构
      *
-     * @param root1 ��A��ʼƥ��ĸ����
-     * @param root2 ��B��ʼƥ��ĸ����
-     * @return ��B����A���ӽṹ��false����B�ǲ���A���ӽṹ
+     * @param root1 树A开始匹配的根结点
+     * @param root2 树B开始匹配的根结点
+     * @return 树B是树A的子结构，false：树B是不树A的子结构
      */
     public static boolean match(BinaryTreeNode root1, BinaryTreeNode root2) {
-        // ֻҪ����������ͬһ���ͷ���true
+        // 只要两个对象是同一个就返回true
         if (root1 == root2) {
             return true;
         }
 
-        // ֻҪ��B�ĸ�����Ϊ�վͷ���true
+        // 只要树B的根结点点为空就返回true
         if (root2 == null) {
             return true;
         }
-        // ��B�ĸ���㲻Ϊ�գ������A�ĸ����Ϊ�վͷ���false
+        // 树B的根结点不为空，如果树A的根结点为空就返回false
         if (root1 == null) {
             return false;
         }
 
-        // �����������ֵ��ȣ���ֱ��ж������ӽ������ӽ��
+        // 如果两个结点的值相等，则分别判断其左子结点和右子结点
         if (root1.value == root2.value) {
             return match(root1.left, root2.left) && match(root1.right, root2.right);
         }
 
-        // ���ֵ����ȷ���false
+        // 结点值不相等返回false
         return false;
     }
 

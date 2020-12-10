@@ -1,36 +1,36 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-17
  * Time: 10:53
  * Declaration: All Rights Reserved !!!
  */
 public class Test66 {
     /**
-     * ÌâÄ¿£ºÇëÉè¼ÆÒ»¸öº¯Êı£¬ÓÃÀ´ÅĞ¶ÏÔÚÒ»¸ö¾ØÕóÖĞÊÇ·ñ´æÔÚÒ»Ìõ°üº¬Ä³×Ö·û´®ËùÓĞ×Ö·ûµÄÂ·¾¶¡£
-     * Â·¾¶¿ÉÒÔ´Ó¾ØÕóÖĞÈÎÒâÒ»¸ñ¿ªÊ¼£¬Ã¿Ò»²½¿ÉÒÔÔÚ¾ØÕóÖĞ¼äÏò×ó¡¢ÓÒ¡¢ÉÏ¡¢ÏÂÒÆ¶¯Ò»¸ñ¡£
-     * Èç¹ûÒ»ÌõÂ·¾¶¾­¹ıÁË¾ØÕóµÄÄ³Ò»¸ñ£¬ÄÇÃ´¸ÃÂ·¾¶²»ÄÜÔÙ´Î½øÈë¸Ã¸ñ×Ó¡£
+     * é¢˜ç›®ï¼šè¯·è®¾è®¡ä¸€ä¸ªå‡½æ•°ï¼Œç”¨æ¥åˆ¤æ–­åœ¨ä¸€ä¸ªçŸ©é˜µä¸­æ˜¯å¦å­˜åœ¨ä¸€æ¡åŒ…å«æŸå­—ç¬¦ä¸²æ‰€æœ‰å­—ç¬¦çš„è·¯å¾„ã€‚
+     * è·¯å¾„å¯ä»¥ä»çŸ©é˜µä¸­ä»»æ„ä¸€æ ¼å¼€å§‹ï¼Œæ¯ä¸€æ­¥å¯ä»¥åœ¨çŸ©é˜µä¸­é—´å‘å·¦ã€å³ã€ä¸Šã€ä¸‹ç§»åŠ¨ä¸€æ ¼ã€‚
+     * å¦‚æœä¸€æ¡è·¯å¾„ç»è¿‡äº†çŸ©é˜µçš„æŸä¸€æ ¼ï¼Œé‚£ä¹ˆè¯¥è·¯å¾„ä¸èƒ½å†æ¬¡è¿›å…¥è¯¥æ ¼å­ã€‚
      *
-     * @param matrix ÊäÈë¾ØÕó
-     * @param rows   ¾ØÕóĞĞÊı
-     * @param cols   ¾ØÕóÁĞÊı
-     * @param str    ÒªËÑË÷µÄ×Ö·û´®
-     * @return ÊÇ·ñÕÒµ½ trueÊÇ£¬false·ñ
+     * @param matrix è¾“å…¥çŸ©é˜µ
+     * @param rows   çŸ©é˜µè¡Œæ•°
+     * @param cols   çŸ©é˜µåˆ—æ•°
+     * @param str    è¦æœç´¢çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ‰¾åˆ° trueæ˜¯ï¼Œfalseå¦
      */
     public static boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
-        // ²ÎÊıĞ£Ñé
+        // å‚æ•°æ ¡éªŒ
         if (matrix == null || matrix.length != rows * cols || str == null || str.length < 1) {
             return false;
         }
 
-        // ±äÁ¿³õÊ¼»¯
+        // å˜é‡åˆå§‹åŒ–
         boolean[] visited = new boolean[rows * cols];
         for (int i = 0; i < visited.length; i++) {
             visited[i] = false;
         }
 
-        // ¼ÇÂ¼½á¹ûµÄÊı×é£¬
+        // è®°å½•ç»“æœçš„æ•°ç»„ï¼Œ
         int[] pathLength = {0};
-        // ÒÔÃ¿Ò»¸öµãÎªÆğÊ¼½øĞĞËÑË÷
+        // ä»¥æ¯ä¸€ä¸ªç‚¹ä¸ºèµ·å§‹è¿›è¡Œæœç´¢
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (hasPathCore(matrix, rows, cols, str, visited, i, j, pathLength)) {
@@ -43,17 +43,17 @@ public class Test66 {
     }
 
     /**
-     * »ØËİËÑË÷Ëã·¨
+     * å›æº¯æœç´¢ç®—æ³•
      *
-     * @param matrix     ÊäÈë¾ØÕó
-     * @param rows       ¾ØÕóĞĞÊı
-     * @param cols       ¾ØÕóÁĞÊı
-     * @param str        ÒªËÑË÷µÄ×Ö·û´®
-     * @param visited    ·ÃÎÊ±ê¼ÇÊı×é
-     * @param row        µ±Ç°´¦ÀíµÄĞĞºÅ
-     * @param col        µ±Ç°´¦ÀíµÄÁĞºÅ
-     * @param pathLength ÒÑ¾­´¦ÀíµÄstrÖĞ×Ö·û¸öÊı
-     * @return ÊÇ·ñÕÒµ½ trueÊÇ£¬false·ñ
+     * @param matrix     è¾“å…¥çŸ©é˜µ
+     * @param rows       çŸ©é˜µè¡Œæ•°
+     * @param cols       çŸ©é˜µåˆ—æ•°
+     * @param str        è¦æœç´¢çš„å­—ç¬¦ä¸²
+     * @param visited    è®¿é—®æ ‡è®°æ•°ç»„
+     * @param row        å½“å‰å¤„ç†çš„è¡Œå·
+     * @param col        å½“å‰å¤„ç†çš„åˆ—å·
+     * @param pathLength å·²ç»å¤„ç†çš„strä¸­å­—ç¬¦ä¸ªæ•°
+     * @return æ˜¯å¦æ‰¾åˆ° trueæ˜¯ï¼Œfalseå¦
      */
     private static boolean hasPathCore(char[] matrix, int rows, int cols, char[] str, boolean[] visited,
                                        int row, int col, int[] pathLength) {
@@ -64,7 +64,7 @@ public class Test66 {
 
         boolean hasPath = false;
 
-        // ÅĞ¶ÏÎ»ÖÃÊÇ·ñºÏ·¨
+        // åˆ¤æ–­ä½ç½®æ˜¯å¦åˆæ³•
         if (row >= 0 && row < rows
                 && col >= 0 && col < cols
                 && matrix[row * cols + col] == str[pathLength[0]]
@@ -73,7 +73,7 @@ public class Test66 {
             visited[row * cols + col] = true;
             pathLength[0]++;
 
-            // °´×óÉÏÓÒÏÂ½øĞĞ»ØËİ
+            // æŒ‰å·¦ä¸Šå³ä¸‹è¿›è¡Œå›æº¯
             hasPath = hasPathCore(matrix, rows, cols, str, visited, row, col - 1, pathLength)
                     || hasPathCore(matrix, rows, cols, str, visited, row - 1, col, pathLength)
                     || hasPathCore(matrix, rows, cols, str, visited, row, col + 1, pathLength)

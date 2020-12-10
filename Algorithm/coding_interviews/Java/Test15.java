@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-04-23
  * Time: 16:20
  * Declaration: All Rights Reserved !!!
@@ -11,47 +11,47 @@ public class Test15 {
     }
 
     /**
-     * ÊäÈëÒ»¸ö¼ü±í£¬Êä³ö¸ÃÁ´±íÖÐµ¹ÊýµÚk ¸ö½áµã£®ÎªÁË·ûºÏ´ó¶àÊýÈËµÄÏ°¹ß£¬
-     * ±¾Ìâ´Ó1¿ªÊ¼¼ÆÊý£¬¼´Á´±íµÄÎ²½áµãÊÇµ¹ÊýµÚ1¸ö½áµã£®ÀýÈçÒ»¸öÁ´±íÓÐ6¸ö½áµã£¬
-     * ´ÓÍ·½áµã¿ªÊ¼ËüÃÇµÄÖµÒÀ´ÎÊÇ1¡¢2¡¢3¡¢4¡¢5 6¡£Õâ¸öÁ´±íµÄµ¹ÊýµÚ3¸ö½áµãÊÇÖµÎª4µÄ½áµã£®
+     * è¾“å…¥ä¸€ä¸ªé”®è¡¨ï¼Œè¾“å‡ºè¯¥é“¾è¡¨ä¸­å€’æ•°ç¬¬k ä¸ªç»“ç‚¹ï¼Žä¸ºäº†ç¬¦åˆå¤§å¤šæ•°äººçš„ä¹ æƒ¯ï¼Œ
+     * æœ¬é¢˜ä»Ž1å¼€å§‹è®¡æ•°ï¼Œå³é“¾è¡¨çš„å°¾ç»“ç‚¹æ˜¯å€’æ•°ç¬¬1ä¸ªç»“ç‚¹ï¼Žä¾‹å¦‚ä¸€ä¸ªé“¾è¡¨æœ‰6ä¸ªç»“ç‚¹ï¼Œ
+     * ä»Žå¤´ç»“ç‚¹å¼€å§‹å®ƒä»¬çš„å€¼ä¾æ¬¡æ˜¯1ã€2ã€3ã€4ã€5 6ã€‚è¿™ä¸ªé“¾è¡¨çš„å€’æ•°ç¬¬3ä¸ªç»“ç‚¹æ˜¯å€¼ä¸º4çš„ç»“ç‚¹ï¼Ž
      *
-     * @param head Á´±íµÄÍ·½áµã
-     * @param k    µ¹ÊýµÚk¸ö½áµã
-     * @return µ¹ÊýµÚk¸ö½áµã
+     * @param head é“¾è¡¨çš„å¤´ç»“ç‚¹
+     * @param k    å€’æ•°ç¬¬kä¸ªç»“ç‚¹
+     * @return å€’æ•°ç¬¬kä¸ªç»“ç‚¹
      */
     public static ListNode findKthToTail(ListNode head, int k) {
 
-        // ÊäÈëµÄÁ´±í²»ÄÜÎª¿Õ£¬²¢ÇÒk´óÓÚ0
+        // è¾“å…¥çš„é“¾è¡¨ä¸èƒ½ä¸ºç©ºï¼Œå¹¶ä¸”kå¤§äºŽ0
         if (k < 1 || head == null) {
             return null;
         }
 
-        // Ö¸ÏòÍ·½áµã
+        // æŒ‡å‘å¤´ç»“ç‚¹
         ListNode pointer = head;
 
-        // µ¹ÊýµÚk¸ö½áµãÓëµ¹ÊýµÚÒ»¸ö½áµãÏà¸ôk-1¸öÎ»ÖÃ
-        // pointerÏÈ×ßk-1¸öÎ»ÖÃ
+        // å€’æ•°ç¬¬kä¸ªç»“ç‚¹ä¸Žå€’æ•°ç¬¬ä¸€ä¸ªç»“ç‚¹ç›¸éš”k-1ä¸ªä½ç½®
+        // pointerå…ˆèµ°k-1ä¸ªä½ç½®
         for (int i = 1; i < k; i++) {
-            // ËµÃ÷»¹ÓÐ½áµã
+            // è¯´æ˜Žè¿˜æœ‰ç»“ç‚¹
             if (pointer.next != null) {
                 pointer = pointer.next;
             }
-            // ÒÑ¾­Ã»ÓÐ½ÚµãÁË£¬µ«ÊÇi»¹Ã»ÓÐµ½´ïk-1ËµÃ÷kÌ«´ó£¬Á´±íÖÐÃ»ÓÐÄÇÃ´¶àµÄÔªËØ
+            // å·²ç»æ²¡æœ‰èŠ‚ç‚¹äº†ï¼Œä½†æ˜¯iè¿˜æ²¡æœ‰åˆ°è¾¾k-1è¯´æ˜Žkå¤ªå¤§ï¼Œé“¾è¡¨ä¸­æ²¡æœ‰é‚£ä¹ˆå¤šçš„å…ƒç´ 
             else {
-                // ·µ»Ø½á¹û
+                // è¿”å›žç»“æžœ
                 return null;
             }
 
         }
 
-        // pointer»¹Ã»ÓÐ×ßµ½Á´±íµÄÄ©Î²£¬ÄÇÃ´pointerºÍheadÒ»Æð×ß£¬
-        // µ±pointer×ßµ½×îºóÒ»¸ö½áµã¼´£¬pointer.next=nullÊ±£¬head¾ÍÊÇµ¹ÊýµÚk¸ö½áµã
+        // pointerè¿˜æ²¡æœ‰èµ°åˆ°é“¾è¡¨çš„æœ«å°¾ï¼Œé‚£ä¹ˆpointerå’Œheadä¸€èµ·èµ°ï¼Œ
+        // å½“pointerèµ°åˆ°æœ€åŽä¸€ä¸ªç»“ç‚¹å³ï¼Œpointer.next=nullæ—¶ï¼Œheadå°±æ˜¯å€’æ•°ç¬¬kä¸ªç»“ç‚¹
         while (pointer.next != null) {
             head = head.next;
             pointer = pointer.next;
         }
 
-        // ·µ»Ø½á¹û
+        // è¿”å›žç»“æžœ
         return head;
     }
 
@@ -83,9 +83,9 @@ public class Test15 {
         head.next.next.next.next.next.next.next.next = new ListNode();
         head.next.next.next.next.next.next.next.next.value = 9;
 
-        System.out.println(findKthToTail(head, 1).value); // µ¹ÊýµÚÒ»¸ö
-        System.out.println(findKthToTail(head, 5).value); // ÖÐ¼äµÄÒ»¸ö
-        System.out.println(findKthToTail(head, 9).value); // µ¹Êý×îºóÒ»¸ö¾ÍÊÇË³ÊýµÚÒ»¸ö
+        System.out.println(findKthToTail(head, 1).value); // å€’æ•°ç¬¬ä¸€ä¸ª
+        System.out.println(findKthToTail(head, 5).value); // ä¸­é—´çš„ä¸€ä¸ª
+        System.out.println(findKthToTail(head, 9).value); // å€’æ•°æœ€åŽä¸€ä¸ªå°±æ˜¯é¡ºæ•°ç¬¬ä¸€ä¸ª
 
         System.out.println(findKthToTail(head, 10));
     }

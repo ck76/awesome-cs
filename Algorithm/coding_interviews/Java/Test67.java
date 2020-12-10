@@ -1,29 +1,29 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-06-17
  * Time: 19:19
  * Declaration: All Rights Reserved !!!
  */
 public class Test67 {
     /**
-     * ÌâÄ¿£ºµØÉÏÓÐ¸ömÐÐnÁÐµÄ·½¸ñ¡£Ò»¸ö»úÆ÷ÈË´Ó×ø±ê(0,0)µÄ¸ñ×Ó¿ªÊ¼ÒÆ¶¯£¬
-     * ËüÃ¿Ò»´Î¿ÉÒÔÏò×ó¡¢ÓÒ¡¢ÉÏ¡¢ÏÂÒÆ¶¯Ò»¸ñ£¬µ«²»ÄÜ½øÈëÐÐ×ø±êºÍÁÐ×ø±êµÄÊý
-     * Î»Ö®ºÍ´óÓÚkµÄ¸ñ×Ó¡£ÀýÈç£¬µ±kÎª18Ê±£¬»úÆ÷ÈËÄÜ¹»½øÈë·½¸ñ(35,37)£¬
-     * ÒòÎª3+5+3+7=18.µ«Ëü²»ÄÜ½øÈë·½¸ñ(35,38)£¬ÒòÎª3+5+3+8=19.
-     * ÇëÎÊ¸Ã»úÆ÷ÈËÄÜ¹»´ïµ½¶àÉÙ¸ñ×Ó£¿
+     * é¢˜ç›®ï¼šåœ°ä¸Šæœ‰ä¸ªmè¡Œnåˆ—çš„æ–¹æ ¼ã€‚ä¸€ä¸ªæœºå™¨äººä»Žåæ ‡(0,0)çš„æ ¼å­å¼€å§‹ç§»åŠ¨ï¼Œ
+     * å®ƒæ¯ä¸€æ¬¡å¯ä»¥å‘å·¦ã€å³ã€ä¸Šã€ä¸‹ç§»åŠ¨ä¸€æ ¼ï¼Œä½†ä¸èƒ½è¿›å…¥è¡Œåæ ‡å’Œåˆ—åæ ‡çš„æ•°
+     * ä½ä¹‹å’Œå¤§äºŽkçš„æ ¼å­ã€‚ä¾‹å¦‚ï¼Œå½“kä¸º18æ—¶ï¼Œæœºå™¨äººèƒ½å¤Ÿè¿›å…¥æ–¹æ ¼(35,37)ï¼Œ
+     * å› ä¸º3+5+3+7=18.ä½†å®ƒä¸èƒ½è¿›å…¥æ–¹æ ¼(35,38)ï¼Œå› ä¸º3+5+3+8=19.
+     * è¯·é—®è¯¥æœºå™¨äººèƒ½å¤Ÿè¾¾åˆ°å¤šå°‘æ ¼å­ï¼Ÿ
      *
-     * @param threshold Ô¼ÊøÖµ
-     * @param rows      ·½¸ñµÄÐÐÊý
-     * @param cols      ·½¸ñµÄÁÐÊý
-     * @return ×î¶à¿É×ßµÄ·½¸ñ
+     * @param threshold çº¦æŸå€¼
+     * @param rows      æ–¹æ ¼çš„è¡Œæ•°
+     * @param cols      æ–¹æ ¼çš„åˆ—æ•°
+     * @return æœ€å¤šå¯èµ°çš„æ–¹æ ¼
      */
     public static int movingCount(int threshold, int rows, int cols) {
-        // ²ÎÊýÐ£Ñé
+        // å‚æ•°æ ¡éªŒ
         if (threshold < 0 || rows < 1 || cols < 1) {
             return 0;
         }
 
-        // ±äÁ¿³õÊ¼»¯
+        // å˜é‡åˆå§‹åŒ–
         boolean[] visited = new boolean[rows * cols];
         for (int i = 0; i < visited.length; i++) {
             visited[i] = false;
@@ -33,15 +33,15 @@ public class Test67 {
     }
 
     /**
-     * µÝ¹é»ØËÝ·½·¨
+     * é€’å½’å›žæº¯æ–¹æ³•
      *
-     * @param threshold Ô¼ÊøÖµ
-     * @param rows      ·½¸ñµÄÐÐÊý
-     * @param cols      ·½¸ñµÄÁÐÊý
-     * @param row       µ±Ç°´¦ÀíµÄÐÐºÅ
-     * @param col       µ±Ç°´¦ÀíµÄÁÐºÅ
-     * @param visited   ·ÃÎÊ±ê¼ÇÊý×é
-     * @return ×î¶à¿É×ßµÄ·½¸ñ
+     * @param threshold çº¦æŸå€¼
+     * @param rows      æ–¹æ ¼çš„è¡Œæ•°
+     * @param cols      æ–¹æ ¼çš„åˆ—æ•°
+     * @param row       å½“å‰å¤„ç†çš„è¡Œå·
+     * @param col       å½“å‰å¤„ç†çš„åˆ—å·
+     * @param visited   è®¿é—®æ ‡è®°æ•°ç»„
+     * @return æœ€å¤šå¯èµ°çš„æ–¹æ ¼
      */
     private static int movingCountCore(int threshold, int rows, int cols,
                                        int row, int col, boolean[] visited) {
@@ -61,15 +61,15 @@ public class Test67 {
     }
 
     /**
-     * ¶Ï»úÆ÷ÈËÄÜ·ñ½øÈë×ø±êÎª(row, col)µÄ·½¸ñ
+     * æ–­æœºå™¨äººèƒ½å¦è¿›å…¥åæ ‡ä¸º(row, col)çš„æ–¹æ ¼
      *
-     * @param threshold Ô¼ÊøÖµ
-     * @param rows      ·½¸ñµÄÐÐÊý
-     * @param cols      ·½¸ñµÄÁÐÊý
-     * @param row       µ±Ç°´¦ÀíµÄÐÐºÅ
-     * @param col       µ±Ç°´¦ÀíµÄÁÐºÅ
-     * @param visited   ·ÃÎÊ±ê¼ÇÊý×é
-     * @return ÊÇ·ñ¿ÉÒÔ½øÈë£¬trueÊÇ£¬false·ñ
+     * @param threshold çº¦æŸå€¼
+     * @param rows      æ–¹æ ¼çš„è¡Œæ•°
+     * @param cols      æ–¹æ ¼çš„åˆ—æ•°
+     * @param row       å½“å‰å¤„ç†çš„è¡Œå·
+     * @param col       å½“å‰å¤„ç†çš„åˆ—å·
+     * @param visited   è®¿é—®æ ‡è®°æ•°ç»„
+     * @return æ˜¯å¦å¯ä»¥è¿›å…¥ï¼Œtrueæ˜¯ï¼Œfalseå¦
      */
     private static boolean check(int threshold, int rows, int cols,
                                  int row, int col, boolean[] visited) {
@@ -80,10 +80,10 @@ public class Test67 {
     }
 
     /**
-     * Ò»¸öÊý×ÖµÄÊýÎ»Ö®ºÍ
+     * ä¸€ä¸ªæ•°å­—çš„æ•°ä½ä¹‹å’Œ
      *
-     * @param number Êý×Ö
-     * @return Êý×ÖµÄÊýÎ»Ö®ºÍ
+     * @param number æ•°å­—
+     * @return æ•°å­—çš„æ•°ä½ä¹‹å’Œ
      */
     private static int getDigitSum(int number) {
         int result = 0;

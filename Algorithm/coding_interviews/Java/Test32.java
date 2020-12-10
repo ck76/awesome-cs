@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-11
  * Time: 09:22
  * Declaration: All Rights Reserved !!!
@@ -7,9 +7,9 @@
 public class Test32 {
 
     /**
-     * ÌâÄ¿£ºÊäÈëÒ»¸öÕûÊınÇó´Ó1 µ½nÕân¸öÕûÊıµÄÊ®½øÖÆ±íÊ¾ÖĞ1 ³öÏÖµÄ´ÎÊı¡£
-     * @param n ×î´óµÄÊı×Ö
-     * @return 1-nÖĞ£¬¸÷¸öÊıÎ»1³öÏÖµÄ´ÎÊı
+     * é¢˜ç›®ï¼šè¾“å…¥ä¸€ä¸ªæ•´æ•°næ±‚ä»1 åˆ°nè¿™nä¸ªæ•´æ•°çš„åè¿›åˆ¶è¡¨ç¤ºä¸­1 å‡ºç°çš„æ¬¡æ•°ã€‚
+     * @param n æœ€å¤§çš„æ•°å­—
+     * @return 1-nä¸­ï¼Œå„ä¸ªæ•°ä½1å‡ºç°çš„æ¬¡æ•°
      */
     public static int numberOf1Between1AndN(int n) {
         if (n <= 0) {
@@ -27,58 +27,58 @@ public class Test32 {
     }
 
     /**
-     * Çó0-numbers±íµÄÊı×ÖÖĞµÄ1µÄ¸öÊı
+     * æ±‚0-numbersè¡¨çš„æ•°å­—ä¸­çš„1çš„ä¸ªæ•°
      *
-     * @param numbers Êı×Ö£¬Èç{1, 2, 3, 4, 5}±íÊ¾Êı×Ö12345
-     * @param curIdx  µ±Ç°´¦ÀíµÄÎ»ÖÃ
-     * @return 1µÄ¸öÊı
+     * @param numbers æ•°å­—ï¼Œå¦‚{1, 2, 3, 4, 5}è¡¨ç¤ºæ•°å­—12345
+     * @param curIdx  å½“å‰å¤„ç†çš„ä½ç½®
+     * @return 1çš„ä¸ªæ•°
      */
     private static int numberOf1(int[] numbers, int curIdx) {
 
         if (numbers == null || curIdx >= numbers.length || curIdx < 0) {
             return 0;
         }
-        // ´ı´¦ÀíµÄµÚÒ»¸öÊı×Ö
+        // å¾…å¤„ç†çš„ç¬¬ä¸€ä¸ªæ•°å­—
         int first = numbers[curIdx];
 
-        // Òª´¦ÀíµÄÊı×ÖµÄÎ»Êı
+        // è¦å¤„ç†çš„æ•°å­—çš„ä½æ•°
         int length = numbers.length - curIdx;
 
-        // Èç¹ûÖ»ÓĞÒ»Î»ÇÒÕâÒ»Î»ÊÇ0·µ»Ø0
+        // å¦‚æœåªæœ‰ä¸€ä½ä¸”è¿™ä¸€ä½æ˜¯0è¿”å›0
         if (length == 1 && first == 0) {
             return 0;
         }
 
-        // Èç¹ûÖ»ÓĞÒ»Î»ÇÒÕâÒ»Î»²»ÊÇ0·µ»Ø1
+        // å¦‚æœåªæœ‰ä¸€ä½ä¸”è¿™ä¸€ä½ä¸æ˜¯0è¿”å›1
         if (length == 1 && first > 0) {
             return 1;
         }
 
-        // ¼ÙÉènumbersÊÇ21345
-        // numFirstDigitÊÇÊı×Ö10000-19999µÄµÚÒ»¸öÎ»ÖĞµÄÊıÄ¿
+        // å‡è®¾numbersæ˜¯21345
+        // numFirstDigitæ˜¯æ•°å­—10000-19999çš„ç¬¬ä¸€ä¸ªä½ä¸­çš„æ•°ç›®
         int numFirstDigit = 0;
-        // Èç¹û×î¸ßÎ»²»ÊÇ1£¬Èç21345£¬ÔÚ[1236, 21345]ÖĞ£¬×î¸ßÎ»1³öÏÖµÄÖ»ÔÚ[10000, 19999]ÖĞ£¬³öÏÖ1µÄ´ÎÊıÊÇ10^4·½¸ö
+        // å¦‚æœæœ€é«˜ä½ä¸æ˜¯1ï¼Œå¦‚21345ï¼Œåœ¨[1236, 21345]ä¸­ï¼Œæœ€é«˜ä½1å‡ºç°çš„åªåœ¨[10000, 19999]ä¸­ï¼Œå‡ºç°1çš„æ¬¡æ•°æ˜¯10^4æ–¹ä¸ª
         if (first > 1) {
             numFirstDigit = powerBase10(length - 1);
         }
-        // Èç¹û×î¸ßÎ»ÊÇ1£¬Èç12345£¬ÔÚ[2346, 12345]ÖĞ£¬×î¸ßÎ»1³öÏÖµÄÖ»ÔÚ[10000, 12345]ÖĞ£¬×Ü¼Æ2345+1¸ö
+        // å¦‚æœæœ€é«˜ä½æ˜¯1ï¼Œå¦‚12345ï¼Œåœ¨[2346, 12345]ä¸­ï¼Œæœ€é«˜ä½1å‡ºç°çš„åªåœ¨[10000, 12345]ä¸­ï¼Œæ€»è®¡2345+1ä¸ª
         else if (first == 1) {
             numFirstDigit = atoi(numbers, curIdx + 1) + 1;
         }
 
-        // numOtherDigits£¬ÊÇ[1346, 21345]ÖĞ£¬³ıÁËµÚÒ»Î»Ö®Íâ£¨²»¿´21345ÖĞµÄµÚÒ»Î»2£©µÄÊıÎ»ÖĞµÄ1µÄÊıÄ¿
+        // numOtherDigitsï¼Œæ˜¯[1346, 21345]ä¸­ï¼Œé™¤äº†ç¬¬ä¸€ä½ä¹‹å¤–ï¼ˆä¸çœ‹21345ä¸­çš„ç¬¬ä¸€ä½2ï¼‰çš„æ•°ä½ä¸­çš„1çš„æ•°ç›®
         int numOtherDigits = first * (length - 1) * powerBase10(length - 2);
-        // numRecursiveÊÇ1-1234ÖĞ1µÄµÄÊıÄ¿
+        // numRecursiveæ˜¯1-1234ä¸­1çš„çš„æ•°ç›®
         int numRecursive = numberOf1(numbers, curIdx + 1);
 
         return numFirstDigit + numOtherDigits + numRecursive;
     }
 
     /**
-     * ½«Êı×ÖÊı×é×ª»»³ÉÊıÖµ£¬Èç{1, 2, 3, 4, 5}£¬i = 2£¬½á¹ûÊÇ345
-     * @param numbers Êı×é
-     * @param i ¿ªÊ¼ºÚÆøµÄÎ»ÖÃ
-     * @return ×ª»»½á¹û
+     * å°†æ•°å­—æ•°ç»„è½¬æ¢æˆæ•°å€¼ï¼Œå¦‚{1, 2, 3, 4, 5}ï¼Œi = 2ï¼Œç»“æœæ˜¯345
+     * @param numbers æ•°ç»„
+     * @param i å¼€å§‹é»‘æ°”çš„ä½ç½®
+     * @return è½¬æ¢ç»“æœ
      */
     private static int atoi(int[] numbers, int i) {
         int result = 0;
@@ -89,9 +89,9 @@ public class Test32 {
     }
 
     /**
-     * Çó10µÄn´Î·½£¬¼Ù¶¨n²»Îª¸ºÊı
-     * @param n Ãİ£¬·Ç¸ºÊı
-     * @return 10µÄn´Î·½
+     * æ±‚10çš„næ¬¡æ–¹ï¼Œå‡å®šnä¸ä¸ºè´Ÿæ•°
+     * @param n å¹‚ï¼Œéè´Ÿæ•°
+     * @return 10çš„næ¬¡æ–¹
      */
     private static int powerBase10(int n) {
         int result = 1;

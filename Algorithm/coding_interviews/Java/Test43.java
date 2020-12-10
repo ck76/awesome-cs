@@ -1,15 +1,15 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-14
  * Time: 12:01
  * Declaration: All Rights Reserved !!!
  */
 public class Test43 {
     /**
-     * »ùÓÚÍ¨¹éÇó½â
+     * åŸºäºé€šå½’æ±‚è§£
      *
-     * @param number É«×Ó¸öÊı
-     * @param max    É«×ÓµÄ×î´óÖµ
+     * @param number è‰²å­ä¸ªæ•°
+     * @param max    è‰²å­çš„æœ€å¤§å€¼
      */
     public static void printProbability(int number, int max) {
         if (number < 1 || max < 1) {
@@ -35,9 +35,9 @@ public class Test43 {
     }
 
     /**
-     * @param number        É«×Ó¸öÊı
-     * @param probabilities ²»Í¬É«×ÓÊı³öÏÖ´ÎÊıµÄ¼ÆÊıÊı×é
-     * @param max           É«×ÓµÄ×î´óÖµ
+     * @param number        è‰²å­ä¸ªæ•°
+     * @param probabilities ä¸åŒè‰²å­æ•°å‡ºç°æ¬¡æ•°çš„è®¡æ•°æ•°ç»„
+     * @param max           è‰²å­çš„æœ€å¤§å€¼
      */
     private static void probability(int number, int[] probabilities, int max) {
         for (int i = 1; i <= max; i++) {
@@ -46,11 +46,11 @@ public class Test43 {
     }
 
     /**
-     * @param original      ×ÜµÄÉ«×ÓÊı
-     * @param current       µ±Ç°´¦ÀíµÄÊÇµÚ¼¸¸ö
-     * @param sum           ÒÑ¾­Ç°ÃæµÄÉ«×ÓÊıºÍ
-     * @param probabilities ²»Í¬É«×ÓÊı³öÏÖ´ÎÊıµÄ¼ÆÊıÊı×é
-     * @param max           É«×ÓµÄ×î´óÖµ
+     * @param original      æ€»çš„è‰²å­æ•°
+     * @param current       å½“å‰å¤„ç†çš„æ˜¯ç¬¬å‡ ä¸ª
+     * @param sum           å·²ç»å‰é¢çš„è‰²å­æ•°å’Œ
+     * @param probabilities ä¸åŒè‰²å­æ•°å‡ºç°æ¬¡æ•°çš„è®¡æ•°æ•°ç»„
+     * @param max           è‰²å­çš„æœ€å¤§å€¼
      */
     private static void probability(int original, int current, int sum, int[] probabilities, int max) {
         if (current == 1) {
@@ -63,9 +63,9 @@ public class Test43 {
     }
 
     /**
-     * »ùÓÚÑ­»·Çó½â
-     * @param number É«×Ó¸öÊı
-     * @param max    É«×ÓµÄ×î´óÖµ
+     * åŸºäºå¾ªç¯æ±‚è§£
+     * @param number è‰²å­ä¸ªæ•°
+     * @param max    è‰²å­çš„æœ€å¤§å€¼
      */
     public static void printProbability2(int number, int max) {
         if (number < 1 || max < 1) {
@@ -73,34 +73,34 @@ public class Test43 {
         }
 
         int[][] probabilities = new int[2][max * number + 1];
-        // Êı¾İ³õÊ¼»¯
+        // æ•°æ®åˆå§‹åŒ–
         for (int i = 0; i < max * number + 1; i++) {
             probabilities[0][i] = 0;
             probabilities[1][i] = 0;
         }
 
-        // ±ê¼Çµ±Ç°ÒªÊ¹ÓÃµÄÊÇµÚ0¸öÊı×é»¹ÊÇµÚ1¸öÊı×é
+        // æ ‡è®°å½“å‰è¦ä½¿ç”¨çš„æ˜¯ç¬¬0ä¸ªæ•°ç»„è¿˜æ˜¯ç¬¬1ä¸ªæ•°ç»„
         int flag = 0;
 
-        // Å×³öÒ»¸ö÷»×ÓÊ±³öÏÖµÄ¸÷ÖÖÇé¿ö
+        // æŠ›å‡ºä¸€ä¸ªéª°å­æ—¶å‡ºç°çš„å„ç§æƒ…å†µ
         for (int i = 1; i <= max; i++) {
             probabilities[flag][i] = 1;
         }
 
-        // Å×³öÆäËü÷»×Ó
+        // æŠ›å‡ºå…¶å®ƒéª°å­
         for (int k = 2; k <= number; k++) {
-            // Èç¹ûÅ×³öÁËk¸ö÷»×Ó£¬ÄÇÃ´ºÍÎª[0, k-1]µÄ³öÏÖ´ÎÊıÎª0
+            // å¦‚æœæŠ›å‡ºäº†kä¸ªéª°å­ï¼Œé‚£ä¹ˆå’Œä¸º[0, k-1]çš„å‡ºç°æ¬¡æ•°ä¸º0
             for (int i = 0; i < k; i++) {
                 probabilities[1 - flag][i] = 0;
             }
 
-            // Å×³ök¸ö÷»×Ó£¬ËùÓĞºÍµÄ¿ÉÄÜ
+            // æŠ›å‡ºkä¸ªéª°å­ï¼Œæ‰€æœ‰å’Œçš„å¯èƒ½
             for (int i = k; i <= max * k; i++) {
                 probabilities[1 - flag][i] = 0;
 
-                // Ã¿¸ö÷»×ÓµÄ³öÏÖµÄËùÓĞ¿ÉÄÜµÄµãÊı
+                // æ¯ä¸ªéª°å­çš„å‡ºç°çš„æ‰€æœ‰å¯èƒ½çš„ç‚¹æ•°
                 for (int j = 1; j <= i && j <= max; j++) {
-                    // Í³¼Æ³öºÍÎªiµÄµãÊı³öÏÖµÄ´ÎÊı
+                    // ç»Ÿè®¡å‡ºå’Œä¸ºiçš„ç‚¹æ•°å‡ºç°çš„æ¬¡æ•°
                     probabilities[1 - flag][i] += probabilities[flag][i - j];
                 }
             }

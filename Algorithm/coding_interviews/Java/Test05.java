@@ -1,25 +1,25 @@
 import java.util.Stack;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-04-21
  * Time: 21:36
  * Declaration: All Rights Reserved !!!
  */
 public class Test05 {
     /**
-     * ½áµã¶ÔÏó
+     * ç»“ç‚¹å¯¹è±¡
      */
     public static class ListNode {
-        int val; // ½áµãµÄÖµ
-        ListNode nxt; // ÏÂÒ»¸ö½áµã
+        int val; // ç»“ç‚¹çš„å€¼
+        ListNode nxt; // ä¸‹ä¸€ä¸ªç»“ç‚¹
     }
 
     /**
-     * ÊäÈë¸öÁ´±íµÄÍ·½áµã£¬´ÓÎ²µ½Í··´¹ıÀ´´òÓ¡³öÃ¿¸ö½áµãµÄÖµ
-     * Ê¹ÓÃÕ»µÄ·½Ê½½øĞĞ
+     * è¾“å…¥ä¸ªé“¾è¡¨çš„å¤´ç»“ç‚¹ï¼Œä»å°¾åˆ°å¤´åè¿‡æ¥æ‰“å°å‡ºæ¯ä¸ªç»“ç‚¹çš„å€¼
+     * ä½¿ç”¨æ ˆçš„æ–¹å¼è¿›è¡Œ
      *
-     * @param root Á´±íÍ·½áµã
+     * @param root é“¾è¡¨å¤´ç»“ç‚¹
      */
     public static void printListInverselyUsingIteration(ListNode root) {
         Stack<ListNode> stack = new Stack<>();
@@ -35,10 +35,10 @@ public class Test05 {
     }
 
     /**
-     * ÊäÈë¸öÁ´±íµÄÍ·½áµã£¬´ÓÎ²µ½Í··´¹ıÀ´´òÓ¡³öÃ¿¸ö½áµãµÄÖµ
-     * Ê¹ÓÃÕ»µÄ·½Ê½½øĞĞ
+     * è¾“å…¥ä¸ªé“¾è¡¨çš„å¤´ç»“ç‚¹ï¼Œä»å°¾åˆ°å¤´åè¿‡æ¥æ‰“å°å‡ºæ¯ä¸ªç»“ç‚¹çš„å€¼
+     * ä½¿ç”¨æ ˆçš„æ–¹å¼è¿›è¡Œ
      *
-     * @param root Á´±íÍ·½áµã
+     * @param root é“¾è¡¨å¤´ç»“ç‚¹
      */
     public static void printListInverselyUsingRecursion(ListNode root) {
         if (root != null) {

@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-16
  * Time: 10:31
  * Declaration: All Rights Reserved !!!
@@ -29,7 +29,7 @@ public class Test58 {
             return null;
         }
 
-        // ±£´æÒª²éÕÒµÄÏÂÒ»¸ö½Úµã
+        // ä¿å­˜è¦æŸ¥æ‰¾çš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
         BinaryTreeNode target = null;
 
         if (node.right != null) {
@@ -42,7 +42,7 @@ public class Test58 {
         } else if (node.parent != null){
             target = node.parent;
             BinaryTreeNode cur = node;
-            // Èç¹û¸¸ĞÂ½áµã²»Îª¿Õ£¬²¢ÇÒ£¬×Ó½áµã²»ÊÇ¸¸½áµãµÄ×óº¢×Ó
+            // å¦‚æœçˆ¶æ–°ç»“ç‚¹ä¸ä¸ºç©ºï¼Œå¹¶ä¸”ï¼Œå­ç»“ç‚¹ä¸æ˜¯çˆ¶ç»“ç‚¹çš„å·¦å­©å­
             while (target != null && target.left != cur) {
                 cur = target;
                 target = target.parent;

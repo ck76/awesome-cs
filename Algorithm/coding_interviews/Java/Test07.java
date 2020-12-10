@@ -1,48 +1,48 @@
 import java.util.Stack;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: çŽ‹ä¿Šè¶…
  * Date: 2015-04-22
  * Time: 09:11
  * Declaration: All Rights Reserved !!!
  */
 public class Test07 {
     /**
-     * ÓÃÁ½¸öÕ»Ä£ÄâµÄ¶ÓÁÐ
-     * ÓÃÁ½¸öºËÊµÏÖÒ»¸ö¶ÓÁÐ¡£¶ÓÁÐµÄÉùÃ÷ÈçÏÂ£¬ÖîÊµÏÖËüµÄÁ½¸öº¯ÊýappendTailºÍdeleteHead£¬
-     * ·Ö±ðÍê³ÉÔÚ¶ÓÁÐÎ²²¿²åÈë½áµãºÍÔÚ¶ÓÁÐÍ·²¿É¾³ý½áµãµÄ¹¦ÄÜ¡£
+     * ç”¨ä¸¤ä¸ªæ ˆæ¨¡æ‹Ÿçš„é˜Ÿåˆ—
+     * ç”¨ä¸¤ä¸ªæ ¸å®žçŽ°ä¸€ä¸ªé˜Ÿåˆ—ã€‚é˜Ÿåˆ—çš„å£°æ˜Žå¦‚ä¸‹ï¼Œè¯¸å®žçŽ°å®ƒçš„ä¸¤ä¸ªå‡½æ•°appendTailå’ŒdeleteHeadï¼Œ
+     * åˆ†åˆ«å®Œæˆåœ¨é˜Ÿåˆ—å°¾éƒ¨æ’å…¥ç»“ç‚¹å’Œåœ¨é˜Ÿåˆ—å¤´éƒ¨åˆ é™¤ç»“ç‚¹çš„åŠŸèƒ½ã€‚
      */
     public static class MList<T> {
-        // ²åÈëÕ»£¬Ö»ÓÃÓÚ²åÈëµÄÊý¾Ý
+        // æ’å…¥æ ˆï¼Œåªç”¨äºŽæ’å…¥çš„æ•°æ®
         private Stack<T> stack1 = new Stack<>();
-        // µ¯³öÕ»£¬Ö»ÓÃÓÚµ¯³öÊý¾Ý
+        // å¼¹å‡ºæ ˆï¼Œåªç”¨äºŽå¼¹å‡ºæ•°æ®
         private Stack<T> stack2 = new Stack<>();
 
         public MList() {
         }
         
-        // Ìí¼Ó²Ù×÷£¬³ÉÔÚ¶ÓÁÐÎ²²¿²åÈë½áµã
+        // æ·»åŠ æ“ä½œï¼Œæˆåœ¨é˜Ÿåˆ—å°¾éƒ¨æ’å…¥ç»“ç‚¹
         public void appendTail(T t) {
             stack1.add(t);
         }
 
-        // É¾³ý²Ù×÷£¬ÔÚ¶ÓÁÐÍ·²¿É¾³ý½áµã
+        // åˆ é™¤æ“ä½œï¼Œåœ¨é˜Ÿåˆ—å¤´éƒ¨åˆ é™¤ç»“ç‚¹
         public T deleteHead() {
 
-            // ÏÈÅÐ¶Ïµ¯³öÕ»ÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿Õ¾Í½«²åÈëÕ»µÄËùÓÐÊý¾Ýµ¯³öÕ»£¬
-            // ²¢ÇÒ½«µ¯³öµÄÊý¾ÝÑ¹Èëµ¯³öÕ»ÖÐ
+            // å…ˆåˆ¤æ–­å¼¹å‡ºæ ˆæ˜¯å¦ä¸ºç©ºï¼Œå¦‚æžœä¸ºç©ºå°±å°†æ’å…¥æ ˆçš„æ‰€æœ‰æ•°æ®å¼¹å‡ºæ ˆï¼Œ
+            // å¹¶ä¸”å°†å¼¹å‡ºçš„æ•°æ®åŽ‹å…¥å¼¹å‡ºæ ˆä¸­
             if (stack2.isEmpty()) {
                 while (!stack1.isEmpty()) {
                     stack2.add(stack1.pop());
                 }
             }
 
-            // Èç¹ûµ¯³öÕ»ÖÐ»¹Ã»ÓÐÊý¾Ý¾ÍÅ×³öÒì³£
+            // å¦‚æžœå¼¹å‡ºæ ˆä¸­è¿˜æ²¡æœ‰æ•°æ®å°±æŠ›å‡ºå¼‚å¸¸
             if (stack2.isEmpty()) {
                 throw new RuntimeException("No more element.");
             }
 
-            // ·µ»Øµ¯³öÕ»µÄÕ»¶¥ÔªËØ£¬¶ÔÓ¦µÄ¾ÍÊÇ¶ÓÊ×ÔªËØ¡£
+            // è¿”å›žå¼¹å‡ºæ ˆçš„æ ˆé¡¶å…ƒç´ ï¼Œå¯¹åº”çš„å°±æ˜¯é˜Ÿé¦–å…ƒç´ ã€‚
             return stack2.pop();
         }
     }

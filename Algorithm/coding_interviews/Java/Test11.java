@@ -1,5 +1,5 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-04-23
  * Time: 13:03
  * Declaration: All Rights Reserved !!!
@@ -7,71 +7,71 @@
 public class Test11 {
 
     /**
-     * ÊµÏÖº¯Êıdouble Power(double base, int exponent)£¬ÇóbaseµÄexponent´Î·½¡£
-     * ²»µÃÊ¹ÓÃ¿âº¯Êı£¬Í¬Ê±²»ĞèÒª¿¼ÂÇ´óÊıÎÊÌâ¡£
+     * å®ç°å‡½æ•°double Power(double base, int exponent)ï¼Œæ±‚baseçš„exponentæ¬¡æ–¹ã€‚
+     * ä¸å¾—ä½¿ç”¨åº“å‡½æ•°ï¼ŒåŒæ—¶ä¸éœ€è¦è€ƒè™‘å¤§æ•°é—®é¢˜ã€‚
      *
-     * @param base     Ö¸´Î
-     * @param exponent Ãİ
-     * @return ½á¹û
+     * @param base     æŒ‡æ¬¡
+     * @param exponent å¹‚
+     * @return ç»“æœ
      */
     public static double power(double base, int exponent) {
-        // Ö¸ÊıºÍµ×Êı²»ÄÜÍ¬Ê±Îª0
+        // æŒ‡æ•°å’Œåº•æ•°ä¸èƒ½åŒæ—¶ä¸º0
         if (base == 0 && exponent == 0) {
             throw new RuntimeException("invalid input. base and exponent both are zero");
         }
 
-        // Ö¸ÊıÎª0¾Í·µ»Ø1
+        // æŒ‡æ•°ä¸º0å°±è¿”å›1
         if (exponent == 0) {
             return 1;
         }
 
 
-        // ÇóÖ¸ÊıµÄ¾ø¶ÔÖµ
+        // æ±‚æŒ‡æ•°çš„ç»å¯¹å€¼
         long exp = exponent;
         if (exponent < 0) {
             exp = -exp;
         }
 
-        // ÇóÃİ´Î·½
+        // æ±‚å¹‚æ¬¡æ–¹
         double result = powerWithUnsignedExponent(base, exp);
 
-        // Ö¸ÊıÊÇ¸ºÊı£¬Òª½øĞĞÇóµ¹Êı
+        // æŒ‡æ•°æ˜¯è´Ÿæ•°ï¼Œè¦è¿›è¡Œæ±‚å€’æ•°
         if (exponent < 0) {
             result = 1 / result;
         }
 
-        // ·µ»Ø½á¹û
+        // è¿”å›ç»“æœ
         return result;
     }
 
     /**
-     * ÇóÒ»¸öÊıµÄÕıÕûÊı´ÎÃİ£¬²»¿¼ÂÇÒç³ö
+     * æ±‚ä¸€ä¸ªæ•°çš„æ­£æ•´æ•°æ¬¡å¹‚ï¼Œä¸è€ƒè™‘æº¢å‡º
      *
-     * @param base     Ö¸´Î
-     * @param exponent Ãİ
-     * @return ½á¹û
+     * @param base     æŒ‡æ¬¡
+     * @param exponent å¹‚
+     * @return ç»“æœ
      */
     public static double powerWithUnsignedExponent(double base, long exponent) {
-        // Èç¹ûÖ¸ÊıÎª0£¬·µ»Ø1
+        // å¦‚æœæŒ‡æ•°ä¸º0ï¼Œè¿”å›1
         if (exponent == 0) {
             return 1;
         }
 
-        // Ö¸ÊıÎª1£¬·µ»Øµ×Êı
+        // æŒ‡æ•°ä¸º1ï¼Œè¿”å›åº•æ•°
         if (exponent == 1) {
             return base;
         }
 
-        // µİ¹éÇóÒ»°ëµÄÖµ
+        // é€’å½’æ±‚ä¸€åŠçš„å€¼
         double result = powerWithUnsignedExponent(base, exponent >> 2);
 
-        // Çó×îÖÕµÄÖµ£¬Èç¹ûÊÇÆæÊı¾Í»¹ÒªÊ£ÒÔÒ»´Îµ×Êı
+        // æ±‚æœ€ç»ˆçš„å€¼ï¼Œå¦‚æœæ˜¯å¥‡æ•°å°±è¿˜è¦å‰©ä»¥ä¸€æ¬¡åº•æ•°
         result *= result;
         if (exponent % 2 != 0) {
             result *= base;
         }
 
-        // ·µ»Ø½á¹û
+        // è¿”å›ç»“æœ
         return result;
     }
 

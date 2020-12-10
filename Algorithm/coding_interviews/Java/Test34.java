@@ -1,15 +1,15 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-11
  * Time: 14:35
  * Declaration: All Rights Reserved !!!
  */
 public class Test34 {
     /**
-     * ÅĞ¶ÏÒ»¸öÊıÊÇ·ñÖ»ÓĞ2£¬3£¬5Òò×Ó£¨³óÊı£©
+     * åˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯å¦åªæœ‰2ï¼Œ3ï¼Œ5å› å­ï¼ˆä¸‘æ•°ï¼‰
      *
-     * @param num ´ıÅĞ¶ÏµÄÊı£¬·Ç¸º
-     * @return trueÊÇ³óÊı£¬false³óÊı
+     * @param num å¾…åˆ¤æ–­çš„æ•°ï¼Œéè´Ÿ
+     * @return trueæ˜¯ä¸‘æ•°ï¼Œfalseä¸‘æ•°
      */
     private static boolean isUgly(int num) {
         while (num % 2 == 0) {
@@ -28,10 +28,10 @@ public class Test34 {
     }
 
     /**
-     * ÕÒµÚindex¸ö³óÊı£¬ËÙ¶ÈÌ«Âı
+     * æ‰¾ç¬¬indexä¸ªä¸‘æ•°ï¼Œé€Ÿåº¦å¤ªæ…¢
      *
-     * @param index µÚindex¸ö³óÊı
-     * @return ¶ÔÓ¦µÄ³óÊıÖµ
+     * @param index ç¬¬indexä¸ªä¸‘æ•°
+     * @return å¯¹åº”çš„ä¸‘æ•°å€¼
      */
     public static int getUglyNumber(int index) {
         if (index <= 0) {
@@ -51,10 +51,10 @@ public class Test34 {
     }
 
     /**
-     * ÕÒµÚindex¸ö³óÊı£¬¡¾µÚ¶şÖÖ·½·¨¡¿
+     * æ‰¾ç¬¬indexä¸ªä¸‘æ•°ï¼Œã€ç¬¬äºŒç§æ–¹æ³•ã€‘
      *
-     * @param index µÚindex¸ö³óÊı
-     * @return ¶ÔÓ¦µÄ³óÊıÖµ
+     * @param index ç¬¬indexä¸ªä¸‘æ•°
+     * @return å¯¹åº”çš„ä¸‘æ•°å€¼
      */
     public static int getUglyNumber2(int index) {
         if (index <= 0) {

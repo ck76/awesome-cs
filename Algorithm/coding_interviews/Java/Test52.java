@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-15
  * Time: 08:59
  * Declaration: All Rights Reserved !!!
@@ -14,18 +14,18 @@ public class Test52 {
 
         double[] result = new double[data.length];
 
-        // result[0]È¡1
+        // result[0]å–1
         result[0] = 1;
         for (int i = 1; i < data.length; i++) {
-            // µÚÒ»²½Ã¿¸öresult[i]¶¼µÈÓÚÓÚdata[0]*data[1]...data[i-1]
-            // µ±i=n-1Ê±£¬´ËÊ±result[n-1]µÄ½á¹ûÒÑ¾­¼ÆËã³öÀ´ÁË¡¾A¡¿
+            // ç¬¬ä¸€æ­¥æ¯ä¸ªresult[i]éƒ½ç­‰äºäºdata[0]*data[1]...data[i-1]
+            // å½“i=n-1æ—¶ï¼Œæ­¤æ—¶result[n-1]çš„ç»“æœå·²ç»è®¡ç®—å‡ºæ¥äº†ã€Aã€‘
             result[i] = result[i -1] * data[i - 1];
         }
 
-        // tmp±£´ædata[n-1]*data[n-2]...data[i+1]µÄ½á¹û
+        // tmpä¿å­˜data[n-1]*data[n-2]...data[i+1]çš„ç»“æœ
         double tmp = 1;
-        // µÚ¶ş²½Çódata[n-1]*data[n-2]...data[i+1]
-        // ¡¾A¡¿result[n-1]µÄ½á¹ûÒÑ¾­¼ÆËã³öÀ´£¬ËùÒÔ´Ódata.length-2¿ªÊ¼²Ù×÷
+        // ç¬¬äºŒæ­¥æ±‚data[n-1]*data[n-2]...data[i+1]
+        // ã€Aã€‘result[n-1]çš„ç»“æœå·²ç»è®¡ç®—å‡ºæ¥ï¼Œæ‰€ä»¥ä»data.length-2å¼€å§‹æ“ä½œ
         for (int i = data.length - 2; i >= 0; i--) {
             tmp *= data[i + 1];
             result[i] *= tmp;

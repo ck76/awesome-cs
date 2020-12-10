@@ -1,12 +1,12 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-06-15
  * Time: 13:42
  * Declaration: All Rights Reserved !!!
  */
 public class Test54 {
     /**
-     * ÌâÄ¿£ºÇëÊµÏÖÒ»¸öº¯ÊıÓÃÀ´ÅĞ¶Ï×Ö·û´®ÊÇ·ñ±íÊ¾ÊıÖµ£¨°üÀ¨ÕûÊıºÍĞ¡Êı£©¡£
+     * é¢˜ç›®ï¼šè¯·å®ç°ä¸€ä¸ªå‡½æ•°ç”¨æ¥åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦è¡¨ç¤ºæ•°å€¼ï¼ˆåŒ…æ‹¬æ•´æ•°å’Œå°æ•°ï¼‰ã€‚
      *
      * @param string
      * @return
@@ -21,33 +21,33 @@ public class Test54 {
             index++;
         }
 
-        // ÒÑ¾­µ½´ï×Ö·û´®µÄÄ©Î²ÁË
+        // å·²ç»åˆ°è¾¾å­—ç¬¦ä¸²çš„æœ«å°¾äº†
         if (index >= string.length()) {
             return false;
         }
 
         boolean numeric = true;
         index = scanDigits(string, index);
-        // »¹Î´µ½×Ö·û´®µÄÄ©Î²
+        // è¿˜æœªåˆ°å­—ç¬¦ä¸²çš„æœ«å°¾
         if (index < string.length()) {
-            // Èç¹ûÊÇĞ¡Êıµã
+            // å¦‚æœæ˜¯å°æ•°ç‚¹
             if (string.charAt(index) == '.') {
-                // ÒÆ¶¯µ½ÏÂÒ»¸öÎ»ÖÃ
+                // ç§»åŠ¨åˆ°ä¸‹ä¸€ä¸ªä½ç½®
                 index++;
                 index = scanDigits(string, index);
 
-                // ÒÑ¾­µ½ÁË×Ö·û´®µÄÄ©Î²ÁË
+                // å·²ç»åˆ°äº†å­—ç¬¦ä¸²çš„æœ«å°¾äº†
                 if (index >= string.length()) {
                     numeric = true;
                 }
-                // »¹Î´µ½×Ö·û´®½áÊøÎ»ÖÃ
+                // è¿˜æœªåˆ°å­—ç¬¦ä¸²ç»“æŸä½ç½®
                 else if (index < string.length() && (string.charAt(index) == 'e' || string.charAt(index) == 'E')) {
                     numeric = isExponential(string, index);
                 } else {
                     numeric = false;
                 }
             }
-            // Èç¹ûÊÇÖ¸Êı±êÊ¶
+            // å¦‚æœæ˜¯æŒ‡æ•°æ ‡è¯†
             else if (string.charAt(index) == 'e' || string.charAt(index) == 'E') {
                 numeric = isExponential(string, index);
             } else {
@@ -56,7 +56,7 @@ public class Test54 {
 
             return numeric;
         }
-        // ÒÑ¾­µ½ÁË×Ö·û´®µÄÄ©Î²ÁË£¬ËµÃ÷ÆäÃ»ÓĞÖ¸Êı²¿·Ö
+        // å·²ç»åˆ°äº†å­—ç¬¦ä¸²çš„æœ«å°¾äº†ï¼Œè¯´æ˜å…¶æ²¡æœ‰æŒ‡æ•°éƒ¨åˆ†
         else {
             return true;
         }
@@ -64,11 +64,11 @@ public class Test54 {
     }
 
     /**
-     * ÅĞ¶ÏÊÇ·ñÊÇ¿ÆÑ§¼ÆÊı·¨µÄ½áÎ²²¿·Ö£¬ÈçE5£¬e5£¬E+5£¬e-5£¬e(E)ºóÃæ½ÓÕûÊı
+     * åˆ¤æ–­æ˜¯å¦æ˜¯ç§‘å­¦è®¡æ•°æ³•çš„ç»“å°¾éƒ¨åˆ†ï¼Œå¦‚E5ï¼Œe5ï¼ŒE+5ï¼Œe-5ï¼Œe(E)åé¢æ¥æ•´æ•°
      *
-     * @param string ×Ö·û´®
-     * @param index  ¿ªÊ¼Æ¥ÅäµÄÎ»ÖÃ
-     * @return Æ¥ÅäµÄ½á¹û
+     * @param string å­—ç¬¦ä¸²
+     * @param index  å¼€å§‹åŒ¹é…çš„ä½ç½®
+     * @return åŒ¹é…çš„ç»“æœ
      */
     private static boolean isExponential(String string, int index) {
 
@@ -76,10 +76,10 @@ public class Test54 {
             return false;
         }
 
-        // ÒÆ¶¯µ½ÏÂÒ»¸öÒª´¦ÀíµÄÎ»ÖÃ
+        // ç§»åŠ¨åˆ°ä¸‹ä¸€ä¸ªè¦å¤„ç†çš„ä½ç½®
         index++;
 
-        // µ½´ï×Ö·û´®µÄÄ©Î²£¬¾Í·µ»Øfalse
+        // åˆ°è¾¾å­—ç¬¦ä¸²çš„æœ«å°¾ï¼Œå°±è¿”å›false
         if (index >= string.length()) {
             return false;
         }
@@ -88,23 +88,23 @@ public class Test54 {
             index++;
         }
 
-        // µ½´ï×Ö·û´®µÄÄ©Î²£¬¾Í·µ»Øfalse
+        // åˆ°è¾¾å­—ç¬¦ä¸²çš„æœ«å°¾ï¼Œå°±è¿”å›false
         if (index >= string.length()) {
             return false;
         }
 
         index = scanDigits(string, index);
 
-        // Èç¹ûÒÑ¾­´¦Àíµ½ÁËµÄÊı×ÖµÄÄ©Î²¾ÍÈÏÎªÊÇÕıÈ·µÄÖ¸Êı
+        // å¦‚æœå·²ç»å¤„ç†åˆ°äº†çš„æ•°å­—çš„æœ«å°¾å°±è®¤ä¸ºæ˜¯æ­£ç¡®çš„æŒ‡æ•°
         return index >= string.length();
     }
 
     /**
-     * É¨Ãè×Ö·û´®²¿·ÖµÄÊı×Ö²¿·Ö
+     * æ‰«æå­—ç¬¦ä¸²éƒ¨åˆ†çš„æ•°å­—éƒ¨åˆ†
      *
-     * @param string ×Ö·û´®
-     * @param index  ¿ªÊ¼É¨ÃèµÄÎ»ÖÃ
-     * @return ´ÓÉ¨ÃèÎ»ÖÃ¿ªÊ¼µÚÒ»¸öÊı×Ö×Ö·ûµÄÎ»ÖÃ
+     * @param string å­—ç¬¦ä¸²
+     * @param index  å¼€å§‹æ‰«æçš„ä½ç½®
+     * @return ä»æ‰«æä½ç½®å¼€å§‹ç¬¬ä¸€ä¸ªæ•°å­—å­—ç¬¦çš„ä½ç½®
      */
     private static int scanDigits(String string, int index) {
         while (index < string.length() && string.charAt(index) >= '0' && string.charAt(index) <= '9') {

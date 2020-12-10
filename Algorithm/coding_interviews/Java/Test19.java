@@ -1,12 +1,12 @@
 /**
- * Author: Íõ¿¡³¬
+ * Author: ç‹ä¿Šè¶…
  * Date: 2015-04-23
  * Time: 20:49
  * Declaration: All Rights Reserved !!!
  */
 public class Test19 {
     /**
-     * ¶ş²æÊ÷µÄÊ÷½áµã
+     * äºŒå‰æ ‘çš„æ ‘ç»“ç‚¹
      */
     public static class BinaryTreeNode {
         int value;
@@ -15,19 +15,19 @@ public class Test19 {
     }
 
     /**
-     * ÇëÍê³ÉÒ»¸öº¯Êı£¬ÊäÈë¡­¸ö¶ş²æÊ÷£¬¸Ãº¯ÊıÊä³öËüµÄ¾µÏñ
+     * è¯·å®Œæˆä¸€ä¸ªå‡½æ•°ï¼Œè¾“å…¥â€¦ä¸ªäºŒå‰æ ‘ï¼Œè¯¥å‡½æ•°è¾“å‡ºå®ƒçš„é•œåƒ
      *
-     * @param node ¶ş²æÊ÷µÄ¸ù½áµã
+     * @param node äºŒå‰æ ‘çš„æ ¹ç»“ç‚¹
      */
     public static void mirror(BinaryTreeNode node) {
-        // Èç¹ûµ±Ç°½áµã²»Îª¿ÕÔò½øĞĞ²Ù×÷
+        // å¦‚æœå½“å‰ç»“ç‚¹ä¸ä¸ºç©ºåˆ™è¿›è¡Œæ“ä½œ
         if (node != null) {
-            // ÏÂÃæÊÇ½»»»½áµã×óÓÒÁ½¸ö×ÓÊ÷
+            // ä¸‹é¢æ˜¯äº¤æ¢ç»“ç‚¹å·¦å³ä¸¤ä¸ªå­æ ‘
             BinaryTreeNode tmp = node.left;
             node.left = node.right;
             node.right = tmp;
 
-            // ¶Ô½áµãµÄ×óÓÒÁ½¸ö×ÓÊ÷½øĞĞ´¦Àí
+            // å¯¹ç»“ç‚¹çš„å·¦å³ä¸¤ä¸ªå­æ ‘è¿›è¡Œå¤„ç†
             mirror(node.left);
             mirror(node.right);
         }
