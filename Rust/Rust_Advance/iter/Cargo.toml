@@ -1,0 +1,16 @@
+[package]
+name = "iter"
+version = "0.1.0"
+authors = ["chengkun <276128749@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[profile.dev]
+opt-level = 3
+#优化级别越高编译时间越长
+
+[profile.release]
+opt-level = 0
