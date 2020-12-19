@@ -7,7 +7,7 @@
 fn main() {
     //let a: Option<i32> = Some(5); //匹配Some(value), None
     //let b: Option<i32> = None; //匹配Some(value), None
-    ////let Some(x) = a;
+    //let Some(x) = a;
 
     //if let Some(v) = a {
     if let v = 5 {

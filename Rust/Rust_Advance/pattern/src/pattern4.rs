@@ -1,3 +1,4 @@
+//TODO  解构枚举类型
 enum Message {
     Quit,
     Move{x: i32, y: i32},

@@ -1,5 +1,7 @@
+
+//TODO 解构结构体和元祖
 struct Point{
-    x: i32, 
+    x: i32,
     y: i32,
 }
 

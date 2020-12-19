@@ -66,11 +66,11 @@ fn main() {
 impl Message {
     fn print(&self) {
 //        解引用
-        match *self {
+        match self {
             Message::Quit => println!("Quit"),
             Message::Move{x, y} => println!("Move"),
-//            TODO  有问题
-//            Message::Write(&s) => println!("Write"),
+//            TODO  有问题 match *self {-》match self { 就可以了
+            Message::Write(s) => println!("Write"),
             Message::Change(a,b,c) => println!("Change"),
             _ => println!("default"),
         }

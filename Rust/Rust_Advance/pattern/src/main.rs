@@ -13,9 +13,9 @@
 //    PATTERN => EXPRESSION,
 //    PATTERN => EXPRESSION,
 //}
-//必须匹配完所有的情况
+//TODO 必须匹配完所有的情况
 //fn main() {
-//    let a = 1;    
+//    let a = 1;
 //    match a {
 //        0 => println!("Zero"),
 //        1 => println!("One"),
@@ -24,7 +24,7 @@
 //    println!("Hello, world!");
 //}
 
-//if let
+//TODO if let
 //fn main() {
 //    let color: Option<&str> = None;
 //    let is_ok = true;
@@ -45,7 +45,7 @@
 //    }
 //}
 
-//while let
+//TODO while let
 //只要模式匹配就一直执行while循环
 //fn main() {
 //    let mut stack = Vec::new();
@@ -58,7 +58,7 @@
 //    }//只要匹配Some(value),就会一直循环
 //}
 
-//for 
+//TODO for
 ////在for循环中，模式是直接跟随for关键字的值，例如 for x in y，x就是对应的模式
 //fn main() {
 //    let v = vec!['a', 'b', 'c'];
@@ -68,7 +68,7 @@
 //}
 //此处的模式是(index, value)
 
-//let 
+//TODO let
 //let PATTERN = EXPRESSION
 //fn main() {
 //    let (x, y, z) = (1, 2, 3); //(1, 2, 3)会匹配(x, y, z)，将1绑定到x，2绑定到y，3绑定到z
@@ -78,7 +78,7 @@
 //    println!("{}, {}", x, z);
 //}
 
-//函数
+//TODO  函数
 //函数的参数也是模式
 fn print_point(&(x, y): &(i32, i32)) {
     println!("x: {}, y: {}", x, y);

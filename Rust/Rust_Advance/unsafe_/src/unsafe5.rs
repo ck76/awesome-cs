@@ -1,4 +1,4 @@
-//6、访问或者修改可变静态变量
+//TODO 6、访问或者修改可变静态变量
 //
 //static HELLO_WORLD: &str = "Hello, world";
 //

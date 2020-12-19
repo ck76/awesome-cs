@@ -1,4 +1,4 @@
-//1、匹配字面值
+//TODO 1、匹配字面值
 //fn main() {
 //    let x = 1;
 //    match x {
@@ -10,20 +10,20 @@
 //    println!("Hello, world!");
 //}
 
-////2、匹配命名变量
+////TODO 2、匹配命名变量
 //fn main() {
 //    let x = Some(5);
 //    let y = 10; //位置1
 //    match x {
 //        Some(50) => println!("50"),
-//        Some(y) => println!("value = {}", y), //此处的y不是位置1的y
+//        Some(y) => println!("value = {}", y), //此处的y不是位置1的y //【】
 //        _ => println!("other"),
 //    };
 //
-//    println!("x = {:?}, y = {:?}", x, y); //此处的y是位置1的y
+//    println!("x = {:?}, y = {:?}", x, y); //此处的y是位置1的y 结果是Some(5)和10
 //}
 
-////3、多个模式
+////TODO 3、多个模式
 //fn main() {
 //    let x = 1;
 //    match x {
@@ -33,7 +33,7 @@
 //    };
 //}
 
-//4、通过..匹配
+//TODO 4、通过..匹配
 fn main() {
     //let x = 5;
 

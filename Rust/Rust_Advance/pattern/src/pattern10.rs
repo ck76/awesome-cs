@@ -1,11 +1,12 @@
-//@运算符允许我们在创建一个存放值的变量的同时，测试这个变量的值是否匹配模式。
+//TODO  【 @ 运算符】允许我们在创建一个存放值的变量的同时，测试这个变量的值是否匹配模式。
 enum Message {
     Hello{id: i32},
 }
 
 fn main() {
-    let msg = Message::Hello{id: 25};
+    let msg = Message::Hello{id: 5};
     match msg {
+//        TODO
         Message::Hello{id: id_va @ 3..=7} => {
             println!("id_va: {}", id_va);
         },
