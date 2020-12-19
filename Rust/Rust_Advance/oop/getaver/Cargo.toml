@@ -1,5 +1,5 @@
 [package]
-name = "oop"
+name = "getaver"
 version = "0.1.0"
 authors = ["chengkun <276128749@qq.com>"]
 edition = "2018"
@@ -7,15 +7,3 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-
-[workspace]
-
-members = [
-#封装
-	"getaver",
-	"main",
-#   多态
-    "gui",
-#    Rust没有继承，可以通过trait来共享特性
-
-]

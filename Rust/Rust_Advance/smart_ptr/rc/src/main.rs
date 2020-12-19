@@ -5,14 +5,16 @@
 //
 //use crate::List::{Cons, Nil};
 
-enum List {
-    Cons(i32, Rc<List>),
-    Nil,
-}
+//enum List {
+//    Cons(i32, Rc<List>),
+//    Nil,
+//}
+//
+//use crate::List::{Cons, Nil};
+//use std::rc::Rc;
 
-use crate::List::{Cons, Nil};
-use std::rc::Rc;
-
+//TODO 【引用计数的智能指针】 所有权共享
+include!("rc2.rs");
 fn main() {
     //let a = Cons(5, Box::new(Cons(10, Box::new(Nil))));
     let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
@@ -24,4 +26,6 @@ fn main() {
     //let c = Cons(4, Box::new(a));
     let c = Cons(4, Rc::clone(&a));
     println!("Hello, world!");
+
+    main2();
 }
