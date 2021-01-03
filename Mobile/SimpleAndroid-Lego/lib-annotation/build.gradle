@@ -1,0 +1,21 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = 'com.neuqer.android'
+            pom.artifactId = 'annotation'
+            pom.version = ANNOTATION_VERSION
+            repository(url: uri("$project.rootDir${LOCAL_MAVEN}"))
+        }
+    }
+}

@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neuqer.panga'
+apply plugin: 'com.neuqer.gather'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    flatDir {
+        rootProject.allprojects.each {
+            dirs project(it.path).file('libs')
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.android.v4
+    implementation deps.android.v7
+    implementation deps.project.lib_runtime
+    implementation deps.tools.butterknife
+    implementation deps.project.lib_annotation
+    implementation deps.project.lib_annotation_api
+    implementation deps.project.lib_network
+    implementation deps.project.lib_scheme
+    annotationProcessor deps.processor.butterknife_apt
+    annotationProcessor deps.processor.lego_apt
+}
+
+pangeConfig {
+    enable true
+    debug true
+}

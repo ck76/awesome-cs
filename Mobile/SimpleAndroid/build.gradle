@@ -1,0 +1,57 @@
+buildscript {
+
+    repositories {
+        maven { url uri("$project.rootDir${LOCAL_MAVEN}") }
+        mavenLocal()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://jitpack.io' }
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${GRADLE_PLUGIN_VERSION}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+        classpath "com.jakewharton:butterknife-gradle-plugin:${BUTTER_KNIFE}"
+        classpath "com.neuqer.gradle.plugin:panga:${PANGA_PLUGIN_VERSION}"
+        classpath "com.neuqer.gradle.plugin:gather:${GATHER_PLUGIN_VERSION}"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url uri("$project.rootDir${LOCAL_MAVEN}") }
+        mavenLocal()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://jitpack.io' }
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+project.ext {
+    buildToolsVersion = "${BUILD_TOOLS_VERSION}"
+    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
+    minSdkVersion = MIN_SDK_VERISON.toInteger()
+    targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+ext.deps = gradle.ext.deps
+fixProjectDeps(ext.properties)
+
+def fixProjectDeps(def map) {
+    map.each { entry ->
+        if (entry.value instanceof ProjectDescriptor) {
+            entry.value = rootProject.project(entry.value.path)
+        } else if (entry.value instanceof Map) {
+            fixProjectDeps(entry.value)
+        }
+    }
+}

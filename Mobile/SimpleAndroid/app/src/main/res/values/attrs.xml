@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleItemView">
+        <attr name="simple_title" format="string" />
+        <attr name="simple_hint" format="string" />
+        <attr name="hasIcon" format="boolean" />
+        <attr name="simple_type" format="enum">
+            <enum name="edit" value="0" />
+            <enum name="text" value="1" />
+            <enum name="number_decimal" value="2"/>
+            <enum name="number" value="3"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

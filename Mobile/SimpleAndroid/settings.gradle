@@ -1,0 +1,100 @@
+include ':app'
+
+rootProject.name = "SimpleAndroid"
+
+def deps = [:]
+
+def android = [
+        v4          : "com.android.support:support-v4:${V4}",
+        v7          : "com.android.support:appcompat-v7:${V7}",
+        recyclerview: "com.android.support:recyclerview-v7:${RECYCLERVIEW}",
+        design      : "com.android.support:design:${DESIGN}",
+        paging      : "android.arch.paging:runtime:${PAGING_VERSION}",
+        lifecycle   : "android.arch.lifecycle:extensions:${LIFECYCLE_VERSION}",
+        db_room     : "android.arch.persistence.room:runtime:${DB_ROOM_VERSION}",
+        annotation  : "com.android.support:support-annotations:${ANNOTATION}",
+        gradle_tools: "com.android.tools.build:gradle:${ANDROID_GRADLE_TOOLS_VERSION}"
+]
+
+def tools = [
+        butterknife          : "com.jakewharton:butterknife:${BUTTER_KNIFE}",
+        glide                : "com.github.bumptech.glide:glide:${GLIDE_VERSION}",
+        retrofit             : "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}",
+        retrofit_convert_gson: "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}",
+        okhttp_logging       : "com.squareup.okhttp3:logging-interceptor:${OK_HTTP_VERSION}",
+        gson                 : "com.google.code.gson:gson:${GSON_VERSION}",
+        sonic                : "com.tencent.sonic:sdk:${SONIC_VERSION}",
+        agentweb             : "com.just.agentweb:agentweb:${AGENT_WEB_VERSION}",
+        rxjava               : "io.reactivex.rxjava2:rxjava:${RX_JAVA_VERSION}",
+        rxandroid            : "io.reactivex.rxjava2:rxandroid:${RX_ANDROID_VERSION}",
+        flowlayout           : "com.hyman:flowlayout-lib:${FLOW_LAYOUT_VERSION}",
+        matisse              : "com.zhihu.android:matisse:${MATISSE_VERSION}",
+        picker_view          : "com.contrarywind:Android-PickerView:${PICKER_VIEW_VERSION}",
+        indicator_view       : "com.romandanylyk:pageindicatorview:${INDICATOR_VIEW_VERSION}",
+        auto_service         : "com.google.auto.service:auto-service:${AUTO_SERVICE_VERSION}",
+        javapoet             : "com.squareup:javapoet:${JAVAPOET_VERSION}",
+        javassist            : "javassist:javassist:${JAVASSIST_VERSION}",
+        event_bus            : "org.greenrobot:eventbus:${EVENT_BUS}",
+        fastjson             : "com.alibaba:fastjson:1.2.49"
+]
+
+def project = [
+        lib_runtime       : includeProject(":lego:lib-runtime"),
+        lib_config        : includeProject(":lego:lib-config"),
+        lib_ui            : includeProject(":lego:lib-ui"),
+        lib_util          : includeProject(":lego:lib-util"),
+        lib_permission    : includeProject(":lego:lib-permission"),
+        lib_img_loader    : includeProject(":lego:lib-img-loader"),
+        lib_network       : includeProject(":lego:lib-network"),
+        lib_cache         : includeProject(":lego:lib-cache"),
+        lib_scheme        : includeProject(":lego:lib-scheme"),
+        lib_webview       : includeProject(":lego:lib-webview"),
+        lib_mock          : includeProject(":lego:lib-mock"),
+        lib_splash        : includeProject(":lego:lib-splash"),
+        lib_payment       : includeProject(":lego:lib-payment"),
+        lib_debug         : includeProject(":lego:lib-debug"),
+        lib_annotation    : includeProject(":lego:lib-annotation"),
+        lib_annotation_api: includeProject(":lego:lib-annotation-api")
+]
+
+def processor = [
+        butterknife_apt: "com.jakewharton:butterknife-compiler:${BUTTER_KNIFE}",
+        glide_apt      : "com.github.bumptech.glide:compiler:${GLIDE_VERSION}",
+        db_room_apt    : "android.arch.persistence.room:compiler:${DB_ROOM_VERSION}",
+        event_bus_apt  : "org.greenrobot:eventbus-annotation-processor:${EVENT_BUS}",
+        lego_apt       : includeProject(":lego:lib-annotation-processor")
+]
+
+def debug = [
+        debug_db: "com.amitshekhar.android:debug-db:${DEBUG_DB_VERSION}"
+]
+
+def plugin = [
+        panga : includeProject(":lego:gradle-plugins:panga"),
+        gather: includeProject(":lego:gradle-plugins:gather")
+]
+
+def kotlin = [
+        "core": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${KOTLIN_VERSION}"
+]
+
+// 主要是Plugin插件使用
+def maven = [
+        annotation: "com.neuqer.android:annotation:${ANNOTATION_VERSION}",
+]
+
+deps.android = android
+deps.tools = tools
+deps.project = project
+deps.processor = processor
+deps.debug = debug
+deps.plugin = plugin
+deps.kotlin = kotlin
+deps.maven = maven
+
+def includeProject(def projectPath) {
+    include projectPath
+    return project(projectPath)
+}
+
+gradle.ext.deps = deps
