@@ -7,36 +7,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    static  Object lock=new Object();
     public static void main(String[] args) {
-//        List<? extends Human> list = new ArrayList<>();
-////     【之前List中就有元素，不允许后添加，会导致类型不一致】添加受限，下面三个全错
-//        list.add(new Human());//错误❌
-//        list.add(new MAN());//错误❌
-//        list.add(new Animal());//错误❌
-//        list.add(new WOMAN());//错误❌
-//
-////        获取的只能是Human及其父类
-//        MAN man = list.get(0);//错误❌
-//        WOMAN woman = list.get(0);//错误❌
-//        Human human = list.get(0);
-//        Animal animal = list.get(0);
-//
-//        List<? super Human> list1 = new ArrayList<>();
-//        list1.add(new WOMAN());
-//        list1.add(new MAN());
-//        list1.add(new Human());
-//        list1.add(new Animal());//错误❌
-//
-////        获取受限【向下转型，如果没有强转就是错误】
-//        MAN a_human1 = (MAN) list1.get(0);//抛出转型异常
-//        Human human1 = (Human) list1.get(0);
-//        Animal animal1 = (Animal) list1.get(1);
-        Solution2 solution2=new Solution2();
-        List<String> strings = solution2.generateParenthesis(1);
-        System.out.println(strings);
-        System.out.println(solution2.count);
+        Runnable runnable1=new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    synchronized (lock){
+                        System.out.println("A");
+
+                        lock.notify();
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        };
+
+        Runnable runnable2=new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    synchronized (lock){
+                        System.out.println("B");
+
+                        lock.notify();
+                        try {
+                            lock.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        };
+
+        Thread thread1=new Thread(runnable1);
+        Thread thread2=new Thread(runnable2);
+        thread1.start();
+        thread2.start();
     }
 }
+
 
 class Solution2 {
     public int count=0;
