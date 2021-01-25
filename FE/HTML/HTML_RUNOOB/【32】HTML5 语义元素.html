@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+语义= 意义
+
+语义元素 = 有意义的元素
+
+什么是语义元素?
+一个语义元素能够清楚的描述其意义给浏览器和开发者。
+
+无语义 元素实例: div> 和 span> - 无需考虑内容.
+
+语义元素实例: form>, table>, and img> - 清楚的定义了它的内容.
+
+<img src="https://www.runoob.com/wp-content/uploads/2013/07/html5-layout.jpg">
+
+<hr>
+
+HTML5 section> 元素
+section> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。
+
+根据W3C HTML5文档: section 包含了一组内容及其标题。
+
+实例
+<section>
+    <h1>WWF</h1>
+    <p>The World Wide Fund for Nature (WWF) is....</p>
+</section>
+
+
+<hr>
+
+article> 元素
+article> 标签定义独立的内容。.
+
+article> 元素使用实例:
+
+Forum post
+Blog post
+News story
+Comment
+实例
+<article>
+    <h1>Internet Explorer 9</h1>
+    <p>Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。</p>
+</article>
+
+<hr>
+
+nav> 元素
+nav> 标签定义导航链接的部分。
+
+nav> 元素用于定义页面的导航链接部分区域，但是，不是所有的链接都需要包含在 nav> 元素中!
+
+实例
+<nav>
+    <a href="/html/">HTML</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/jquery/">jQuery</a>
+</nav>
+<hr>
+
+aside> 元素
+aside> 标签定义页面主区域内容之外的内容（比如侧边栏）。
+
+aside 标签的内容应与主区域的内容相关.
+
+实例
+<p>My family and I visited The Epcot center this summer.</p>
+
+<aside>
+    <h4>Epcot Center</h4>
+    <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+</aside>
+
+<hr>
+
+header> 元素
+header>元素描述了文档的头部区域
+
+header>元素主要用于定义内容的介绍展示区域.
+
+在页面中你可以使用多个header> 元素.
+
+以下实例定义了文章的头部:
+
+实例
+<article>
+    <header>
+        <h1>Internet Explorer 9</h1>
+        <p>
+            <time pubdate datetime="2011-03-15"></time>
+        </p>
+    </header>
+    <p>Windows Internet Explorer 9(缩写为 IE9 )是在2011年3月14日21:00发布的</p>
+</article>
+
+
+<hr>
+
+footer> 元素
+footer> 元素描述了文档的底部区域.
+
+footer> 元素应该包含它的包含元素
+
+一个页脚通常包含文档的作者，著作权信息，链接的使用条款，联系信息等
+
+文档中你可以使用多个 footer>元素.
+
+实例
+<footer>
+    <p>Posted by: Hege Refsnes</p>
+    <p>
+        <time pubdate datetime="2012-03-01"></time>
+    </p>
+</footer>
+<hr>
+
+figure> 和 figcaption> 元素
+figure>标签规定独立的流内容（图像、图表、照片、代码等等）。
+
+figure> 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。
+
+figcaption> 标签定义 figure> 元素的标题.
+
+figcaption>元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。
+
+实例
+<figure>
+    <img loading="lazy" src="https://www.runoob.com/try/demo_source/img_pulpit.jpg" alt="The Pulpit Rock" width="304"
+         height="228">
+    <figcaption>Fig1. - The Pulpit Pock, Norway.</figcaption>
+</figure>
+
+<hr>
+
+
+</body>
+</html>

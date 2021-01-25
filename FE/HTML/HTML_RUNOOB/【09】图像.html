@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228">
+在浏览器无法载入图像时，替换文本属性告诉读者她们失去的信息。此时，浏览器将显示这个替代性的文本而不是图像。为页面上的图像都加上替换文本属性是个好习惯，这样有助于更好的显示信息，并且对于那些使用纯文本浏览器的人来说是非常有用的。
+<br>
+提示: 指定图像的高度和宽度是一个很好的习惯。如果图像指定了高度宽度，页面加载时就会保留指定的尺寸。如果没有指定图片的大小，加载页面时有可能会破坏HTML页面的整体布局。
+
+
+<map name="planetmap">
+    <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+    <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+    <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+</map>
+
+1、矩形：(左上角顶点坐标为(x1,y1)，右下角顶点坐标为(x2,y2))
+<area shape="rect" coords="x1,y1,x2,y2" href=url>
+2、圆形：(圆心坐标为(X1,y1)，半径为r)
+<area shape="circle" coords="x1,y1,r" href=url>
+3、多边形：(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......)
+<area shape="poly" coords="x1,y1,x2,y2 ......" href=url>
+
+</body>
+</html>

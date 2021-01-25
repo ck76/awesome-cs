@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        a:link {
+            color: #000000;
+        }
+
+        /* 未访问链接*/
+        a:visited {
+            color: #00FF00;
+        }
+
+        /* 已访问链接 */
+        a:hover {
+            color: #FF00FF;
+        }
+
+        /* 鼠标移动到链接上 */
+        a:active {
+            color: #0000FF;
+        }
+
+        /* 鼠标点击时 */
+
+        p:first-child {
+            color: blue;
+        }
+
+        p > i:first-child {
+            color: blue;
+        }
+
+        p:first-child i {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+<p>This is some text.</p>
+<p>This is some text.</p>
+<p><b>注意:</b>对于 :first-child 工作于 IE8 以及更早版本的浏览器, ！DOCTYPE 必须已经声明.</p>
+<hr>
+<p><b><a href="/css/" target="_blank">这是一个链接</a></b></p>
+<p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+<p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+
+<hr>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p><b>注意:</b> 当 :first-child 作用于 IE8 以及更早版本的浏览器, ！DOCTYPE 必须已经定义.</p>
+<hr>
+
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p><b>注意:</b> 当:first-child 作用于 IE8 及更早版本的浏览器, DOCTYPE 必须已经定义.</p>
+
+
+</body>
+</html>

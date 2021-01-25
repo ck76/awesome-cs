@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--引入百度 API，"ak=" 后面一串码是密钥，最好自己申请-->
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
+
+
+</head>
+<body>
+<p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+<button onclick="getLocation()">点我</button>
+<script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            x.innerHTML = "该浏览器不支持定位。";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "纬度: " + position.coords.latitude +
+            "<br>经度: " + position.coords.longitude;
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "用户拒绝对获取地理位置的请求。"
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "位置信息是不可用的。"
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "请求用户地理位置超时。"
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "未知错误。"
+                break;
+        }
+    }
+</script>
+
+<input type="button" onclick="getLocationBaidu()" value="确认"/>
+<div id="position"></div>
+<script type="text/javascript">
+    var x = document.getElementById('position');
+
+    function getLocationBaidu() {
+        // 创建百度地理位置实例，代替 navigator.geolocation
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function (e) {
+            if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                // 百度 geolocation 的经纬度属性不同，此处是 point.lat 而不是 coords.latitude
+                x.innerHTML = '纬度：' + e.point.lat + '<br/>经度：' + e.point.lng;
+            } else {
+                x.innerHTML = 'failed' + this.getStatus();
+            }
+        });
+    }
+</script>
+</body>
+</html>

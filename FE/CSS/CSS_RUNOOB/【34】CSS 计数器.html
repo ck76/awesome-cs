@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+
+        li::before {
+            counter-increment: section;
+            content: counters(section,".") " ";
+        }
+    </style>
+</head>
+<body>
+
+<ol>
+    <li>item</li>
+    <li>item
+        <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item
+                <ol>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </li>
+            <li>item</li>
+        </ol>
+    </li>
+    <li>item</li>
+    <li>item</li>
+</ol>
+
+<ol>
+    <li>item</li>
+    <li>item</li>
+</ol>
+
+<p><b>注意:</b> IE8 需要指定 !DOCTYPE 才可以支持该属性。</p>
+
+</body>
+</html>

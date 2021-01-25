@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        [title=runoob] {
+            border: 5px solid green;
+        }
+
+        [title~=hello] {
+            color: blue;
+        }
+
+        [lang|=en] {
+            color: blue;
+        }
+
+        input[type="text"] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+            background-color: yellow;
+        }
+
+        input[type="button"] {
+            width: 120px;
+            margin-left: 35px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+<h2>将适用:</h2>
+<img title="runoob" src="logo.png" width="270" height="50"/>
+<br>
+<a title="runoob" href="//www.runoob.com/">runoob</a>
+<hr>
+<h2>将不适用:</h2>
+<p title="greeting">Hi!</p>
+<a class="runoob" href="//www.runoob.com/">runoob</a>
+<hr>
+<h2>将适用:</h2>
+<h1 title="hello world">Hello world</h1>
+<p title="student hello">Hello CSS students!</p>
+<hr>
+<h2>将不适用:</h2>
+<p title="student">Hi CSS students!</p>
+<hr>
+<h2>将适用:</h2>
+<p lang="en">Hello!</p>
+<p lang="en-us">Hi!</p>
+<p lang="en-gb">Ello!</p>
+<hr>
+<h2>将不适用:</h2>
+<p lang="us">Hi!</p>
+<p lang="no">Hei!</p>
+<hr>
+<form name="input" action="demo-form.php" method="get">
+    Firstname:<input type="text" name="fname" value="Peter" size="20">
+    Lastname:<input type="text" name="lname" value="Griffin" size="20">
+    <input type="button" value="Example Button">
+</body>
+</html>

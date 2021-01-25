@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+HTML5 新的表单元素
+HTML5 有以下新的表单元素:
+
+<datalist></datalist>
+<keygen></keygen>
+<output></output>
+input>标签定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值。
+keygen> 标签规定用于表单的密钥对生成器字段。
+output> 标签定义不同类型的输出，比如脚本的输出。
+
+注意:不是所有的浏览器都支持HTML5 新的表单元素，但是你可以在使用它们，即使浏览器不支持表单属性，仍然可以显示为常规的表单元素。
+
+
+
+<form action="demo-form.php" method="get">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <input type="submit">
+</form>
+
+<p><strong>注意:</strong> Internet Explorer 9（更早 IE 版本），Safari 不支持 datalist 标签。</p>
+
+
+<form action="demo_keygen.php" method="get">
+    用户名: <input type="text" name="usr_name">
+    加密: <keygen name="security"></keygen>
+    <input type="submit">
+</form>
+
+<p><strong>注意:</strong> Internet Explorer 不支持 keygen 标签。</p>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+    <input type="range" id="a" value="50">100
+    +<input type="number" id="b" value="50">
+    =<output name="x" for="a b"></output>
+</form>
+
+<p><strong>注意:</strong> Edge 12及更早 IE 版本的浏览器不支持 output 元素。</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div
+        {
+            border:2px solid #a1a1a1;
+            padding:10px 40px;
+            background:#dddddd;
+            width:300px;
+            border-radius:25px;
+        }
+        div
+        {
+            width:300px;
+            height:100px;
+            background-color:yellow;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        div
+        {
+            border:15px solid transparent;
+            width:250px;
+            padding:10px 20px;
+        }
+
+        #round
+        {
+            -webkit-border-image:url(https://www.runoob.com/images/border.png) 30 30 round; /* Safari 5 and older */
+            -o-border-image:url(https://www.runoob.com/images/border.png) 30 30 round; /* Opera */
+            border-image:url(https://www.runoob.com/images/border.png) 30 30 round;
+        }
+
+        #stretch
+        {
+            -webkit-border-image:url(https://www.runoob.com/images/border.png) 30 30 stretch; /* Safari 5 and older */
+            -o-border-image:url(https://www.runoob.com/images/border.png) 30 30 stretch; /* Opera */
+            border-image:url(https://www.runoob.com/images/border.png) 30 30 stretch;
+        }
+    </style>
+</head>
+<body>
+
+<div>border-radius 属性允许您为元素添加圆角边框！ </div>
+<p><b>注意: </b> Internet Explorer 不支持 border-image 属性。</p>
+<p> border-image 属性用于设置图片的边框。</p>
+
+<div id="round">这里，图像平铺（重复）来填充该区域。</div>
+<br>
+<div id="stretch">这里，图像被拉伸以填充该区域。</div>
+
+<p>这是我们使用的图片素材：</p>
+<img src="https://www.runoob.com/images/https://www.runoob.com/images/border.png" />
+
+</body>
+</html>

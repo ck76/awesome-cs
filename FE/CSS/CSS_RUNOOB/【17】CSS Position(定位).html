@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div.static {
+            position: static;
+            border: 3px solid #73AD21;
+        }
+
+        p.pos_fixed {
+            position: fixed;
+            top: 30px;
+            right: 5px;
+        }
+
+        h2.pos_left {
+            position: relative;
+            left: -20px;
+        }
+
+        h2.pos_right {
+            position: relative;
+            left: 20px;
+        }
+
+        h2.pos_top {
+            position: relative;
+            top: -50px;
+        }
+
+        h2.xx {
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
+
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }
+
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<h2>position: static;</h2>
+
+<p>使用 position: static; 定位的元素，无特殊定位，遵循正常的文档流对象:</p>
+
+<div class="static">
+    该元素使用了 position: static;
+</div>
+
+<hr>
+<p class="pos_fixed">Some more text</p>
+<p><b>注意:</b> IE7 和 IE8 支持只有一个 !DOCTYPE 指定固定值.</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<p>Some text</p>
+<hr>
+<h2>这是位于正常位置的标题</h2>
+<h2 class="pos_left">这个标题相对于其正常位置向左移动</h2>
+<h2 class="pos_right">这个标题相对于其正常位置向右移动</h2>
+<p>相对定位会按照元素的原始位置对该元素进行移动。</p>
+<p>样式 "left:-20px" 从元素的原始左侧位置减去 20 像素。</p>
+<p>样式 "left:20px" 向元素的原始左侧位置增加 20 像素。</p>
+
+<hr>
+<h2>这是一个没有定位的标题</h2>
+<h2 class="pos_top">这个标题是根据其正常位置向上移动</h2>
+<p><b>注意:</b> 即使相对定位元素的内容是移动,预留空间的元素仍保存在正常流动。</p>
+
+<hr>
+
+<h2 class="xx">这是一个绝对定位了的标题</h2>
+<p>用绝对定位,一个元素可以放在页面上的任何位置。标题下面放置距离左边的页面100 px和距离页面的顶部150 px的元素。.</p>
+<hr>
+
+<p>尝试滚动页面。</p>
+<p>注意: IE/Edge 15 及更早 IE 版本不支持 sticky 属性。</p>
+
+<div class="sticky">我是粘性定位!</div>
+
+<div style="padding-bottom:2000px">
+    <p>滚动我</p>
+    <p>来回滚动我</p>
+    <p>滚动我</p>
+    <p>来回滚动我</p>
+    <p>滚动我</p>
+    <p>来回滚动我</p>
+</div>
+
+<hr>
+<h1>This is a heading</h1>
+<img src="https://www.runoob.com/try/demo_source/w3css.gif" width="100" height="140"/>
+<p>因为图像元素设置了 z-index 属性值为 -1, 所以它会显示在文字之后。</p>
+<hr>
+
+
+</body>
+</html>

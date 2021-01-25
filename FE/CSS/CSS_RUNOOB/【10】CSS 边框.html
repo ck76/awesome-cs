@@ -1,0 +1,79 @@
+<!--border-style：属性1，属性2，属性3，属性4
+
+上->右->下->左
+
+border-style：属性1，属性2，属性3
+
+上->左右->下
+
+border-style：属性1，属性2
+
+上下->左右
+
+border-style：属性1
+
+上下左右属性相同-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        p.one {
+            border-style: solid;
+            border-width: 5px;
+        }
+
+        p.two {
+            border-style: solid;
+            border-width: medium;
+        }
+
+        p.three {
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        p.one1 {
+            border-style: solid;
+            border-color: red;
+        }
+
+        p.two1 {
+            border-style: solid;
+            border-color: #98bf21;
+        }
+
+        p.xx {
+            border-top-style: dotted;
+            border-right-style: solid;
+            border-bottom-style: dotted;
+            border-left-style: solid;
+        }
+
+        p.xxx {
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+<p class="one">一些文本。</p>
+<p class="two">一些文本。</p>
+<p class="three">一些文本。</p>
+<p><b>注意:</b> "border-width" 属性 如果单独使用则不起作用。要先使用 "border-style" 属性来设置边框。</p>
+<hr>
+
+<p class="one1">实线红色边框</p>
+<p class="two1">实线绿色边框</p>
+<p><b>注意:</b> "border-color" 属性 如果单独使用则不起作用. 要先使用 "border-style" 属性来设置边框。</p>
+
+<hr>
+<p class="xx">两个不同的边界样式。</p>
+
+<hr>
+<p class="xxx">段落中的一些文本。</p>
+</body>
+
+</html>

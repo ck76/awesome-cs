@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        .center1 {
+            margin: auto;
+            width: 60%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+            text-align: center;
+            border: 3px solid green;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .right {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+        }
+
+        div {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+
+        .img1 {
+            float: right;
+        }
+
+        .clearfix {
+            overflow: auto;
+        }
+
+        .img2 {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<h2>元素居中对齐</h2>
+<p>水平居中块级元素 (如 div), 可以使用 margin: auto;</p>
+
+<div class="center1">
+    <p><b>注意: </b>使用 margin:auto 无法兼容 IE8, 除非 !DOCTYPE 已经声明。</p>
+</div>
+
+<hr>
+<h2>图片居中对齐</h2>
+<p>要让图片居中对齐, 可以使用 margin: auto; 并将它放到块元素中：</p>
+
+<img src="//static.runoob.com/images/mix/paris.jpg" alt="Paris" style="width:40%">
+<hr>
+
+<h2>右对齐</h2>
+<p>以下实例演示了如何使用 position 来实现右对齐:</p>
+
+<div class="right">
+    <p>菜鸟教程 -- 学的不仅是技术，更是梦想！！</p>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="right">
+        <p><b>注意: </b>当使用浮动属性对齐,总是包括 !DOCTYPE 声明!如果丢失,它将会在 IE 浏览器产生奇怪的结果。</p>
+    </div>
+</div>
+
+<hr>
+<p>以下实例图在父元素中溢出，很不美观:</p>
+
+<div>
+    <img class="img1" src="https://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="170"
+         height="170">
+    菜鸟教程 - 学的不仅是技术，更是梦想！！！
+</div>
+
+<p style="clear:right">在父元素上通过添加 clearfix 类，并设置 overflow: auto; 来解决该问题:</p>
+
+<div class="clearfix">
+    <img class="img2" src="https://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="170"
+         height="170">
+    菜鸟教程 - 学的不仅是技术，更是梦想！！！
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!--CSS组合选择符包括各种简单选择符的组合方式。-->
+
+<!--在 CSS3 中包含了四种组合方式:-->
+
+<!--后代选择器(以空格     分隔)-->
+<!--子元素选择器(以大于 > 号分隔）-->
+<!--相邻兄弟选择器（以加号 + 分隔）-->
+<!--普通兄弟选择器（以波浪号 ～ 分隔）-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div p {
+            background-color: yellow;
+        }
+
+        div>p
+        {
+            background-color: #5dff28;
+        }
+        div+p
+        {
+            background-color: #ff8d48;
+        }
+        div~p
+        {
+            background-color: #48c8ff;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <p>段落 1。 在 div 中。</p>
+    <p>段落 2。 在 div 中。</p>
+</div>
+
+<p>段落 3。不在 div 中。</p>
+<p>段落 4。不在 div 中。</p>
+
+<hr>
+<h1>Welcome to My Homepage</h1>
+<div>
+    <h2>My name is Donald</h2>
+    <p>I live in Duckburg.</p>
+</div>
+
+<div>
+    <span><p>I will not be styled.</p></span>
+</div>
+
+<p>My best friend is Mickey.</p>
+
+<hr>
+<h1>文章标题</h1>
+
+<div>
+    <h2>DIV 内部标题</h2>
+    <p>DIV 内部段落。</p>
+</div>
+
+<p>DIV 之后的第一个 P 元素。</p>
+
+<p>DIV 之后的第二个 P 元素。</p>
+<hr>
+<p>之前段落，不会添加背景颜色。</p>
+<div>
+    <p>段落 1。 在 div 中。</p>
+    <p>段落 2。 在 div 中。</p>
+</div>
+
+<p>段落 3。不在 div 中。</p>
+<p>段落 4。不在 div 中。</p>
+</body>
+</html>
