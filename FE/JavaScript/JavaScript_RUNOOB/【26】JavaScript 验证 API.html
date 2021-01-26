@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<p>输入数字并点击验证按钮:</p>
+
+<input id="id1" type="number" max="100">
+<button onclick="myFunction()">验证</button>
+
+<p>如果输入的数字大于 100 ( input 的 max 属性), 会显示错误信息。</p>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var txt = "";
+        if (document.getElementById("id1").validity.rangeOverflow) {
+            txt = "输入的值太大了";
+        } else {
+            txt = "输入正确";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
+</body>
+</html>

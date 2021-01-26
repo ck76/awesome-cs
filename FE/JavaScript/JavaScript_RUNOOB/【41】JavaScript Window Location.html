@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<head>
+    <script>
+        function newDoc() {
+            window.location.assign("https://www.runoob.com")
+        }
+    </script>
+</head>
+<body>
+
+<p>
+    window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。<br>
+
+    Window Location<br>
+    window.location 对象在编写时可不使用 window 这个前缀。 一些例子：<br>
+
+    一些实例:<br>
+
+    location.hostname 返回 web 主机的域名<br>
+    location.pathname 返回当前页面的路径和文件名<br>
+    location.port 返回 web 主机的端口 （80 或 443）<br>
+    location.protocol 返回所使用的 web 协议（http: 或 https:）<br>
+</p>
+<input type="button" value="加载新文档" onclick="newDoc()">
+
+</body>
+</html>

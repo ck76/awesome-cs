@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>单击按钮每3秒出现一个“Hello”警告框。</p>
+<p>再次点击警告框，经过3秒出现新的警告框，这将一直执行 ...</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction(){
+        setInterval(function(){alert("Hello")},3000);
+    }
+</script>
+
+<hr>
+<p>页面上显示时钟：</p>
+<p id="demo"></p>
+<button onclick="myStopFunction()">停止</button>
+<script>
+    var myVar=setInterval(function(){myTimer()},1000);
+    function myTimer(){
+        var d=new Date();
+        var t=d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML=t;
+    }
+    function myStopFunction(){
+        clearInterval(myVar);
+    }
+</script>
+<hr>
+<p>点击按钮，在等待 3 秒后弹出 "Hello"。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction(){
+        setTimeout(function(){alert("Hello")},3000);
+    }
+</script>
+
+<hr>
+<p>点击第一个按钮等待3秒后出现"Hello"弹框。</p>
+<p>点击第二个按钮来阻止第一个函数运行。（你必须在3秒之前点击它）。</p>
+<button onclick="myFunction()">点我</button>
+<button onclick="myStopFunction()">停止弹框</button>
+<script>
+    var myVar;
+    function myFunction(){
+        myVar=setTimeout(function(){alert("Hello")},3000);
+    }
+    function myStopFunction(){
+        clearTimeout(myVar);
+    }
+</script>
+<hr>
+<script>
+    function timedText(){
+        var x=document.getElementById('txt');
+        var t1=setTimeout(function(){x.value="2 秒"},2000);
+        var t2=setTimeout(function(){x.value="4 秒"},4000);
+        var t3=setTimeout(function(){x.value="6 秒"},6000);
+    }
+</script>
+
+<form>
+    <input type="button" value="显示文本时间!" onclick="timedText()" />
+    <input type="text" id="txt" />
+</form>
+<p>点击上面的按钮，输出的文本将告诉你2秒，4秒，6秒已经过去了。</p>
+</body>
+</html>

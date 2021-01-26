@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>局部变量在声明的函数外不可以访问。</p>
+<p>作用域是可访问变量的集合。
+
+    JavaScript 作用域
+    在 JavaScript 中, 对象和函数同样也是变量。
+
+    在 JavaScript 中, 作用域为可访问变量，对象，函数的集合。
+
+    JavaScript 函数作用域: 作用域在函数内修改。
+</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+在 HTML 中, 所有全局变量都会成为 window 变量。
+<script>
+    var g_carName = "Volvo";
+    myFunction();
+    document.getElementById("demo").innerHTML = "carName 的类型是：" + typeof carName;
+    document.getElementById("demo1").innerHTML =
+        "我可以显示 " + l_g_carName;
+    document.getElementById("demo2").innerHTML =
+        "我可以显示 " + window.carName + window.g_carName + window.l_g_carName;
+
+    function myFunction() {
+        var carName = "Volvo";
+        l_g_carName = "Volvo";
+        document.getElementById("demo3").innerHTML =
+            "我可以显示 " + g_carName;
+    }
+</script>
+
+</body>
+</html>

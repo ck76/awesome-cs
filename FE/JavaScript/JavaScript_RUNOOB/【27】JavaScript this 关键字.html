@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript <b>this</b> 关键字</h2>
+
+<p>实例中，<b>this</b> 指向了 <b>person</b> 对象。</p>
+<p>因为 person 对象是 fullName 方法的所有者。</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<hr>
+<p>
+    this 的多种指向:<br>
+
+    1、在对象方法中， this 指向调用它所在方法的对象。<br>
+    2、单独使用 this，它指向全局(Global)对象。<br>
+    3、函数使用中，this 指向函数的所属者。<br>
+    4、严格模式下函数是没有绑定到 this 上，这时候 this 是 undefined。<br>
+    5、在 HTML 事件句柄中，this 指向了接收事件的 HTML 元素。<br>
+    6、apply 和 call 允许切换函数执行的上下文环境（context），即 this 绑定的对象，可以将 this 引用到任何对象。<br>
+</p>
+<hr>
+<script>
+    // 创建一个对象
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+
+    // 显示对象的数据
+    document.getElementById("demo").innerHTML = person.fullName();
+
+    var x = this;
+    document.getElementById("demo1").innerHTML = x;
+</script>
+
+</body>
+</html>

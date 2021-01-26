@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h2>JavaScript HTML DOM!</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Runoob!</p>
+
+<p id="demo"></p>
+
+<script>
+    var myNodelist = document.querySelectorAll("p");
+    document.getElementById("demo").innerHTML = "文档包含 " + myNodelist.length + " 个段落。";
+</script>
+<button onclick="myFunction()">点我</button>
+
+<script>
+    function myFunction() {
+        var myNodelist = document.querySelectorAll("p");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+            myNodelist[i].style.color = "red";
+        }
+    }
+</script>
+<hr>
+<p>
+    HTMLCollection 与 NodeList 的区别<br>
+    HTMLCollection 是 HTML 元素的集合。<br>
+
+    NodeList 是一个文档节点的集合。<br>
+
+    NodeList 与 HTMLCollection 有很多类似的地方。<br>
+
+    NodeList 与 HTMLCollection 都与数组对象有点类似，可以使用索引 (0, 1, 2, 3, 4, ...) 来获取元素。<br>
+
+    NodeList 与 HTMLCollection 都有 length 属性。<br>
+
+    HTMLCollection 元素可以通过 name，id 或索引来获取。<br>
+
+    NodeList 只能通过索引来获取。<br>
+
+    只有 NodeList 对象有包含属性节点和文本节点。<br>
+
+    节点列表不是一个数组！<br>
+
+    节点列表看起来可能是一个数组，但其实不是。<br>
+
+    你可以像数组一样，使用索引来获取元素。<br>
+
+    节点列表无法使用数组的方法： valueOf(), pop(), push(), 或 join() 。<br>
+</p>
+</body>
+</html>

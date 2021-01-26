@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+<p>回调函数等待 3 秒后执行。</p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    setTimeout(function () {
+        document.getElementById("demo1").innerHTML = "RUNOOB-1!";
+    }, 3000);
+    document.getElementById("demo2").innerHTML = "RUNOOB-2!";
+</script>
+
+<hr>
+
+
+<p><strong>Ajax 以下内容是通过异步请求获取的：</strong></p>
+<p id="demo"></p>
+<script>
+    var xhr = new XMLHttpRequest();
+
+    xhr.onload = function () {
+        // 输出接收到的文字数据
+        document.getElementById("demo").innerHTML = xhr.responseText;
+    };
+
+    xhr.onerror = function () {
+        document.getElementById("demo").innerHTML = "请求出错";
+    }
+
+    // 发送异步 GET 请求
+    xhr.open("GET", "https://www.runoob.com/try/ajax/ajax_info.txt", true);
+    xhr.send();
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("https://www.runoob.com/try/ajax/demo_test.php", function (data, status) {
+                alert("数据: " + data + "\n状态: " + status);
+            });
+        });
+    });
+</script>
+<button>发送一个 HTTP GET 请求并获取返回结果</button>
+</body>
+</html>

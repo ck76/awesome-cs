@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p>
+    Number() 转换为数字， String() 转换为字符串， Boolean() 转换为布尔值。<br>
+
+    JavaScript 数据类型<br>
+    在 JavaScript 中有 6 种不同的数据类型：<br>
+
+    string<br>
+    number<br>
+    boolean<br>
+    object<br>
+    function<br>
+    symbol<br>
+    3 种对象类型：<br>
+
+    Object<br>
+    Date<br>
+    Array<br>
+    2 个不包含任何值的数据类型：<br>
+
+    null<br>
+    undefined<br>
+</p>
+<script>
+    document.getElementById("demo").innerHTML =
+        typeof "john" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof NaN + "<br>" +
+        typeof false + "<br>" +
+        typeof [1,2,3,4] + "<br>" +
+        typeof {name:'john', age:34} + "<br>" +
+        typeof new Date() + "<br>" +
+        typeof function () {} + "<br>" +
+        typeof myCar + "<br>" +
+        typeof null;
+
+    document.getElementById("demo1").innerHTML =
+        "john".constructor + "<br>" +
+        (3.14).constructor + "<br>" +
+        false.constructor + "<br>" +
+        [1,2,3,4].constructor + "<br>" +
+        {name:'john', age:34}.constructor + "<br>" +
+        new Date().constructor + "<br>" +
+        function () {}.constructor;
+</script>
+
+</body>
+</html>

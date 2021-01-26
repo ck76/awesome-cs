@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+    值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol。
+    <br>
+    引用数据类型：对象(Object)、数组(Array)、函数(Function)。
+</p>
+
+<script>
+    var carname1 = "Volvo XC60";
+    var carname2 = 'Volvo XC60';
+    var answer1 = 'It\'s alright';
+    var answer2 = "He is called \"Johnny\"";
+    var answer3 = 'He is called "Johnny"';
+    document.write(carname1 + "<br>");
+    document.write(carname2 + "<br>");
+    document.write(answer1 + "<br>")
+    document.write(answer2 + "<br>")
+    document.write(answer3 + "<br>")
+    document.write("<hr>")
+    //
+    var x1 = 34.00;
+    var x2 = 34;
+    var y = 123e5;
+    var z = 123e-5;
+    document.write(x1 + "<br>")
+    document.write(x2 + "<br>")
+    document.write(y + "<br>")
+    document.write(z + "<br>")
+    document.write("<hr>")
+    //
+    var i;
+    var cars = new Array();
+    cars[0] = "Saab";
+    cars[1] = "Volvo";
+    cars[2] = "BMW";
+
+    for (i = 0; i < cars.length; i++) {
+        document.write(cars[i] + "<br>");
+    }
+    document.write("<hr>")
+    //
+    var person =
+        {
+            firstname: "John",
+            lastname: "Doe",
+            id: 5566
+        };
+    document.write(person.lastname + "<br>");
+    document.write(person["lastname"] + "<br>");
+    document.write("<hr>")
+    //
+    var person;
+    var car = "Volvo";
+    document.write(person + "<br>");
+    document.write(car + "<br>");
+    var car = null;
+    document.write(car + "<br>");
+</script>
+</body>
+</html>

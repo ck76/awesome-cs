@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/prototype/1.7.3/prototype.min.js"></script>
+    <script>
+        function myFunction(){
+            $("h01").insert("Hello Prototype!");
+            $("h01").writeAttribute("style","color:red").insert("Hello Prototype!");
+        }
+        Event.observe(window,"load",myFunction);
+    </script>
+</head>
+<body>
+
+<h1 id="h01"></h1>
+</body>
+
+</html>
