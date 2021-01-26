@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>N5文法</title>
+    <script src="https://static.jiemo.net/./fp2.min_a69db096.js"></script>
+    <script>
+ var jiemo = {
+        'domainName': 'jiemo.net',
+        'staticUrl': location.protocol + '//static.jiemo.net',
+        'imgHomeUrl': location.protocol + '//imghome.jiemo.net',
+        'fp': null,
+        'production': false
+    };
+
+    if (!0) {
+        jiemo.production = true;
+        var domains = ["jiemo.net","jiemodou.net","jiemojia.net","dev.jiemo.net","jiemo.net"];
+        for (var i; i<domains.length; i++) {
+            if (document.location.host.indexOf(domains[i]) < 0) {
+                location.href='https://www.jiemo.net';
+            }
+        }
+    }
+
+    </script>
+    <!-- baidu.ocpc 统计 -->
+    <script>
+    window._agl = window._agl || [];
+    (function () {
+        _agl.push(
+            ['production', '_f7L2XwGXjyszb4d1e2oxPybgD']
+        );
+        (function () {
+            var agl = document.createElement('script');
+            agl.type = 'text/javascript';
+            agl.async = true;
+            agl.src = 'https://fxgate.baidu.com/angelia/fcagl.js?production=_f7L2XwGXjyszb4d1e2oxPybgD';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(agl, s);
+        })();
+    })();
+
+    </script>
+    <script>jiemo.vhost="jiemo.net"; jiemo.wsUrl="wss://wss.jiemo.net/ws";</script>
+    <link rel="stylesheet" href="https://static.jiemo.net/Common/css/common-wap_343b6604.css">
+    <link rel="stylesheet" href="https://static.jiemo.net/proc/Specials/app_share/NSeries/css/grammar_5b261507.css">
+    <style>
+        /* html, body {
+        width: 100%;
+        height: 100%;
+        } */
+        #container {
+            height: 100vh;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+    </style>
+</head>
+
+<body id="wrapper">
+<div id="container">
+    <div class="content-top"></div>
+    <div class="grammar-content">
+        <h1>
+            <span class="grammar">语法内容</span>
+        </h1>
+        <p>
+            ～にする／くする </p>
+        <h1>
+            <span class="explian">解说</span>
+        </h1>
+        <p>
+            表示人为的改变、改造，使其达到期望的结果。 </p>
+        <h1>
+            <span class="pickUp">接続</span>
+        </h1>
+        <p>
+            Na語幹/N+にする \nAくする </p>
+        <h1>
+            <span class="example">例文</span>
+        </h1>
+        <p>
+            ①部屋を綺麗にします。 /把房间打扫干净。 <br>②これを白く染めてください。　/请把这个染白。 </p>
+        <h1>
+            <span class="point">注意点</span>
+        </h1>
+        <p>
+            「～にする」还可以表示选择。 </p>
+        <h1>
+            <span class="about"> 相关文法</span>
+        </h1>
+        <p>
+            ～になる/くなる<br/></p>
+    </div>
+    <div class="download-fixed">
+        <img src="https://static.jiemo.net/proc/Specials/app_share/NSeries/img/app-img_92c84894.png" alt="">
+        <div class="content">
+            <h1>日语考级</h1>
+            <p>一个懂JLPT的词汇文法库</p>
+        </div>
+        <a class="download-href">
+            立即下载
+        </a>
+    </div>
+</div>
+<script src="https://static.jiemo.net/CDN/jquery/1.8.3/jquery.min_8b6babff.js"></script>
+<script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script type="text/javascript" src="https://static.jiemo.net/CDN/js-cookie/js.cookie-2.2.0.min_640a0df4.js"></script>
+<script src="https://static.jiemo.net/proc/Specials/app_share/js/bi-share_025b0243.js"></script>
+<script>
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+        // 页面载入手动打点
+        $(function(){
+            document.querySelector('body').addEventListener('touchmove', function(e) {
+                if (!document.querySelector('#container').contains(e.target)) {
+                    e.preventDefault();
+                }
+            })
+            var UserParams = getQueryString('share');
+            var userurl = '';
+            var hrefUrl = ''
+            if(UserParams == 1){
+                //App分享
+                userurl = 'share.jiemo.net/nSeries/grammarShare/share=1';
+                hrefUrl = 'flying.html?mark=9';
+                console.log('App分享')
+            }else{
+                //手账扫码分享
+                userurl = 'share.jiemo.net/NSeries/grammarShare.html';
+                hrefUrl = 'flying.html?mark=7';
+                console.log('手账分享')
+            }
+
+            $(document).on('fpInited', function(e, fp) {
+                statsPage(encodeURIComponent(userurl));
+            });
+            $(document).on('click','.download-href', function(e, fp) {
+                location.href=hrefUrl;
+            });
+        })
+        var url = window.location.href;
+        wx.config(null);
+        wx.ready(function() {
+        var shareConfig = {
+            title: '科学备战[日语考级]', // 分享标题
+            desc: '总结多年教学经验，遵循艾宾浩斯遗忘曲线，助你备考一臂之力！', // 分享描述
+            link: url,
+            imgUrl: 'https://static.jiemo.net/proc/Specials/app_share/NSeries/img/app-img.png',
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+        };
+        // wx.onMenuShareTimeline(shareConfig);
+        // wx.onMenuShareAppMessage(shareConfig);
+        wx.onMenuShareQQ(shareConfig);
+        wx.onMenuShareWeibo(shareConfig);
+        wx.onMenuShareQZone(shareConfig);
+        wx.updateAppMessageShareData(shareConfig)
+        wx.updateTimelineShareData(shareConfig)
+    });
+
+</script>
+</body>
+
+</html>

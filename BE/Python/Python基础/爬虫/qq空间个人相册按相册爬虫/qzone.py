@@ -1,0 +1,46 @@
+
+# TODO 日后再说，现在很忙。
+# /proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine2_Callback&t=900704082&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=30&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine2&_=1602754973793
+"""
+curl -H 'Host: h5.qzone.qq.com' -H 'Cookie: pgv_pvi=8181215232; pgv_pvid=8128021019; RK=TVQADijJOy; ptcz=3c7ce9ad65b6c01822ca80fd5146e3bf505d451d9791f945701ef8a3fb7a676e; tvfe_boss_uuid=6cdf537ba6c7162c; XWINDEXGREY=0; QZ_FE_WEBP_SUPPORT=1; ied_qq=o0276128749; _ga=GA1.2.1971679203.1582105462; o_cookie=276128749; pac_uid=1_276128749; sd_userid=65981589351151899; sd_cookie_crttime=1589351151899; eas_sid=21T5n9A0X5W9a4s9B6L5z5F9S9; iip=0; mobileUV=1_1741fd6fe8c_af614; __Q_w_s__QZN_TodoMsgCnt=1; __Q_w_s_hat_seed=1; uin=o0276128749; skey=@pS3lEygb8; p_uin=o0276128749; pt4_token=BP0HNzRnKvoSQCqvjo7jkH4Gu5tt2Jh3*0QUPjKmAaQ_; p_skey=OqO*6CrFDbT**Pkn2DeRgU*bE2RsKqhuHsxB4mHNHlA_; Loading=Yes; pgv_info=ssid=s2779135119; cpu_performance_v8=25' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36' -H 'accept: */*' -H 'sec-fetch-site: same-site' -H 'sec-fetch-mode: no-cors' -H 'sec-fetch-dest: script' -H 'referer: https://user.qzone.qq.com/' -H 'accept-language: en,zh-CN;q=0.9,zh-HK;q=0.8,zh;q=0.7,ja-JP;q=0.6,ja;q=0.5,en-US;q=0.4' --compressed 'https://h5.qzone.qq.com/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine0_Callback&t=964445707&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=0&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&question=&answer=&callbackFun=shine0&_=1602754973790'
+"""
+"""
+curl ,
+ 'Host: h5.qzone.qq.com' ,
+ 'Cookie: pgv_pvi=8181215232; pgv_pvid=8128021019; RK=TVQADijJOy; ptcz=3c7ce9ad65b6c01822ca80fd5146e3bf505d451d9791f945701ef8a3fb7a676e; tvfe_boss_uuid=6cdf537ba6c7162c; XWINDEXGREY=0; QZ_FE_WEBP_SUPPORT=1; ied_qq=o0276128749; _ga=GA1.2.1971679203.1582105462; o_cookie=276128749; pac_uid=1_276128749; sd_userid=65981589351151899; sd_cookie_crttime=1589351151899; eas_sid=21T5n9A0X5W9a4s9B6L5z5F9S9; iip=0; mobileUV=1_1741fd6fe8c_af614; __Q_w_s__QZN_TodoMsgCnt=1; __Q_w_s_hat_seed=1; uin=o0276128749; skey=@pS3lEygb8; p_uin=o0276128749; pt4_token=BP0HNzRnKvoSQCqvjo7jkH4Gu5tt2Jh3*0QUPjKmAaQ_; p_skey=OqO*6CrFDbT**Pkn2DeRgU*bE2RsKqhuHsxB4mHNHlA_; Loading=Yes; pgv_info=ssid=s2779135119; cpu_performance_v8=25' ,
+ 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36' ,
+ 'accept: */*' ,
+ 'sec-fetch-site: same-site' ,
+ 'sec-fetch-mode: no-cors' ,
+ 'sec-fetch-dest: script' ,
+ 'referer: https://user.qzone.qq.com/' ,
+ 'accept-language: en,zh-CN;q=0.9,zh,
+K;q=0.8,zh;q=0.7,ja-JP;q=0.6,ja;q=0.5,en-US;q=0.4' --compressed 'https://h5.qzone.qq.com/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine0_Callback&t=964445707&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=0&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&question=&answer=&callbackFun=shine0&_=1602754973790'
+
+"""
+"""
+curl -H 'Host: h5.qzone.qq.com' -H 'Cookie: pgv_pvi=8181215232; pgv_pvid=8128021019; RK=TVQADijJOy; ptcz=3c7ce9ad65b6c01822ca80fd5146e3bf505d451d9791f945701ef8a3fb7a676e; tvfe_boss_uuid=6cdf537ba6c7162c; XWINDEXGREY=0; QZ_FE_WEBP_SUPPORT=1; ied_qq=o0276128749; _ga=GA1.2.1971679203.1582105462; o_cookie=276128749; pac_uid=1_276128749; sd_userid=65981589351151899; sd_cookie_crttime=1589351151899; eas_sid=21T5n9A0X5W9a4s9B6L5z5F9S9; iip=0; mobileUV=1_1741fd6fe8c_af614; __Q_w_s__QZN_TodoMsgCnt=1; __Q_w_s_hat_seed=1; uin=o0276128749; skey=@pS3lEygb8; p_uin=o0276128749; pt4_token=BP0HNzRnKvoSQCqvjo7jkH4Gu5tt2Jh3*0QUPjKmAaQ_; p_skey=OqO*6CrFDbT**Pkn2DeRgU*bE2RsKqhuHsxB4mHNHlA_; Loading=Yes; pgv_info=ssid=s2779135119; cpu_performance_v8=25' -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36' -H 'accept: */*' -H 'sec-fetch-site: same-site' -H 'sec-fetch-mode: no-cors' -H 'sec-fetch-dest: script' -H 'referer: https://user.qzone.qq.com/' -H 'accept-language: en,zh-CN;q=0.9,zh-HK;q=0.8,zh;q=0.7,ja-JP;q=0.6,ja;q=0.5,en-US;q=0.4' --compressed 'https://h5.qzone.qq.com/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine2_Callback&t=900704082&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=30&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine2&_=1602754973793'
+curl ,
+ 'Host: h5.qzone.qq.com' ,
+ 'Cookie: pgv_pvi=8181215232; pgv_pvid=8128021019; RK=TVQADijJOy; ptcz=3c7ce9ad65b6c01822ca80fd5146e3bf505d451d9791f945701ef8a3fb7a676e; tvfe_boss_uuid=6cdf537ba6c7162c; XWINDEXGREY=0; QZ_FE_WEBP_SUPPORT=1; ied_qq=o0276128749; _ga=GA1.2.1971679203.1582105462; o_cookie=276128749; pac_uid=1_276128749; sd_userid=65981589351151899; sd_cookie_crttime=1589351151899; eas_sid=21T5n9A0X5W9a4s9B6L5z5F9S9; iip=0; mobileUV=1_1741fd6fe8c_af614; __Q_w_s__QZN_TodoMsgCnt=1; __Q_w_s_hat_seed=1; uin=o0276128749; skey=@pS3lEygb8; p_uin=o0276128749; pt4_token=BP0HNzRnKvoSQCqvjo7jkH4Gu5tt2Jh3*0QUPjKmAaQ_; p_skey=OqO*6CrFDbT**Pkn2DeRgU*bE2RsKqhuHsxB4mHNHlA_; Loading=Yes; pgv_info=ssid=s2779135119; cpu_performance_v8=25' ,
+ 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36' ,
+ 'accept: */*' ,
+ 'sec-fetch-site: same-site' ,
+ 'sec-fetch-mode: no-cors' ,
+ 'sec-fetch-dest: script' ,
+ 'referer: https://user.qzone.qq.com/' ,
+ 'accept-language: en,zh-CN;q=0.9,zh,
+K;q=0.8,zh;q=0.7,ja-JP;q=0.6,ja;q=0.5,en-US;q=0.4' --compressed 'https://h5.qzone.qq.com/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine2_Callback&t=900704082&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=30&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine2&_=1602754973793'
+
+"""
+# callbackFun
+# g_tk
+# _
+"""
+/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine0_Callback&t=964445707&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=0&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&question=&answer=&callbackFun=shine0&_=1602754973790
+/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine2_Callback&t=900704082&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=30&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine2&_=1602754973793
+/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine3_Callback&t=943132097&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=60&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine3&_=1602754973794
+/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine4_Callback&t=241925023&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=90&pageNum=10&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine4&_=1602754973795
+/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine6_Callback&t=246550580&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=100&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine6&_=1602754973797
+/proxy/domain/photo.qzone.qq.com/fcgi-bin/cgi_list_photo?g_tk=1799068784&callback=shine7_Callback&t=107254601&mode=0&idcNum=4&hostUin=276128749&topicId=V14L47VC49R6XJ&noTopic=0&uin=276128749&pageStart=130&pageNum=30&skipCmtCount=0&singleurl=1&batchId=&notice=0&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&outstyle=json&format=jsonp&json_esc=1&callbackFun=shine7&_=1602754973798
+"""
