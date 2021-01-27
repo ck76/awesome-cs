@@ -1,8 +1,8 @@
-
+from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from . import views, testdb
+from . import views, testdb, search, search2
 
 # path() 函数
 # Django path() 可以接收四个参数，分别是两个必选参数：route、view 和两个可选参数：kwargs、name。
@@ -20,5 +20,8 @@ urlpatterns = [
     path('runoob/', views.runoob),
     path('entends/', views.extends),
     path('testdb/', testdb.testdb),
-
+    path('search/', search.search),
+    path('search_form/', search.search_form),
+    path('search-post/', search2.search_post),
+    # path("app01/", include("app01/app01.urls")),
 ]

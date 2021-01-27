@@ -6,3 +6,46 @@
         if query is not None:
             query = query.encode(errors='replace')
         return query
+
+
+
+HelloWorld
+|-- HelloWorld
+|   |-- __init__.py
+|   |-- __init__.pyc
+|   |-- search.py
+|   |-- search.pyc
+|   |-- search2.py
+|   |-- search2.pyc
+|   |-- settings.py
+|   |-- settings.pyc
+|   |-- testdb.py
+|   |-- testdb.pyc
+|   |-- urls.py
+|   |-- urls.pyc
+|   |-- views.py
+|   |-- views.pyc
+|   |-- wsgi.py
+|   `-- wsgi.pyc
+|-- TestModel
+|   |-- __init__.py
+|   |-- __init__.pyc
+|   |-- admin.py
+|   |-- admin.pyc
+|   |-- apps.py
+|   |-- migrations
+|   |   |-- 0001_initial.py
+|   |   |-- 0001_initial.pyc
+|   |   |-- __init__.py
+|   |   `-- __init__.pyc
+|   |-- models.py
+|   |-- models.pyc
+|   |-- tests.py
+|   `-- views.py
+|-- db.sqlite3
+|-- manage.py
+`-- templates
+    |-- base.html
+    |-- hello.html
+    |-- post.html
+    `-- search_form.html
