@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7/dist/css/bootstrap.css">
+</head>
+<body>
+<h1>{{ hello }}</h1>
+<p>{{ck}}</p>
+<p>
+    {% for i in views_list %}
+    {{ i }}
+    {% endfor %}
+</p>
+
+<p>
+    {% for i,j in views_dict.items %}
+    {{ i }}---{{ j }}
+    {% endfor %}
+</p>
+<p>
+    a {% load my_tags %}
+</p>
+
+<p>
+    a {{ 11|my_filter:22 }}
+</p>
+<p>
+    a {% my_tag1 11 22 33 %}
+</p>
+<p>
+    a {% my_html "zzz" "xxx" %}
+</p>
+<p>
+    static {% load static %}
+</p>
+{{name}}<img src="{% static 'images/runoob-logo.png' %}" alt="runoob-logo">
+</body>
+</html>
