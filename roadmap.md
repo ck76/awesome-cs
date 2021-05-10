@@ -4,8 +4,14 @@
 
 
 
+- https://github.com/yngz/cs-roadmap
+- https://github.com/thanhluanuit/full-stack-web-developer
+
+- https://github.com/anshulrgoyal/rust-web-developer-roadmap
+
 - https://github.com/kamranahmedse/developer-roadmap
 - https://github.com/adam-golab/react-developer-roadmap
+- https://github.com/xiaohai222220/roadmap-for-php-developer
 - https://github.com/Alikhll/golang-developer-roadmap
 - https://github.com/BohdanOrlov/iOS-Developer-Roadmap
 - https://github.com/sundowndev/hacker-roadmap
