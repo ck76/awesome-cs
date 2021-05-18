@@ -1,6 +1,10 @@
-
-function   greeter ( person) {
-    return   "Hello, "  + person;
+function greeter(person) {
+    return "Hello, " + person;
 }
-var  user =  "Jane User" ;
-document .body.innerHTML = greeter(user);
+
+var user = "Jane User";
+console.log(greeter(user))
+
+
+var message: string = "Hello World"
+console.log(message)
