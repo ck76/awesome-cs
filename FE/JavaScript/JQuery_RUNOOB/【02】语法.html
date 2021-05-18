@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+
+通过 jQuery，您可以选取（查询，query） HTML 元素，并对它们执行"操作"（actions）。
+
+jQuery 语法
+jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。
+
+基础语法： $(selector).action()
+
+美元符号定义 jQuery
+选择符（selector）"查询"和"查找" HTML 元素
+jQuery 的 action() 执行对元素的操作
+实例:
+
+$(this).hide() - 隐藏当前元素
+
+$("p").hide() - 隐藏所有 <p> 元素
+
+    $("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素
+
+    $("#test").hide() - 隐藏 id="test" 的元素
+
+
+{{/*---------------------------------------------------*/}}
+    jQuery 入口函数:
+    $(document).ready(function(){
+    // 执行代码
+    });
+    或者
+    $(function(){
+    // 执行代码
+    });
+
+    JavaScript 入口函数:
+    window.onload = function () {
+    // 执行代码
+    }
+
+    jQuery 入口函数与 JavaScript 入口函数的区别：
+    jQuery 的入口函数是在 html 所有标签(DOM)都加载之后，就会去执行。
+    JavaScript 的 window.onload 事件是等到所有内容，包括外部图片之类的文件加载完后，才会执行。
+</body>
+</html>
