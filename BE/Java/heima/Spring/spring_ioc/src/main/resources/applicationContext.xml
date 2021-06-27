@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--        <bean id="userDao" class="dao.impl.UserDaoImpl">
+                <property name="username" value="zhangsan"></property>
+                <property name="age" value="23"></property>
+            </bean>-->
+
+    <bean id="userDao" class="dao.impl.UserDaoImpl">
+        <property name="strList">
+            <list>
+                <value>aaaaa</value>
+                <value>bbbbb</value>
+                <value>ccccc</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="u1" value-ref="user1"></entry>
+                <entry key="u2" value-ref="user2"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p1">ppp1</prop>
+                <prop key="p2">ppp2</prop>
+                <prop key="p3">ppp3</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="user1" class="domain.User">
+        <property name="name" value="tom"></property>
+        <property name="addr" value="beijing"></property>
+    </bean>
+    <bean id="user2" class="domain.User">
+        <property name="name" value="lucy"></property>
+        <property name="addr" value="tianjin"></property>
+    </bean>
+    <!--    <bean id="userDao" class="factory.StaticFactory" factory-method="getUserDao"></bean>-->
+    <!--    <bean id="factory" class="factory.DynamicFactory"></bean>-->
+    <!--    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+
+    <!--    <bean id="userDao" class="dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destroy"></bean>
+        <bean id="userService" class="service.impl.UserServiceImpl">
+            &lt;!&ndash;name是属性名字，例如setUserDao的属性名是userDao
+                ref引用bean的id&ndash;&gt;
+            <property name="userDao" ref="userDao"></property>
+        </bean>-->
+
+    <!--    <bean id="userService" class="service.impl.UserServiceImpl" p:userDao-ref="userDao"></bean>-->
+
+    <bean id="userService" class="service.impl.UserServiceImpl">
+        <!--name是属性名字，例如setUserDao的属性名是userDao
+            ref引用bean的id-->
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+    <bean id="userService2" class="service.impl.UserServiceImpl">
+        <!--name是属性名字，例如setUserDao的属性名是userDao
+            ref引用bean的id-->
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+    <import resource="applicationContext-user.xml" />
+    <import resource="applicationContext-product.xml" />
+</beans>
