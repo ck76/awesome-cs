@@ -1,6 +1,7 @@
 import json
 import os
 
+# TODO 不用了
 from shutil import copy  # shutil 是用来复制黏贴文件的
 
 sd_store = ".DS_Store"
@@ -38,9 +39,9 @@ white = ["aws丨aws-sdk-go",
          "o2oa丨o2oa",
          "papers-we-love丨papers-we-love",
          "paritytech丨substrate",
-         "",
-         "",
-         "",
+         "0voice丨campus_recruitmen_questions",
+         "0voice丨from_coder_to_expert",
+         "0voice丨interview_internal_reference",
          "",
          "",
          "",
@@ -51,6 +52,8 @@ for json_item in json_dir_s:
     if white.__contains__(json_name_without_json):
         print("白名单：", json_name_without_json)
         continue
+
+
     if origin_git_dir.__contains__(json_name_without_json) \
             or new_dir_s.__contains__(json_name_without_json):
         print("已经下载过：", json_name_without_json)
