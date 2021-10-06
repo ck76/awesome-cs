@@ -5,9 +5,14 @@
 import json
 import os
 
-repo_json_dir = "/Volumes/CK/stars_repo_json/"
+repo_json_dir = "/Volumes/CK/stars_repo_json_new/"
 json_dir_s = os.listdir(repo_json_dir)
 print(json_dir_s)
+
+
+original_repo_json_dir = "/Volumes/CK/stars_repo_json/"
+original_json_dir_s = os.listdir(original_repo_json_dir)
+print(original_json_dir_s)
 
 # 30 总共77页
 # 100 24页
@@ -17,7 +22,8 @@ page_count = 77
 count = 1
 
 for i in range(1, 3):
-    url = "curl  https://api.github.com/users/ck76/starred?page=" + str(i)
+    # TODO 加密码
+    url = "curl -u ck76: https://api.github.com/users/ck76/starred?page=" + str(i)
     print(url)
     result = os.popen(url).read()
     print(result)
@@ -27,7 +33,7 @@ for i in range(1, 3):
         full_name = j_item["full_name"]
         file_name = full_name.replace("/", "丨") + ".json"
 
-        if not json_dir_s.__contains__(file_name):
+        if not original_json_dir_s.__contains__(file_name):
             j_item_result_string = json.dumps(j_item)
             with open(repo_json_dir + file_name, "w+") as fout:
                 fout.write(j_item_result_string)

@@ -3,10 +3,8 @@ import os
 from shutil import copy  # shutil 是用来复制黏贴文件的
 
 sd_store = ".DS_Store"
-git_dir = "/Volumes/CK/11111111111111111111111/"
-repo_json_dir = "/Volumes/CK/stars_repo_json/"
-result_dir = ""
-# ⭐ ☆
+git_dir = "/Volumes/CK/newGIthubbbbb_new/"
+repo_json_dir = "/Volumes/CK/stars_repo_json_new/"
 dir_s = os.listdir(git_dir)
 print(dir_s)
 fail_dirs = []

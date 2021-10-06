@@ -1,21 +1,14 @@
 import json
 import os
 
-# TODO 不用了
-from shutil import copy  # shutil 是用来复制黏贴文件的
-
 sd_store = ".DS_Store"
-origin_git_dir = "/Volumes/CK/Githubbbb/"
-# ⭐ ☆
-origin_dir_s = os.listdir(origin_git_dir)
-print(origin_dir_s)
 
-new_git_dir = "/Volumes/CK/newGIthubbbbb/"
+new_git_dir = "/Volumes/CK/newGIthubbbbb_new/"
 # ⭐ ☆
 new_dir_s = os.listdir(new_git_dir)
 print(new_dir_s)
 
-repo_json_dir = "/Volumes/CK/stars_repo_json/"
+repo_json_dir = "/Volumes/CK/stars_repo_json_new/"
 json_dir_s = os.listdir(repo_json_dir)
 print(json_dir_s)
 
@@ -54,8 +47,7 @@ for json_item in json_dir_s:
         continue
 
 
-    if origin_git_dir.__contains__(json_name_without_json) \
-            or new_dir_s.__contains__(json_name_without_json):
+    if  new_dir_s.__contains__(json_name_without_json):
         print("已经下载过：", json_name_without_json)
 
         j_dir = repo_json_dir + json_item
@@ -111,8 +103,8 @@ for json_item in json_dir_s:
             result = os.popen(command).read()
             print(result)
 
-print(str(len(big_size_repo)), "  ", big_size_repo)
-with open("/Users/chengkun02/Downloads/awesome-cs/BE/Python/Python基础/爬虫/github相关爬虫和脚本/big_size_repo.txt", 'w+') as fout:
-    for item in big_size_repo:
-        fout.write(item + "\n")
-    fout.close()
+# print(str(len(big_size_repo)), "  ", big_size_repo)
+# with open("/Users/chengkun02/Downloads/awesome-cs/BE/Python/Python基础/爬虫/github相关爬虫和脚本/big_size_repo.txt", 'w+') as fout:
+#     for item in big_size_repo:
+#         fout.write(item + "\n")
+#     fout.close()
