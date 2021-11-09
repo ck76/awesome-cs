@@ -35,10 +35,48 @@ white = ["aws丨aws-sdk-go",
          "0voice丨campus_recruitmen_questions",
          "0voice丨from_coder_to_expert",
          "0voice丨interview_internal_reference",
+         "ck76丨ck76.github.io",
+         "GoogleCloudPlatform丨terraform-google-examples",
+         "torvalds丨linux",
+         "ansible丨ansible",
+         "TheAlgorithms丨C",
+         "argoproj丨argo-cd",
+         "ck76丨awesome-cs",
+         "ck76丨fitness-dairy",
+         "dcloudio丨uni-app",
+         "docker丨compose",
+         "hehonghui丨the-economist-ebooks",
+         "helm丨helm",
+         "kubernetes丨ingress-nginx",
+         "learnhard-cn丨free_proxy_ss",
+         "NervJS丨taro",
+         "vnpy丨vnpy",
+         "the1812丨Bilibili-Evolved",
+         "yorkLiu丨flutter_weather",
+         "foxsen丨archbase",
          "",
          "",
          "",
-         "", ]
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",]
 black = []
 for json_item in json_dir_s:
     json_name_without_json = json_item.split(".json")[0]
@@ -81,7 +119,7 @@ for json_item in json_dir_s:
 
 
 
-        print("开始下载：", json_name_without_json, "  size:", size, " language:", language)
+        print("开始下载：", json_name_without_json, "  size:", size/1024,"m", " language:", language)
 
         # print(full_name)
         # print(description)

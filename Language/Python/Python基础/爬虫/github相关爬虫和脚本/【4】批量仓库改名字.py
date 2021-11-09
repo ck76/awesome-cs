@@ -62,6 +62,7 @@ for dir in dir_s:
                             + "丨" + "🍋" + str(author) \
                             + "丨" + "🍉" + str(repo_name) \
                             + "丨" + "" + "⭐️" + str(stargazers_count) + "" \
+                            + "丨" + "" + "🐮️" + str(size/1000) + "m" \
                             + "丨" + "🌰" + str(new_des)
             result_dir_name = git_dir + real_dir_name[0:200]
 
